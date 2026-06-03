@@ -1,0 +1,30 @@
+base_model: Qwen/Qwen2.5-3B-Instruct
+dataset_path: ml/data/examples.jsonl
+output_dir: ml/outputs/qwen2.5-3b-voice2action
+
+# QLoRA
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_compute_dtype: bfloat16
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Training
+num_train_epochs: 3
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-4
+warmup_ratio: 0.03
+logging_steps: 5
+save_steps: 50
+max_seq_length: 1024

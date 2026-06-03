@@ -1,0 +1,10 @@
+{"input": "yar Ali ko call karna hai", "output": {"tasks": ["Call Ali"], "deadline": null, "people": ["Ali"], "meetings": [], "priority": null}}
+{"input": "proposal friday tak bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": "Friday", "people": [], "meetings": [], "priority": "Medium"}}
+{"input": "client ne kaha proposal bhejna hai friday tak aur Ali se approval bhi lena hai", "output": {"tasks": ["Send proposal", "Get approval from Ali"], "deadline": "Friday", "people": ["Ali"], "meetings": [], "priority": "High"}}
+{"input": "kal subah Ahmed ke sath meeting hai", "output": {"tasks": [], "deadline": "tomorrow morning", "people": ["Ahmed"], "meetings": ["Meeting with Ahmed"], "priority": null}}
+{"input": "electricity bill pay karna hai aaj", "output": {"tasks": ["Pay electricity bill"], "deadline": "today", "people": [], "meetings": [], "priority": "High"}}
+{"input": "doodh le ana wapsi pe", "output": {"tasks": ["Buy milk on the way back"], "deadline": null, "people": [], "meetings": [], "priority": "Low"}}
+{"input": "Sara ko email karna report ke barey mein", "output": {"tasks": ["Email Sara about the report"], "deadline": null, "people": ["Sara"], "meetings": [], "priority": null}}
+{"input": "monday ko client meeting hai 3 baje", "output": {"tasks": [], "deadline": "Monday 3pm", "people": [], "meetings": ["Client meeting"], "priority": "Medium"}}
+{"input": "presentation ready karni hai aur Ali ko review ke liye bhejni hai", "output": {"tasks": ["Prepare presentation", "Send presentation to Ali for review"], "deadline": null, "people": ["Ali"], "meetings": [], "priority": "Medium"}}
+{"input": "I need to finalize the budget by Wednesday aur Hassan se confirm karna hai", "output": {"tasks": ["Finalize the budget", "Confirm with Hassan"], "deadline": "Wednesday", "people": ["Hassan"], "meetings": [], "priority": "High"}}
