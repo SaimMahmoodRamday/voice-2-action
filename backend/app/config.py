@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     whisper_model: str = "medium"
     whisper_device: str = "cpu"
     whisper_compute_type: str = "int8"
+    # "translate" → Whisper emits English (the extraction model handles English
+    # and Roman Urdu well, but not native Urdu script). "transcribe" keeps the
+    # source-language script.
+    whisper_task: str = "translate"
 
     upload_dir: str = "./uploads"
 

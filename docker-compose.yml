@@ -50,6 +50,7 @@ services:
       - WHISPER_MODEL=medium
       - WHISPER_DEVICE=cpu
       - WHISPER_COMPUTE_TYPE=int8
+      - WHISPER_TASK=translate
       - UPLOAD_DIR=/tmp/uploads
       # Persist the HuggingFace cache so the ~1.5 GB Whisper model is downloaded
       # once and survives container recreation.

@@ -17,6 +17,7 @@ def transcribe(audio_path: str) -> tuple[str, str | None]:
     model = get_model()
     segments, info = model.transcribe(
         audio_path,
+        task=settings.whisper_task,
         language=None,
         vad_filter=True,
         beam_size=5,
