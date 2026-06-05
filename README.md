@@ -33,8 +33,7 @@ yar client ne proposal bhejna hai aur Ali se approval lena hai
     "Get approval from Ali"
   ],
   "deadline": null,
-  "people": ["Ali"],
-  "priority": "Medium"
+  "people": ["Ali"]
 }
 ```
 
@@ -63,7 +62,6 @@ A fine-tuned LLM extracts structured fields from noisy, informal text:
 - Deadlines
 - People involved
 - Meetings
-- Priority
 
 **Example**
 

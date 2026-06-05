@@ -18,4 +18,3 @@ def test_validate_node_flags_missing():
     out = validate_node(state)
     assert "deadline" in out["missing_fields"]
     assert "people" in out["missing_fields"]
-    assert "priority" in out["missing_fields"]

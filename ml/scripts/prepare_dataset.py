@@ -6,7 +6,7 @@ from pathlib import Path
 SYSTEM = (
     "You extract structured task information from informal voice-note transcripts "
     "in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys "
-    "tasks, deadline, people, meetings, priority."
+    "tasks, deadline, people, meetings."
 )
 
 

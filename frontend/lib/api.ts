@@ -1,13 +1,10 @@
 // Typed client for the Voice2Action FastAPI backend.
 
-export type Priority = "Low" | "Medium" | "High";
-
 export interface TaskExtraction {
   tasks: string[];
   deadline: string | null;
   people: string[];
   meetings: string[];
-  priority: Priority | null;
 }
 
 export interface ProcessResponse {

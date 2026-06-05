@@ -1,11 +1,6 @@
-{"input": "acha sun meeting cancel karni hai is mahine", "output": {"tasks": ["Cancel the meeting"], "deadline": "this month", "people": [], "meetings": []}}
-{"input": "yar utility bills pay karne hain aur contract sign karna hai June ke end tak", "output": {"tasks": ["Pay utility bills", "Sign the contract"], "deadline": "end of June", "people": [], "meetings": []}}
 {"input": "kal wala paani ki bottle le ani hai January mein", "output": {"tasks": ["Buy water bottle"], "deadline": "January", "people": [], "meetings": []}}
 {"input": "Mansoor ko payment bhejna hai aur doodh le ana hai 2027 ke start tak", "output": {"tasks": ["Send payment to Mansoor", "Buy milk"], "deadline": "start of 2027", "people": ["Mansoor"], "meetings": []}}
-{"input": "Ali ke sath sync karni hai aur please send the report to Usman next month", "output": {"tasks": ["Send report to Usman"], "deadline": "next month", "people": ["Ali", "Usman"], "meetings": ["Sync with Ali"]}}
 {"input": "sun presentation finalize karni hai March ke pehle week tak", "output": {"tasks": ["Finalize presentation"], "deadline": "first week of March", "people": [], "meetings": []}}
-{"input": "interview hai CEO ka December mein", "output": {"tasks": [], "deadline": "December", "people": ["CEO"], "meetings": ["Interview with CEO"]}}
-{"input": "Please send the proposal to Tooba by 15 July", "output": {"tasks": ["Send proposal to Tooba"], "deadline": "15 July", "people": ["Tooba"], "meetings": []}}
 {"input": "btw deployment karna hai aur bill pay karna hai aur Danish ko reminder bhejna hai Q3 tak", "output": {"tasks": ["Do deployment", "Pay the bill", "Send reminder to Danish"], "deadline": "Q3", "people": ["Danish"], "meetings": []}}
 {"input": "Ayesha ko email bhejo aglay mahine", "output": {"tasks": ["Email Ayesha"], "deadline": "next month", "people": ["Ayesha"], "meetings": []}}
 {"input": "kal wala passport renew karna hai August ke end tak", "output": {"tasks": ["Renew passport"], "deadline": "end of August", "people": [], "meetings": []}}
@@ -14,22 +9,16 @@
 {"input": "ek important cheez report complete karni hai November tak", "output": {"tasks": ["Complete the report"], "deadline": "November", "people": [], "meetings": []}}
 {"input": "by the way room clean karna hai next January", "output": {"tasks": ["Clean the room"], "deadline": "next January", "people": [], "meetings": []}}
 {"input": "by the way Waqas se baat karni hai 2026 ke end tak", "output": {"tasks": ["Talk to Waqas"], "deadline": "end of 2026", "people": ["Waqas"], "meetings": []}}
-{"input": "no rush bhai, bas Zainab ko checkin karna Ramadan se pehle", "output": {"tasks": ["Check in with Zainab"], "deadline": "before Ramadan", "people": ["Zainab"], "meetings": []}}
 {"input": "no rush - Omer ko document share karna June 2027 mein", "output": {"tasks": ["Share document with Omer"], "deadline": "June 2027", "people": ["Omer"], "meetings": []}}
 {"input": "by the way meeting schedule karni hai aglay saal", "output": {"tasks": ["Schedule a meeting"], "deadline": "next year", "people": [], "meetings": []}}
 {"input": "sun email send karna hai Sadia ko aur stationery lani hai aur need to send proposal to Maryam September ke second week tak", "output": {"tasks": ["Send email to Sadia", "Get stationery", "Send proposal to Maryam"], "deadline": "second week of September", "people": ["Sadia", "Maryam"], "meetings": []}}
 {"input": "ek important cheez files arrange karni hain is mahine tak", "output": {"tasks": ["Arrange files"], "deadline": "this month", "people": [], "meetings": []}}
 {"input": "jaldi se weekly meeting hai aur Sana se approval lena hai", "output": {"tasks": ["Get approval from Sana"], "deadline": "today", "people": ["Sana"], "meetings": ["Weekly meeting"]}}
-{"input": "by the way project ka status share karna hai Shazia ke sath", "output": {"tasks": ["Share project status with Shazia"], "deadline": null, "people": ["Shazia"], "meetings": []}}
 {"input": "ek kaam hai gas bill pay karna hai", "output": {"tasks": ["Pay gas bill"], "deadline": null, "people": [], "meetings": []}}
-{"input": "btw board meeting hai aur invoice Sara ko bhejna hai", "output": {"tasks": ["Send invoice to Sara"], "deadline": null, "people": ["Sara"], "meetings": ["Board meeting"]}}
 {"input": "meeting cancel karni hai", "output": {"tasks": ["Cancel the meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "remember karna dry cleaning lane hai sunday tak", "output": {"tasks": ["Pick up dry cleaning"], "deadline": "Sunday", "people": [], "meetings": []}}
-{"input": "ek important cheez I need to get Amna to review the document", "output": {"tasks": ["Get Amna to review the document"], "deadline": null, "people": ["Amna"], "meetings": []}}
 {"input": "aaj ka Tariq se baat karni hai aur invoice Iqra ko bhejna hai aur gas bill pay karna hai agla hafte tak", "output": {"tasks": ["Talk to Tariq", "Send invoice to Iqra", "Pay gas bill"], "deadline": "next week", "people": ["Tariq", "Iqra"], "meetings": []}}
 {"input": "aaj ka assignment submit karni hai", "output": {"tasks": ["Submit assignment"], "deadline": null, "people": [], "meetings": []}}
-{"input": "bhai Danish ke sath call hai", "output": {"tasks": [], "deadline": null, "people": ["Danish"], "meetings": ["Call with Danish"]}}
-{"input": "yar accounts ko ring karna hai aur doodh le ana hai aur gas bill pay karna hai", "output": {"tasks": ["Call accounts", "Buy milk", "Pay gas bill"], "deadline": null, "people": ["accounts"], "meetings": []}}
 {"input": "I need to update Faisal on the project status", "output": {"tasks": ["Update Faisal on project status"], "deadline": null, "people": ["Faisal"], "meetings": []}}
 {"input": "remember karna room clean karna hai", "output": {"tasks": ["Clean the room"], "deadline": null, "people": [], "meetings": []}}
 {"input": "remember karna visa application fill karni hai", "output": {"tasks": ["Fill visa application"], "deadline": null, "people": [], "meetings": []}}
@@ -43,11 +32,10 @@
 {"input": "bhai stationery lani hai aur proposal finalize karni hai aur proposal Rabia ko bhejna hai subah tak", "output": {"tasks": ["Get stationery", "Finalize proposal", "Send proposal to Rabia"], "deadline": "by morning", "people": ["Rabia"], "meetings": []}}
 {"input": "Sobia ke sath sync karni hai", "output": {"tasks": [], "deadline": null, "people": ["Sobia"], "meetings": ["Sync with Sobia"]}}
 {"input": "acha sun bill pay karna hai", "output": {"tasks": ["Pay the bill"], "deadline": null, "people": [], "meetings": []}}
-{"input": "ek important cheez weekly meeting hai", "output": {"tasks": [], "deadline": null , "people": [], "meetings": ["Weekly meeting"]}}
+{"input": "ek important cheez weekly meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "Can you remind me to follow up with Mansoor?", "output": {"tasks": ["Follow up with Mansoor"], "deadline": null, "people": ["Mansoor"], "meetings": []}}
 {"input": "groceries lane hain is mahine tak", "output": {"tasks": ["Buy groceries"], "deadline": "this month", "people": [], "meetings": []}}
 {"input": "Ahmed ko call back karna hai aur email send karna hai Omar ko aur payment karna hai Hina ko", "output": {"tasks": ["Call back Ahmed", "Send email to Omar", "Make payment to Hina"], "deadline": null, "people": ["Ahmed", "Omar", "Hina"], "meetings": []}}
-{"input": "koi jaldi nahi, bas Tariq ko ek message karna", "output": {"tasks": ["Message Tariq"], "deadline": null, "people": ["Tariq"], "meetings": []}}
 {"input": "remember karna team ko update karo aur form fill karna hai", "output": {"tasks": ["Update team", "Fill the form"], "deadline": null, "people": ["team"], "meetings": []}}
 {"input": "urgent hai proposal bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "oh haan gas bill pay karna hai parson tak", "output": {"tasks": ["Pay gas bill"], "deadline": "day after tomorrow", "people": [], "meetings": []}}
@@ -60,7 +48,6 @@
 {"input": "yar proposal finalize karni hai aur report complete karni hai is mahine tak", "output": {"tasks": ["Finalize proposal", "Complete the report"], "deadline": "this month", "people": [], "meetings": []}}
 {"input": "suno paani ki bottle le ani hai aglay do din mein", "output": {"tasks": ["Buy water bottle"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Need to review Sobia's report and send feedback", "output": {"tasks": ["Review Sobia's report and send feedback"], "deadline": null, "people": ["Sobia"], "meetings": []}}
-{"input": "sun apna phone charge karna hai wednesday tak", "output": {"tasks": ["Charge phone"], "deadline": "Wednesday", "people": [], "meetings": []}}
 {"input": "sun Omar ke sath meeting karni hai aur Zara se sign off lena hai by 6pm", "output": {"tasks": ["Meeting with Omar", "Get sign-off from Zara"], "deadline": "6pm", "people": ["Omar", "Zara"], "meetings": []}}
 {"input": "remember karna server update karna hai is weekend tak", "output": {"tasks": ["Update the server"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "ek important cheez client meeting hai aur report Sara ko bhejna hai", "output": {"tasks": ["Send report to Sara"], "deadline": null, "people": ["Sara"], "meetings": ["Client meeting"]}}
@@ -91,13 +78,10 @@
 {"input": "aaj ka rent pay karna hai aur I have to finalize the budget by EOD", "output": {"tasks": ["Pay rent", "Finalize the budget"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "kal wala quotation bhejna hai subah tak", "output": {"tasks": ["Send quotation"], "deadline": "by morning", "people": [], "meetings": []}}
 {"input": "jaldi se 1-on-1 hai boss ke sath", "output": {"tasks": [], "deadline": null, "people": ["boss"], "meetings": ["1-on-1 with boss"]}}
-{"input": "acha sun OPD token lena hai", "output": {"tasks": ["Get OPD token"], "deadline": null, "people": [], "meetings": []}}
 {"input": "by the way invoice Zara ko bhejna hai raat tak", "output": {"tasks": ["Send invoice to Zara"], "deadline": "by tonight", "people": ["Zara"], "meetings": []}}
 {"input": "urgent hai dry cleaning lane hai monday tak", "output": {"tasks": ["Pick up dry cleaning"], "deadline": "Monday", "people": [], "meetings": []}}
 {"input": "aaj ka board meeting hai", "output": {"tasks": [], "deadline": "day after tomorrow morning", "people": [], "meetings": ["Board meeting"]}}
-{"input": "please Kamran ko payment bhejna hai is hafte tak", "output": {"tasks": ["Send payment to Kamran"], "deadline": "this week", "people": ["Kamran"], "meetings": []}}
 {"input": "bhai form fill karna hai", "output": {"tasks": ["Fill the form"], "deadline": null, "people": [], "meetings": []}}
-{"input": "acha sun attendance mark karni hai aur bug fix karna hai aur report bhejna hai aglay do din mein", "output": {"tasks": ["Mark attendance", "Fix the bug", "Send report"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "bas deadline confirm karni hai Bilal se aur laptop charger lana hai thursday tak", "output": {"tasks": ["Confirm deadline with Bilal", "Buy laptop charger"], "deadline": "Thursday", "people": ["Bilal"], "meetings": []}}
 {"input": "sun team standup hai", "output": {"tasks": [], "deadline": null, "people": ["team"], "meetings": ["Team standup"]}}
 {"input": "kal wala gas bill pay karna hai aur I need to update Ayesha on the project status aur Mahnoor ko email bhejo", "output": {"tasks": ["Pay gas bill", "Update Ayesha on project status", "Email Mahnoor"], "deadline": null, "people": ["Ayesha", "Mahnoor"], "meetings": []}}
@@ -131,7 +115,6 @@
 {"input": "aaj ka Danish se sign off lena hai", "output": {"tasks": ["Get sign-off from Danish"], "deadline": null, "people": ["Danish"], "meetings": []}}
 {"input": "by the way grocery lani hai end of day", "output": {"tasks": ["Buy groceries"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "kal wala shoes polish karwane hain", "output": {"tasks": ["Polish shoes"], "deadline": null, "people": [], "meetings": []}}
-{"input": "bhai HR se sign off lena hai", "output": {"tasks": ["Get sign-off from HR"], "deadline": null, "people": ["HR"], "meetings": []}}
 {"input": "Farhan se baat karni hai aglay do din mein", "output": {"tasks": ["Talk to Farhan"], "deadline": "in two days", "people": ["Farhan"], "meetings": []}}
 {"input": "dekh follow up karna hai with boss regarding invoice tuesday tak", "output": {"tasks": ["Follow up with boss regarding invoice"], "deadline": "Tuesday", "people": ["boss"], "meetings": []}}
 {"input": "bas Raza ke sath meeting karni hai aur need to review the contract aur printer ink lani hai kal subah tak", "output": {"tasks": ["Meeting with Raza", "Review the contract", "Buy printer ink"], "deadline": "tomorrow morning", "people": ["Raza"], "meetings": []}}
@@ -139,9 +122,7 @@
 {"input": "remember karna quotation bhejna hai kal tak", "output": {"tasks": ["Send quotation"], "deadline": "tomorrow", "people": [], "meetings": []}}
 {"input": "groceries lane hain", "output": {"tasks": ["Buy groceries"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Need to review Ali's report and send feedback", "output": {"tasks": ["Review Ali's report and send feedback"], "deadline": null, "people": ["Ali"], "meetings": []}}
-{"input": "bas interview hai Fatima ka", "output": {"tasks": [], "deadline": null, "people": ["Fatima"], "meetings": ["Interview with Fatima"]}}
 {"input": "baad mein Amazon order track karna", "output": {"tasks": ["Track Amazon order"], "deadline": null, "people": [], "meetings": []}}
-{"input": "by the way presentation finalize karni hai aaj tak", "output": {"tasks": ["Finalize presentation"], "deadline": "today", "people": [], "meetings": []}}
 {"input": "Samina se milna hai", "output": {"tasks": ["Meet with Samina"], "deadline": null, "people": ["Samina"], "meetings": []}}
 {"input": "kal wala presentation finalize karni hai aur slides update karni hain aur medicine le ani hai is hafte tak", "output": {"tasks": ["Finalize presentation", "Update slides", "Get medicine"], "deadline": "this week", "people": [], "meetings": []}}
 {"input": "btw dry cleaning lane hai aglay do din mein", "output": {"tasks": ["Pick up dry cleaning"], "deadline": "in two days", "people": [], "meetings": []}}
@@ -150,7 +131,6 @@
 {"input": "I need to call Imran about the project update", "output": {"tasks": ["Call Imran about project update"], "deadline": null, "people": ["Imran"], "meetings": []}}
 {"input": "bas Khalid ke sath meeting hai aur Omar se approval lena hai", "output": {"tasks": ["Get approval from Omar"], "deadline": null, "people": ["Khalid", "Omar"], "meetings": ["Meeting with Khalid"]}}
 {"input": "btw code review karni hai", "output": {"tasks": ["Do code review"], "deadline": null, "people": [], "meetings": []}}
-{"input": "I have a meeting with Irfan tomorrow morning", "output": {"tasks": [], "deadline": "tomorrow morning", "people": ["Irfan"], "meetings": ["Meeting with Irfan"]}}
 {"input": "btw Omar se milna hai monday 10 baje aur Arif se baat karni hai", "output": {"tasks": ["Talk to Arif"], "deadline": "Monday 10am", "people": ["Omar", "Arif"], "meetings": ["Meeting with Omar"]}}
 {"input": "dekh OPD token lena hai", "output": {"tasks": ["Get OPD token"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Please send the proposal to Shakeel by end of day", "output": {"tasks": ["Send proposal to Shakeel"], "deadline": "end of day", "people": ["Shakeel"], "meetings": []}}
@@ -159,19 +139,15 @@
 {"input": "suno proposal finalize karni hai", "output": {"tasks": ["Finalize proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "please project ka status share karna hai Bushra ke sath aur report Tayyaba ko bhejna hai aur payment karna hai Shahid ko 3 baje tak", "output": {"tasks": ["Share project status with Bushra", "Send report to Tayyaba", "Make payment to Shahid"], "deadline": "3pm", "people": ["Bushra", "Tayyaba", "Shahid"], "meetings": []}}
 {"input": "bas bug fix karna hai", "output": {"tasks": ["Fix the bug"], "deadline": null, "people": [], "meetings": []}}
-{"input": "bhai laptop charger lana hai aur report complete karni hai", "output": {"tasks": ["Buy laptop charger", "Complete the report"], "deadline": null, "people": [], "meetings": []}}
 {"input": "dawa leni hai", "output": {"tasks": ["Get medicine"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bas interview hai Tayyaba ka", "output": {"tasks": [], "deadline": null, "people": ["Tayyaba"], "meetings": ["Interview with Tayyaba"]}}
 {"input": "I need to call Mehwish raat tak", "output": {"tasks": ["Call Mehwish"], "deadline": "by tonight", "people": ["Mehwish"], "meetings": []}}
 {"input": "kal wala report complete karni hai aur rent pay karna hai aur Ali ko email bhejo", "output": {"tasks": ["Complete the report", "Pay rent", "Email Ali"], "deadline": null, "people": ["Ali"], "meetings": []}}
 {"input": "remember karna fee jama karni hai tuesday tak", "output": {"tasks": ["Submit the fee"], "deadline": "Tuesday", "people": [], "meetings": []}}
 {"input": "sun I have to finalize the budget", "output": {"tasks": ["Finalize the budget"], "deadline": null, "people": [], "meetings": []}}
-{"input": "ek kaam hai gas bill pay karna hai aur follow up karna hai with sir regarding invoice aur meeting reschedule karni hai subah tak", "output": {"tasks": ["Pay gas bill", "Follow up with sir regarding invoice", "Reschedule the meeting"], "deadline": "by morning", "people": ["sir"], "meetings": []}}
 {"input": "ek kaam hai homework complete karna hai wednesday tak", "output": {"tasks": ["Complete homework"], "deadline": "Wednesday", "people": [], "meetings": []}}
 {"input": "acha sun Bilal ke sath call hai aur CV submit karni hai", "output": {"tasks": ["Submit CV"], "deadline": null, "people": ["Bilal"], "meetings": ["Call with Bilal"]}}
-{"input": "Need to review Waqas's report and send feedback", "output": {"tasks": ["Review Waqas's report and send feedback"], "deadline": null, "people": ["Waqas"], "meetings": []}}
 {"input": "btw Noor ke sath online meeting hai", "output": {"tasks": [], "deadline": null, "people": ["Noor"], "meetings": ["Online meeting with Noor"]}}
-{"input": "yar invoice Rizwan ko bhejna hai", "output": {"tasks": ["Send invoice to Rizwan"], "deadline": null, "people": ["Rizwan"], "meetings": []}}
 {"input": "ek kaam hai Aroha ko email karna report ke barey mein aur Sikander ko phone karo aur testing karni hai", "output": {"tasks": ["Email Aroha about the report", "Call Sikander", "Do testing"], "deadline": null, "people": ["Aroha", "Sikander"], "meetings": []}}
 {"input": "Ahsan ko call back karna hai aur Waqas ko email karna hai sunday tak", "output": {"tasks": ["Call back Ahsan", "Email Waqas"], "deadline": "Sunday", "people": ["Ahsan", "Waqas"], "meetings": []}}
 {"input": "acha sun utility bills pay karne hain aur form fill karna hai", "output": {"tasks": ["Pay utility bills", "Fill the form"], "deadline": null, "people": [], "meetings": []}}
@@ -197,7 +173,6 @@
 {"input": "kal wala team ko update karna hai aur testing karni hai aur report bhejna hai", "output": {"tasks": ["Update the team", "Do testing", "Send report"], "deadline": null, "people": ["team"], "meetings": []}}
 {"input": "acha sun deadline confirm karni hai Shakeel se aur project ka status share karna hai Farhan ke sath aur kuch cheezein order karni hain", "output": {"tasks": ["Confirm deadline with Shakeel", "Share project status with Farhan", "Place an order"], "deadline": null, "people": ["Shakeel", "Farhan"], "meetings": []}}
 {"input": "jaldi se quotation bhejna hai aur project ka status share karna hai Zara ke sath aur proposal finalize karni hai raat tak", "output": {"tasks": ["Send quotation", "Share project status with Zara", "Finalize proposal"], "deadline": "by tonight", "people": ["Zara"], "meetings": []}}
-{"input": "remember karna I need to call Zainab aur Sheraz ko phone karo aur testing karni hai", "output": {"tasks": ["Call Zainab", "Call Sheraz", "Do testing"], "deadline": null, "people": ["Zainab", "Sheraz"], "meetings": []}}
 {"input": "sun I need to update Farhan on the project status by EOD", "output": {"tasks": ["Update Farhan on project status"], "deadline": "end of day", "people": ["Farhan"], "meetings": []}}
 {"input": "report Farah ko bhejna hai thursday tak", "output": {"tasks": ["Send report to Farah"], "deadline": "Thursday", "people": ["Farah"], "meetings": []}}
 {"input": "kal wala meeting schedule karni hai", "output": {"tasks": ["Schedule a meeting"], "deadline": null, "people": [], "meetings": []}}
@@ -219,9 +194,7 @@
 {"input": "jaldi se bug fix karna hai aur Iqra ko ring karna hai aur proposal bhejna hai next friday", "output": {"tasks": ["Fix the bug", "Call Iqra", "Send proposal"], "deadline": "next Friday", "people": ["Iqra"], "meetings": []}}
 {"input": "suno server update karna hai aur appraisal form bhejna hai aur kuch cheezein order karni hain shaam tak", "output": {"tasks": ["Update the server", "Submit appraisal form", "Place an order"], "deadline": "by evening", "people": [], "meetings": []}}
 {"input": "yar medicine le ani hai", "output": {"tasks": ["Get medicine"], "deadline": null, "people": [], "meetings": []}}
-{"input": "oh haan subscription renew karni hai raat tak", "output": {"tasks": ["Renew subscription"], "deadline": "by tonight", "people": [], "meetings": []}}
 {"input": "btw Rabia ke sath online meeting hai aur I have to finalize the budget", "output": {"tasks": ["Finalize the budget"], "deadline": null, "people": ["Rabia"], "meetings": ["Online meeting with Rabia"]}}
-{"input": "btw I need to update Farah on the project status aur Mehwish se approval lena hai friday tak", "output": {"tasks": ["Update Farah on project status", "Get approval from Mehwish"], "deadline": "Friday", "people": ["Farah", "Mehwish"], "meetings": []}}
 {"input": "kal wala 1-on-1 hai Sadia ke sath aur report Tayyaba ko bhejna hai", "output": {"tasks": ["Send report to Tayyaba"], "deadline": "Tuesday 2pm", "people": ["Sadia", "Tayyaba"], "meetings": ["1-on-1 with Sadia"]}}
 {"input": "sun utility bills pay karne hain aur please send the report to Lubna aur Hamza ko call karna hai", "output": {"tasks": ["Pay utility bills", "Send report to Lubna", "Call Hamza"], "deadline": null, "people": ["Lubna", "Hamza"], "meetings": []}}
 {"input": "Schedule a call with Irfan for next week", "output": {"tasks": ["Schedule call with Irfan"], "deadline": "next week", "people": ["Irfan"], "meetings": []}}
@@ -235,7 +208,6 @@
 {"input": "ek important cheez Mansoor se feedback lena hai", "output": {"tasks": ["Get feedback from Mansoor"], "deadline": null, "people": ["Mansoor"], "meetings": []}}
 {"input": "bas Noor ko email bhejo aur CV submit karni hai aur I have to finalize the budget", "output": {"tasks": ["Email Noor", "Submit CV", "Finalize the budget"], "deadline": null, "people": ["Noor"], "meetings": []}}
 {"input": "remember karna invoice bhejna hai monday tak", "output": {"tasks": ["Send invoice"], "deadline": "Monday", "people": [], "meetings": []}}
-{"input": "report bhejna hai", "output": {"tasks": ["Send report"], "deadline": null, "people": [], "meetings": []}}
 {"input": "oh haan Adnan ke sath call hai", "output": {"tasks": [], "deadline": null, "people": ["Adnan"], "meetings": ["Call with Adnan"]}}
 {"input": "meeting schedule karni hai aur contract review karni hai", "output": {"tasks": ["Schedule a meeting", "Review the contract"], "deadline": null, "people": [], "meetings": []}}
 {"input": "stationery lani hai is hafte tak", "output": {"tasks": ["Get stationery"], "deadline": "this week", "people": [], "meetings": []}}
@@ -245,16 +217,13 @@
 {"input": "kal wala dry cleaning lane hai subah tak", "output": {"tasks": ["Pick up dry cleaning"], "deadline": "by morning", "people": [], "meetings": []}}
 {"input": "please I have to finalize the budget aur server update karna hai is weekend tak", "output": {"tasks": ["Finalize the budget", "Update the server"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "suno Tooba se sign off lena hai", "output": {"tasks": ["Get sign-off from Tooba"], "deadline": null, "people": ["Tooba"], "meetings": []}}
-{"input": "acha sun weekly meeting hai", "output": {"tasks": [], "deadline": null , "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "remember karna CEO ko email karna report ke barey mein aur PR merge karna hai raat tak", "output": {"tasks": ["Email CEO about the report", "Merge the PR"], "deadline": "by tonight", "people": ["CEO"], "meetings": []}}
-{"input": "remember karna attendance mark karni hai aur document ready karna hai", "output": {"tasks": ["Mark attendance", "Prepare document"], "deadline": null, "people": [], "meetings": []}}
 {"input": "ek kaam hai need to review the contract is weekend tak", "output": {"tasks": ["Review the contract"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "oh haan Sobia ko email karna report ke barey mein aur accounts ko invoice bhejna hai aur I need to call Raza kal subah tak", "output": {"tasks": ["Email Sobia about the report", "Send invoice to accounts", "Call Raza"], "deadline": "tomorrow morning", "people": ["Sobia", "accounts", "Raza"], "meetings": []}}
 {"input": "jaldi se homework complete karna hai is weekend tak", "output": {"tasks": ["Complete homework"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "btw assignment submit karni hai parson tak", "output": {"tasks": ["Submit assignment"], "deadline": "day after tomorrow", "people": [], "meetings": []}}
 {"input": "ek important cheez 1-on-1 hai Tooba ke sath", "output": {"tasks": [], "deadline": null, "people": ["Tooba"], "meetings": ["1-on-1 with Tooba"]}}
 {"input": "suno electricity bill pay karna hai aur document ready karna hai aur bill pay karna hai agla hafte tak", "output": {"tasks": ["Pay electricity bill", "Prepare document", "Pay the bill"], "deadline": "next week", "people": [], "meetings": []}}
-{"input": "ek important cheez Naveed ke sath call hai aur please send the report to Sikander", "output": {"tasks": ["Send report to Sikander"], "deadline": null, "people": ["Naveed", "Sikander"], "meetings": ["Call with Naveed"]}}
 {"input": "urgent hai Maryam ko email karna hai aur Naila ko call karna hai tuesday tak", "output": {"tasks": ["Email Maryam", "Call Naila"], "deadline": "Tuesday", "people": ["Maryam", "Naila"], "meetings": []}}
 {"input": "ek important cheez board meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Board meeting"]}}
 {"input": "dekh project review meeting hai aur electricity bill pay karna hai", "output": {"tasks": ["Pay electricity bill"], "deadline": null, "people": [], "meetings": ["Project review meeting"]}}
@@ -277,10 +246,8 @@
 {"input": "dekh medicine le ani hai aur presentation Sobia ko bhejna hai aur contract review karni hai thursday tak", "output": {"tasks": ["Get medicine", "Send presentation to Sobia", "Review the contract"], "deadline": "Thursday", "people": ["Sobia"], "meetings": []}}
 {"input": "remember karna doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Get CEO to sign off on the budget", "output": {"tasks": ["Get sign-off from CEO on budget"], "deadline": null, "people": ["CEO"], "meetings": []}}
-{"input": "remember karna I need to call Hina dopahar tak", "output": {"tasks": ["Call Hina"], "deadline": "by noon", "people": ["Hina"], "meetings": []}}
 {"input": "ek kaam hai Imran ke sath meeting karni hai saturday tak", "output": {"tasks": ["Meeting with Imran"], "deadline": "Saturday", "people": ["Imran"], "meetings": []}}
 {"input": "eventually wardrobe organize karni hai", "output": {"tasks": ["Organize wardrobe"], "deadline": null, "people": [], "meetings": []}}
-{"input": "koi jaldi nahi, blog post likhni hai", "output": {"tasks": ["Write blog post"], "deadline": null, "people": [], "meetings": []}}
 {"input": "ek kaam hai bug fix karna hai is hafte tak", "output": {"tasks": ["Fix the bug"], "deadline": "this week", "people": [], "meetings": []}}
 {"input": "meeting cancel karni hai aur PR merge karna hai aur payment karna hai Sana ko next friday", "output": {"tasks": ["Cancel the meeting", "Merge the PR", "Make payment to Sana"], "deadline": "next Friday", "people": ["Sana"], "meetings": []}}
 {"input": "aaram se old files delete karni hain", "output": {"tasks": ["Delete old files"], "deadline": null, "people": [], "meetings": []}}
@@ -288,7 +255,6 @@
 {"input": "fee jama karni hai", "output": {"tasks": ["Submit the fee"], "deadline": null, "people": [], "meetings": []}}
 {"input": "yar apna phone charge karna hai", "output": {"tasks": ["Charge phone"], "deadline": null, "people": [], "meetings": []}}
 {"input": "online form fill karna hai tuesday tak", "output": {"tasks": ["Fill online form"], "deadline": "Tuesday", "people": [], "meetings": []}}
-{"input": "Rizwan ke sath meeting karni hai aur contract sign karna hai kal tak", "output": {"tasks": ["Meeting with Rizwan", "Sign the contract"], "deadline": "tomorrow", "people": ["Rizwan"], "meetings": []}}
 {"input": "yar dry cleaning lane hai", "output": {"tasks": ["Pick up dry cleaning"], "deadline": null, "people": [], "meetings": []}}
 {"input": "sun printer ink lani hai", "output": {"tasks": ["Buy printer ink"], "deadline": null, "people": [], "meetings": []}}
 {"input": "sun invoice bhejna hai aur invoice Omer ko bhejna hai", "output": {"tasks": ["Send invoice", "Send invoice to Omer"], "deadline": null, "people": ["Omer"], "meetings": []}}
@@ -302,10 +268,9 @@
 {"input": "sun shoes polish karwane hain", "output": {"tasks": ["Polish shoes"], "deadline": null, "people": [], "meetings": []}}
 {"input": "jaldi se PR merge karna hai", "output": {"tasks": ["Merge the PR"], "deadline": null, "people": [], "meetings": []}}
 {"input": "ek important cheez medicine le ani hai", "output": {"tasks": ["Get medicine"], "deadline": null, "people": [], "meetings": []}}
-{"input": "ek important cheez subscription renew karni hai", "output": {"tasks": ["Renew subscription"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Need to send meeting notes to HR", "output": {"tasks": ["Send meeting notes to HR"], "deadline": null, "people": ["HR"], "meetings": []}}
 {"input": "Send the invoice to Tooba today", "output": {"tasks": ["Send invoice to Tooba"], "deadline": "today", "people": ["Tooba"], "meetings": []}}
-{"input": "jaldi se weekly meeting hai", "output": {"tasks": [], "deadline": null , "people": [], "meetings": ["Weekly meeting"]}}
+{"input": "jaldi se weekly meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "kal wala CEO ko payment bhejna hai", "output": {"tasks": ["Send payment to CEO"], "deadline": null, "people": ["CEO"], "meetings": []}}
 {"input": "oh haan testing karni hai aur contract review karni hai", "output": {"tasks": ["Do testing", "Review the contract"], "deadline": null, "people": [], "meetings": []}}
 {"input": "please demo call hai client ke sath aur Maryam se approval chahiye", "output": {"tasks": ["Get approval from Maryam"], "deadline": null, "people": ["Maryam"], "meetings": ["Demo call with client"]}}
@@ -332,10 +297,8 @@
 {"input": "bhai fee jama karni hai aur Tayyaba ko email bhejo", "output": {"tasks": ["Submit the fee", "Email Tayyaba"], "deadline": null, "people": ["Tayyaba"], "meetings": []}}
 {"input": "jaldi se I need to get Junaid to review the document", "output": {"tasks": ["Get Junaid to review the document"], "deadline": null, "people": ["Junaid"], "meetings": []}}
 {"input": "ek important cheez demo call hai client ke sath aur proposal Bilal ko bhejna hai", "output": {"tasks": ["Send proposal to Bilal"], "deadline": null, "people": ["Bilal"], "meetings": ["Demo call with client"]}}
-{"input": "sun report Sobia ko bhejna hai is weekend tak", "output": {"tasks": ["Send report to Sobia"], "deadline": "this weekend", "people": ["Sobia"], "meetings": []}}
 {"input": "acha sun team ko email karna report ke barey mein aur project ka status share karna hai Amna ke sath aur HR ko call karna hai", "output": {"tasks": ["Email team about the report", "Share project status with Amna", "Call HR"], "deadline": null, "people": ["team", "Amna", "HR"], "meetings": []}}
 {"input": "remember karna ATM se paise nikalne hain", "output": {"tasks": ["Withdraw cash from ATM"], "deadline": null, "people": [], "meetings": []}}
-{"input": "acha sun gas bill pay karna hai aur meeting schedule karni hai", "output": {"tasks": ["Pay gas bill", "Schedule a meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "by the way Aroha ko email karna report ke barey mein tuesday tak", "output": {"tasks": ["Email Aroha about the report"], "deadline": "Tuesday", "people": ["Aroha"], "meetings": []}}
 {"input": "proposal bhejna hai aur contract review karni hai agla hafte tak", "output": {"tasks": ["Send proposal", "Review the contract"], "deadline": "next week", "people": [], "meetings": []}}
 {"input": "suno Aroha ko payment bhejna hai", "output": {"tasks": ["Send payment to Aroha"], "deadline": null, "people": ["Aroha"], "meetings": []}}
@@ -353,8 +316,6 @@
 {"input": "Can you remind me to follow up with Rizwan?", "output": {"tasks": ["Follow up with Rizwan"], "deadline": null, "people": ["Rizwan"], "meetings": []}}
 {"input": "ek important cheez Rehan se confirm karna hai is mahine tak", "output": {"tasks": ["Confirm with Rehan"], "deadline": "this month", "people": ["Rehan"], "meetings": []}}
 {"input": "Hamza ko email karna hai", "output": {"tasks": ["Email Hamza"], "deadline": null, "people": ["Hamza"], "meetings": []}}
-{"input": "bhai Kamran ke sath online meeting hai", "output": {"tasks": [], "deadline": null, "people": ["Kamran"], "meetings": ["Online meeting with Kamran"]}}
-{"input": "ek kaam hai report complete karni hai", "output": {"tasks": ["Complete the report"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bhai Sobia se feedback lena hai aur electricity bill pay karna hai aur I have to finalize the budget", "output": {"tasks": ["Get feedback from Sobia", "Pay electricity bill", "Finalize the budget"], "deadline": null, "people": ["Sobia"], "meetings": []}}
 {"input": "remember karna contract review karni hai 5 baje tak", "output": {"tasks": ["Review the contract"], "deadline": "5pm", "people": [], "meetings": []}}
 {"input": "btw printer ink lani hai aur proposal ready karni hai monday tak", "output": {"tasks": ["Buy printer ink", "Prepare proposal"], "deadline": "Monday", "people": [], "meetings": []}}
@@ -370,11 +331,9 @@
 {"input": "Khalid ke sath call hai", "output": {"tasks": [], "deadline": null, "people": ["Khalid"], "meetings": ["Call with Khalid"]}}
 {"input": "bhai I have to finalize the budget aur proposal Shazia ko bhejna hai aur appraisal form bhejna hai", "output": {"tasks": ["Finalize the budget", "Send proposal to Shazia", "Submit appraisal form"], "deadline": null, "people": ["Shazia"], "meetings": []}}
 {"input": "bhai sir ko payment bhejna hai aur code review karni hai", "output": {"tasks": ["Send payment to sir", "Do code review"], "deadline": null, "people": ["sir"], "meetings": []}}
-{"input": "ek kaam hai I need to call Mansoor aur proposal ready karni hai aglay do din mein", "output": {"tasks": ["Call Mansoor", "Prepare proposal"], "deadline": "in two days", "people": ["Mansoor"], "meetings": []}}
 {"input": "jaldi se presentation Danish ko bhejna hai aur Rabia se feedback lena hai", "output": {"tasks": ["Send presentation to Danish", "Get feedback from Rabia"], "deadline": null, "people": ["Danish", "Rabia"], "meetings": []}}
 {"input": "urgent hai Amna ko email karna hai aur proposal bhejna hai aur accounts ko invoice bhejna hai tuesday tak", "output": {"tasks": ["Email Amna", "Send proposal", "Send invoice to accounts"], "deadline": "Tuesday", "people": ["Amna", "accounts"], "meetings": []}}
 {"input": "utility bills pay karne hain is weekend tak", "output": {"tasks": ["Pay utility bills"], "deadline": "this weekend", "people": [], "meetings": []}}
-{"input": "dekh fee jama karni hai aur gas bill pay karna hai aur meeting schedule karni hai", "output": {"tasks": ["Submit the fee", "Pay gas bill", "Schedule a meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "acha sun accounts ko reminder bhejna hai", "output": {"tasks": ["Send reminder to accounts"], "deadline": null, "people": ["accounts"], "meetings": []}}
 {"input": "urgent hai presentation Hina ko bhejna hai", "output": {"tasks": ["Send presentation to Hina"], "deadline": null, "people": ["Hina"], "meetings": []}}
 {"input": "need to send proposal to Kamran aur team ko update karna hai aur Saad se confirm karna hai", "output": {"tasks": ["Send proposal to Kamran", "Update the team", "Confirm with Saad"], "deadline": null, "people": ["Kamran", "team", "Saad"], "meetings": []}}
@@ -394,10 +353,8 @@
 {"input": "kal wala Omer ko mail karo update ke barey mein", "output": {"tasks": ["Email Omer an update"], "deadline": null, "people": ["Omer"], "meetings": []}}
 {"input": "kal wala team standup hai", "output": {"tasks": [], "deadline": "today evening", "people": ["team"], "meetings": ["Team standup"]}}
 {"input": "bhai I have to finalize the budget", "output": {"tasks": ["Finalize the budget"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Need to review team's report and send feedback", "output": {"tasks": ["Review team's report and send feedback"], "deadline": null, "people": ["team"], "meetings": []}}
 {"input": "Follow up with Ali on the pending approval", "output": {"tasks": ["Follow up with Ali on pending approval"], "deadline": null, "people": ["Ali"], "meetings": []}}
 {"input": "oh haan database backup lena hai", "output": {"tasks": ["Take database backup"], "deadline": null, "people": [], "meetings": []}}
-{"input": "oh haan form fill karna hai is hafte tak", "output": {"tasks": ["Fill the form"], "deadline": "this week", "people": [], "meetings": []}}
 {"input": "urgent hai Nadia ko email karna report ke barey mein dopahar tak", "output": {"tasks": ["Email Nadia about the report"], "deadline": "by noon", "people": ["Nadia"], "meetings": []}}
 {"input": "remember karna report Ayesha ko bhejna hai shaam tak", "output": {"tasks": ["Send report to Ayesha"], "deadline": "by evening", "people": ["Ayesha"], "meetings": []}}
 {"input": "suno email Faisal karna hai about the project", "output": {"tasks": ["Email Faisal about the project"], "deadline": null, "people": ["Faisal"], "meetings": []}}
@@ -411,7 +368,6 @@
 {"input": "urgent hai online form fill karna hai by 6pm", "output": {"tasks": ["Fill online form"], "deadline": "6pm", "people": [], "meetings": []}}
 {"input": "apna phone charge karna hai dopahar tak", "output": {"tasks": ["Charge phone"], "deadline": "by noon", "people": [], "meetings": []}}
 {"input": "dekh client meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Client meeting"]}}
-{"input": "please form fill karna hai", "output": {"tasks": ["Fill the form"], "deadline": null, "people": [], "meetings": []}}
 {"input": "aaj ka invoice bhejna hai", "output": {"tasks": ["Send invoice"], "deadline": null, "people": [], "meetings": []}}
 {"input": "sun Usman ko reminder bhejna hai parson tak", "output": {"tasks": ["Send reminder to Usman"], "deadline": "day after tomorrow", "people": ["Usman"], "meetings": []}}
 {"input": "bhai document ready karna hai", "output": {"tasks": ["Prepare document"], "deadline": null, "people": [], "meetings": []}}
@@ -419,7 +375,6 @@
 {"input": "please deadline confirm karni hai Sobia se by 6pm", "output": {"tasks": ["Confirm deadline with Sobia"], "deadline": "6pm", "people": ["Sobia"], "meetings": []}}
 {"input": "jaldi se Zara se milna hai monday 10 baje", "output": {"tasks": [], "deadline": "Monday 10am", "people": ["Zara"], "meetings": ["Meeting with Zara"]}}
 {"input": "jaldi se passport renew karna hai shaam tak", "output": {"tasks": ["Renew passport"], "deadline": "by evening", "people": [], "meetings": []}}
-{"input": "remember karna ATM se paise nikalne hain kal tak", "output": {"tasks": ["Withdraw cash from ATM"], "deadline": "tomorrow", "people": [], "meetings": []}}
 {"input": "remember karna code review karni hai is mahine tak", "output": {"tasks": ["Do code review"], "deadline": "this month", "people": [], "meetings": []}}
 {"input": "remember karna I need to call Rukhsana aur Ahmed ke sath meeting karni hai", "output": {"tasks": ["Call Rukhsana", "Meeting with Ahmed"], "deadline": null, "people": ["Rukhsana", "Ahmed"], "meetings": []}}
 {"input": "bhai client meeting hai aur bug fix karna hai", "output": {"tasks": ["Fix the bug"], "deadline": null, "people": [], "meetings": ["Client meeting"]}}
@@ -453,14 +408,11 @@
 {"input": "ek important cheez utility bills pay karne hain aur call Mansoor aur accounts ko invoice bhejna hai 3 baje tak", "output": {"tasks": ["Pay utility bills", "Call Mansoor", "Send invoice to accounts"], "deadline": "3pm", "people": ["Mansoor", "accounts"], "meetings": []}}
 {"input": "bas Noor ko reminder bhejna hai", "output": {"tasks": ["Send reminder to Noor"], "deadline": null, "people": ["Noor"], "meetings": []}}
 {"input": "acha sun Fatima se approval chahiye aaj tak", "output": {"tasks": ["Get approval from Fatima"], "deadline": "today", "people": ["Fatima"], "meetings": []}}
-{"input": "ek important cheez meeting schedule karni hai aur Aroha ko mail karo update ke barey mein", "output": {"tasks": ["Schedule a meeting", "Email Aroha an update"], "deadline": null, "people": ["Aroha"], "meetings": []}}
 {"input": "jaldi se accounts se milna hai kal dopahar", "output": {"tasks": [], "deadline": "tomorrow noon", "people": ["accounts"], "meetings": ["Meeting with accounts"]}}
-{"input": "ek kaam hai please send the report to Lubna kal subah tak", "output": {"tasks": ["Send report to Lubna"], "deadline": "tomorrow morning", "people": ["Lubna"], "meetings": []}}
 {"input": "bhai kuch cheezein order karni hain", "output": {"tasks": ["Place an order"], "deadline": null, "people": [], "meetings": []}}
 {"input": "aaj ka Zahid ko email bhejo aur database backup lena hai", "output": {"tasks": ["Email Zahid", "Take database backup"], "deadline": null, "people": ["Zahid"], "meetings": []}}
 {"input": "oh haan project ka status share karna hai Amna ke sath thursday tak", "output": {"tasks": ["Share project status with Amna"], "deadline": "Thursday", "people": ["Amna"], "meetings": []}}
 {"input": "yar report complete karni hai tuesday tak", "output": {"tasks": ["Complete the report"], "deadline": "Tuesday", "people": [], "meetings": []}}
-{"input": "slowly porani emails delete karni hain", "output": {"tasks": ["Delete old emails"], "deadline": null, "people": [], "meetings": []}}
 {"input": "acha sun presentation finalize karni hai aur database backup lena hai aur email Mahnoor karna hai about the project sunday tak", "output": {"tasks": ["Finalize presentation", "Take database backup", "Email Mahnoor about the project"], "deadline": "Sunday", "people": ["Mahnoor"], "meetings": []}}
 {"input": "kal wala Waqas se approval lena hai", "output": {"tasks": ["Get approval from Waqas"], "deadline": null, "people": ["Waqas"], "meetings": []}}
 {"input": "room clean karna hai kal subah tak", "output": {"tasks": ["Clean the room"], "deadline": "tomorrow morning", "people": [], "meetings": []}}
@@ -475,7 +427,6 @@
 {"input": "btw shoes polish karwane hain shaam tak", "output": {"tasks": ["Polish shoes"], "deadline": "by evening", "people": [], "meetings": []}}
 {"input": "dekh Sana ko update karo aur proposal bhejna hai is hafte tak", "output": {"tasks": ["Update Sana", "Send proposal"], "deadline": "this week", "people": ["Sana"], "meetings": []}}
 {"input": "acha sun Mehwish ko mail karo update ke barey mein aur fee jama karni hai aur appraisal form bhejna hai", "output": {"tasks": ["Email Mehwish an update", "Submit the fee", "Submit appraisal form"], "deadline": null, "people": ["Mehwish"], "meetings": []}}
-{"input": "bhai project ka status share karna hai Sheeza ke sath aur Aroha ko call karna hai aur presentation ready karni hai aaj tak", "output": {"tasks": ["Share project status with Sheeza", "Call Aroha", "Prepare presentation"], "deadline": "today", "people": ["Sheeza", "Aroha"], "meetings": []}}
 {"input": "I need to call team about the project update", "output": {"tasks": ["Call team about project update"], "deadline": null, "people": ["team"], "meetings": []}}
 {"input": "dekh proposal finalize karni hai", "output": {"tasks": ["Finalize proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Follow up with Laiba on the pending approval", "output": {"tasks": ["Follow up with Laiba on pending approval"], "deadline": null, "people": ["Laiba"], "meetings": []}}
@@ -488,8 +439,6 @@
 {"input": "yar call Khalid is weekend tak", "output": {"tasks": ["Call Khalid"], "deadline": "this weekend", "people": ["Khalid"], "meetings": []}}
 {"input": "urgent hai online form fill karna hai", "output": {"tasks": ["Fill online form"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bas bill pay karna hai", "output": {"tasks": ["Pay the bill"], "deadline": null, "people": [], "meetings": []}}
-{"input": "btw meeting reschedule karni hai", "output": {"tasks": ["Reschedule the meeting"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Rabia ke sath meeting hai aur I need to get Bushra to review the document", "output": {"tasks": ["Get Bushra to review the document"], "deadline": null, "people": ["Rabia", "Bushra"], "meetings": ["Meeting with Rabia"]}}
 {"input": "I need to finalize the budget by Wednesday aur Hassan se confirm karna hai", "output": {"tasks": ["Finalize the budget", "Confirm with Hassan"], "deadline": "Wednesday", "people": ["Hassan"], "meetings": []}}
 {"input": "urgent hai proposal ready karni hai", "output": {"tasks": ["Prepare proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "report bhejna hai aur payment karna hai Mahnoor ko", "output": {"tasks": ["Send report", "Make payment to Mahnoor"], "deadline": null, "people": ["Mahnoor"], "meetings": []}}
@@ -500,7 +449,6 @@
 {"input": "suno sir ko email karna hai", "output": {"tasks": ["Email sir"], "deadline": null, "people": ["sir"], "meetings": []}}
 {"input": "urgent hai deck bhejna hai aur follow up karna hai with Fatima regarding invoice", "output": {"tasks": ["Send the deck", "Follow up with Fatima regarding invoice"], "deadline": null, "people": ["Fatima"], "meetings": []}}
 {"input": "yar code review karni hai aur server update karna hai aur report bhejna hai", "output": {"tasks": ["Do code review", "Update the server", "Send report"], "deadline": null, "people": [], "meetings": []}}
-{"input": "jaldi se email Bushra karna hai about the project by 6pm", "output": {"tasks": ["Email Bushra about the project"], "deadline": "6pm", "people": ["Bushra"], "meetings": []}}
 {"input": "remember karna leave apply karni hai aur I need to update Zubair on the project status aur proposal ready karni hai", "output": {"tasks": ["Apply for leave", "Update Zubair on project status", "Prepare proposal"], "deadline": null, "people": ["Zubair"], "meetings": []}}
 {"input": "aaj ka CEO ko call karna hai", "output": {"tasks": ["Call CEO"], "deadline": null, "people": ["CEO"], "meetings": []}}
 {"input": "by the way deployment karna hai", "output": {"tasks": ["Do deployment"], "deadline": null, "people": [], "meetings": []}}
@@ -513,7 +461,6 @@
 {"input": "ek kaam hai Huma ke sath sync karni hai aur email Saad karna hai about the project", "output": {"tasks": ["Email Saad about the project"], "deadline": null, "people": ["Huma", "Saad"], "meetings": ["Sync with Huma"]}}
 {"input": "laptop update karna hai", "output": {"tasks": ["Update laptop"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bas I have to finalize the budget aur report Sadia ko bhejna hai aur team se approval chahiye", "output": {"tasks": ["Finalize the budget", "Send report to Sadia", "Get approval from team"], "deadline": null, "people": ["Sadia", "team"], "meetings": []}}
-{"input": "jab waqt mile attic clean karna hai", "output": {"tasks": ["Clean the attic"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Usman se milna hai kal subah aur Shahid ko email karna report ke barey mein", "output": {"tasks": ["Email Shahid about the report"], "deadline": "tomorrow morning", "people": ["Usman", "Shahid"], "meetings": ["Meeting with Usman"]}}
 {"input": "slides update karni hain kal subah tak", "output": {"tasks": ["Update slides"], "deadline": "tomorrow morning", "people": [], "meetings": []}}
 {"input": "code review karni hai aglay do din mein", "output": {"tasks": ["Do code review"], "deadline": "in two days", "people": [], "meetings": []}}
@@ -532,12 +479,8 @@
 {"input": "please project ka status share karna hai Laiba ke sath", "output": {"tasks": ["Share project status with Laiba"], "deadline": null, "people": ["Laiba"], "meetings": []}}
 {"input": "btw Mahnoor ko call back karna hai aur meeting schedule karni hai", "output": {"tasks": ["Call back Mahnoor", "Schedule a meeting"], "deadline": null, "people": ["Mahnoor"], "meetings": []}}
 {"input": "yar Ali ko call karna hai", "output": {"tasks": ["Call Ali"], "deadline": null, "people": ["Ali"], "meetings": []}}
-{"input": "sun presentation ready karni hai wednesday tak", "output": {"tasks": ["Prepare presentation"], "deadline": "Wednesday", "people": [], "meetings": []}}
 {"input": "meeting reschedule karni hai is hafte tak", "output": {"tasks": ["Reschedule the meeting"], "deadline": "this week", "people": [], "meetings": []}}
 {"input": "assignment submit karni hai", "output": {"tasks": ["Submit assignment"], "deadline": null, "people": [], "meetings": []}}
-{"input": "urgent hai demo call hai client ke sath", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Demo call with client"]}}
-{"input": "Huma ko mail karo update ke barey mein aur I need to update Sana on the project status", "output": {"tasks": ["Email Huma an update", "Update Sana on project status"], "deadline": null, "people": ["Huma", "Sana"], "meetings": []}}
-{"input": "aaj ka client meeting hai", "output": {"tasks": [], "deadline": "today evening", "people": [], "meetings": ["Client meeting"]}}
 {"input": "aaj ka accounts ko invoice bhejna hai aur proposal bhejna hai", "output": {"tasks": ["Send invoice to accounts", "Send proposal"], "deadline": null, "people": ["accounts"], "meetings": []}}
 {"input": "oh haan Rizwan ko mail karo update ke barey mein", "output": {"tasks": ["Email Rizwan an update"], "deadline": null, "people": ["Rizwan"], "meetings": []}}
 {"input": "suno Sikander ko update karo is mahine tak", "output": {"tasks": ["Update Sikander"], "deadline": "this month", "people": ["Sikander"], "meetings": []}}
@@ -551,7 +494,6 @@
 {"input": "jaldi se apna phone charge karna hai", "output": {"tasks": ["Charge phone"], "deadline": null, "people": [], "meetings": []}}
 {"input": "btw PR merge karna hai aur Sikander ko call back karna hai aur meeting schedule karni hai", "output": {"tasks": ["Merge the PR", "Call back Sikander", "Schedule a meeting"], "deadline": null, "people": ["Sikander"], "meetings": []}}
 {"input": "suno interview hai manager ka", "output": {"tasks": [], "deadline": null, "people": ["manager"], "meetings": ["Interview with manager"]}}
-{"input": "dekh proposal bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "remember karna Noor ke sath call hai", "output": {"tasks": [], "deadline": null, "people": ["Noor"], "meetings": ["Call with Noor"]}}
 {"input": "aaj ka presentation Arif ko bhejna hai", "output": {"tasks": ["Send presentation to Arif"], "deadline": null, "people": ["Arif"], "meetings": []}}
 {"input": "ek important cheez 1-on-1 hai Aroha ke sath aur Farhan ko email bhejo", "output": {"tasks": ["Email Farhan"], "deadline": null, "people": ["Aroha", "Farhan"], "meetings": ["1-on-1 with Aroha"]}}
@@ -567,7 +509,6 @@
 {"input": "dekh passport renew karna hai parson tak", "output": {"tasks": ["Renew passport"], "deadline": "day after tomorrow", "people": [], "meetings": []}}
 {"input": "oh haan demo call hai client ke sath aur CV submit karni hai", "output": {"tasks": ["Submit CV"], "deadline": null, "people": [], "meetings": ["Demo call with client"]}}
 {"input": "ek important cheez grocery lani hai", "output": {"tasks": ["Buy groceries"], "deadline": null, "people": [], "meetings": []}}
-{"input": "dekh I need to call Noor 5 baje tak", "output": {"tasks": ["Call Noor"], "deadline": "5pm", "people": ["Noor"], "meetings": []}}
 {"input": "proposal bhejna hai aur document ready karna hai saturday tak", "output": {"tasks": ["Send proposal", "Prepare document"], "deadline": "Saturday", "people": [], "meetings": []}}
 {"input": "btw I need to call Sikander saturday tak", "output": {"tasks": ["Call Sikander"], "deadline": "Saturday", "people": ["Sikander"], "meetings": []}}
 {"input": "suno manager ke sath call hai aur fee jama karni hai", "output": {"tasks": ["Submit the fee"], "deadline": null, "people": ["manager"], "meetings": ["Call with manager"]}}
@@ -586,14 +527,11 @@
 {"input": "Please prepare the presentation for Monday", "output": {"tasks": ["Prepare presentation"], "deadline": "Monday", "people": [], "meetings": []}}
 {"input": "jaldi se doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "aaj ka presentation ready karni hai aur need to send proposal to Aroha aur email Asad karna hai about the project", "output": {"tasks": ["Prepare presentation", "Send proposal to Aroha", "Email Asad about the project"], "deadline": null, "people": ["Aroha", "Asad"], "meetings": []}}
-{"input": "yar rent pay karna hai end of day", "output": {"tasks": ["Pay rent"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "bhai proposal finalize karni hai", "output": {"tasks": ["Finalize proposal"], "deadline": null, "people": [], "meetings": []}}
 {"input": "urgent hai medicine le ani hai kal tak", "output": {"tasks": ["Get medicine"], "deadline": "tomorrow", "people": [], "meetings": []}}
-{"input": "remember karna Shazia se follow up karna hai", "output": {"tasks": ["Follow up with Shazia"], "deadline": null, "people": ["Shazia"], "meetings": []}}
 {"input": "urgent hai board meeting hai aur Irfan se confirm karna hai", "output": {"tasks": ["Confirm with Irfan"], "deadline": null, "people": ["Irfan"], "meetings": ["Board meeting"]}}
 {"input": "quotation bhejna hai aur Hamza ko email karna hai aur meeting cancel karni hai", "output": {"tasks": ["Send quotation", "Email Hamza", "Cancel the meeting"], "deadline": null, "people": ["Hamza"], "meetings": []}}
 {"input": "suno payment karna hai Nadia ko thursday tak", "output": {"tasks": ["Make payment to Nadia"], "deadline": "Thursday", "people": ["Nadia"], "meetings": []}}
-{"input": "ek important cheez meeting schedule karni hai aur call Hamza aur report bhejna hai", "output": {"tasks": ["Schedule a meeting", "Call Hamza", "Send report"], "deadline": null, "people": ["Hamza"], "meetings": []}}
 {"input": "sun passport renew karna hai kal subah tak", "output": {"tasks": ["Renew passport"], "deadline": "tomorrow morning", "people": [], "meetings": []}}
 {"input": "kal wala gas bill pay karna hai aur Sheeza ko email karna hai aur email send karna hai Mansoor ko", "output": {"tasks": ["Pay gas bill", "Email Sheeza", "Send email to Mansoor"], "deadline": null, "people": ["Sheeza", "Mansoor"], "meetings": []}}
 {"input": "dekh I need to call Sara aur payment karna hai Iqra ko", "output": {"tasks": ["Call Sara", "Make payment to Iqra"], "deadline": null, "people": ["Sara", "Iqra"], "meetings": []}}
@@ -611,7 +549,6 @@
 {"input": "OPD token lena hai end of day", "output": {"tasks": ["Get OPD token"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "oh haan bill pay karna hai subah tak", "output": {"tasks": ["Pay the bill"], "deadline": "by morning", "people": [], "meetings": []}}
 {"input": "kal wala Sadia ko email bhejo tuesday tak", "output": {"tasks": ["Email Sadia"], "deadline": "Tuesday", "people": ["Sadia"], "meetings": []}}
-{"input": "bas proposal bhejna hai aur database backup lena hai aur report complete karni hai 5 baje tak", "output": {"tasks": ["Send proposal", "Take database backup", "Complete the report"], "deadline": "5pm", "people": [], "meetings": []}}
 {"input": "bas please send the report to sir aur database backup lena hai aur leave apply karni hai by 6pm", "output": {"tasks": ["Send report to sir", "Take database backup", "Apply for leave"], "deadline": "6pm", "people": ["sir"], "meetings": []}}
 {"input": "kal wala Hamza se milna hai thursday 4 baje aur grocery lani hai", "output": {"tasks": ["Buy groceries"], "deadline": "Thursday 4pm", "people": ["Hamza"], "meetings": ["Meeting with Hamza"]}}
 {"input": "remember karna team standup hai aur invoice Zainab ko bhejna hai", "output": {"tasks": ["Send invoice to Zainab"], "deadline": null, "people": ["team", "Zainab"], "meetings": ["Team standup"]}}
@@ -627,7 +564,6 @@
 {"input": "btw proposal bhejna hai aur medicine le ani hai", "output": {"tasks": ["Send proposal", "Get medicine"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Send the invoice to Rabia today", "output": {"tasks": ["Send invoice to Rabia"], "deadline": "today", "people": ["Rabia"], "meetings": []}}
 {"input": "bhai Farah ko ring karna hai aur Usman se baat karni hai aur presentation Iqra ko bhejna hai is weekend tak", "output": {"tasks": ["Call Farah", "Talk to Usman", "Send presentation to Iqra"], "deadline": "this weekend", "people": ["Farah", "Usman", "Iqra"], "meetings": []}}
-{"input": "oh haan files arrange karni hain", "output": {"tasks": ["Arrange files"], "deadline": null, "people": [], "meetings": []}}
 {"input": "follow up karna hai with Mahnoor regarding invoice aur deployment karna hai friday tak", "output": {"tasks": ["Follow up with Mahnoor regarding invoice", "Do deployment"], "deadline": "Friday", "people": ["Mahnoor"], "meetings": []}}
 {"input": "bas appraisal form bhejna hai aur boss ko reminder bhejna hai aur fee jama karni hai", "output": {"tasks": ["Submit appraisal form", "Send reminder to boss", "Submit the fee"], "deadline": null, "people": ["boss"], "meetings": []}}
 {"input": "urgent hai room clean karna hai by 6pm", "output": {"tasks": ["Clean the room"], "deadline": "6pm", "people": [], "meetings": []}}
@@ -645,8 +581,6 @@
 {"input": "dekh weekly meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "btw I need to call Naila", "output": {"tasks": ["Call Naila"], "deadline": null, "people": ["Naila"], "meetings": []}}
 {"input": "kal wala testing karni hai", "output": {"tasks": ["Do testing"], "deadline": null, "people": [], "meetings": []}}
-{"input": "kal wala attendance mark karni hai aglay do din mein", "output": {"tasks": ["Mark attendance"], "deadline": "in two days", "people": [], "meetings": []}}
-{"input": "I need to check in with Zubair about the delivery", "output": {"tasks": ["Check in with Zubair about delivery"], "deadline": null, "people": ["Zubair"], "meetings": []}}
 {"input": "acha sun Ayesha ko email karna report ke barey mein aur kuch cheezein order karni hain aur rent pay karna hai shaam tak", "output": {"tasks": ["Email Ayesha about the report", "Place an order", "Pay rent"], "deadline": "by evening", "people": ["Ayesha"], "meetings": []}}
 {"input": "I need to onboard Waqas to the system before July 2027", "output": {"tasks": ["Onboard Waqas"], "deadline": "before July 2027", "people": ["Waqas"], "meetings": []}}
 {"input": "ek kaam hai rent pay karna hai is mahine ke end tak", "output": {"tasks": ["Pay rent"], "deadline": "end of this month", "people": [], "meetings": []}}
@@ -660,7 +594,6 @@
 {"input": "alarm set karni hai January mein", "output": {"tasks": ["Set the alarm"], "deadline": "January", "people": [], "meetings": []}}
 {"input": "remember karna accounts ko invoice bhejna hai aur presentation ready karni hai June ke end tak", "output": {"tasks": ["Send invoice to accounts", "Prepare presentation"], "deadline": "end of June", "people": ["accounts"], "meetings": []}}
 {"input": "aaj ka Ahsan se milna hai December ke second week mein", "output": {"tasks": [], "deadline": "second week of December", "people": ["Ahsan"], "meetings": ["Meeting with Ahsan"]}}
-{"input": "ek kaam hai Adnan ke sath meeting karni hai aur proposal ready karni hai Q4 tak", "output": {"tasks": ["Meeting with Adnan", "Prepare proposal"], "deadline": "Q4", "people": ["Adnan"], "meetings": []}}
 {"input": "ek kaam hai rent pay karna hai before 1 January 2028", "output": {"tasks": ["Pay rent"], "deadline": "before 1 January 2028", "people": [], "meetings": []}}
 {"input": "dekh board meeting hai aur slides update karni hain aglay quarter mein", "output": {"tasks": ["Update slides"], "deadline": "next quarter", "people": [], "meetings": ["Board meeting"]}}
 {"input": "ek important cheez rent pay karna hai aur email send karna hai Bushra ko by 15 July", "output": {"tasks": ["Pay rent", "Send email to Bushra"], "deadline": "15 July", "people": ["Bushra"], "meetings": []}}
@@ -670,8 +603,6 @@
 {"input": "remember karna deck bhejna hai next January", "output": {"tasks": ["Send the deck"], "deadline": "next January", "people": [], "meetings": []}}
 {"input": "acha sun stationery lani hai next friday", "output": {"tasks": ["Get stationery"], "deadline": "next Friday", "people": [], "meetings": []}}
 {"input": "btw grocery lani hai", "output": {"tasks": ["Buy groceries"], "deadline": null, "people": [], "meetings": []}}
-{"input": "bhai Sana se sign off lena hai aur I need to get CEO to review the document", "output": {"tasks": ["Get sign-off from Sana", "Get CEO to review the document"], "deadline": null, "people": ["Sana", "CEO"], "meetings": []}}
-{"input": "please online form fill karna hai wednesday tak", "output": {"tasks": ["Fill online form"], "deadline": "Wednesday", "people": [], "meetings": []}}
 {"input": "Can you remind me to follow up with Tooba?", "output": {"tasks": ["Follow up with Tooba"], "deadline": null, "people": ["Tooba"], "meetings": []}}
 {"input": "yar email send karna hai Nadia ko aur document ready karna hai aur accounts ko invoice bhejna hai subah tak", "output": {"tasks": ["Send email to Nadia", "Prepare document", "Send invoice to accounts"], "deadline": "by morning", "people": ["Nadia", "accounts"], "meetings": []}}
 {"input": "aaj ka weekly meeting hai aur presentation finalize karni hai", "output": {"tasks": ["Finalize presentation"], "deadline": "tomorrow morning", "people": [], "meetings": ["Weekly meeting"]}}
@@ -681,7 +612,6 @@
 {"input": "suno Junaid ke sath online meeting hai aur client ko call karna hai", "output": {"tasks": ["Call client"], "deadline": null, "people": ["Junaid", "client"], "meetings": ["Online meeting with Junaid"]}}
 {"input": "by the way email send karna hai boss ko aur proposal finalize karni hai aur CV submit karni hai", "output": {"tasks": ["Send email to boss", "Finalize proposal", "Submit CV"], "deadline": null, "people": ["boss"], "meetings": []}}
 {"input": "bhai Imran ko email bhejo aur leave apply karni hai aur deck bhejna hai", "output": {"tasks": ["Email Imran", "Apply for leave", "Send the deck"], "deadline": null, "people": ["Imran"], "meetings": []}}
-{"input": "kal wala board meeting hai aur Tariq se feedback lena hai", "output": {"tasks": ["Get feedback from Tariq"], "deadline": "Friday 9am", "people": ["Tariq"], "meetings": ["Board meeting"]}}
 {"input": "bill pay karna hai aur Sheraz ko email karna report ke barey mein", "output": {"tasks": ["Pay the bill", "Email Sheraz about the report"], "deadline": null, "people": ["Sheraz"], "meetings": []}}
 {"input": "aaj ka team ko update karna hai aur client ko mail karo update ke barey mein 5 baje tak", "output": {"tasks": ["Update the team", "Email client an update"], "deadline": "5pm", "people": ["team", "client"], "meetings": []}}
 {"input": "aaj ka shoes polish karwane hain", "output": {"tasks": ["Polish shoes"], "deadline": null, "people": [], "meetings": []}}
@@ -695,11 +625,9 @@
 {"input": "dekh Zainab ko reminder bhejna hai", "output": {"tasks": ["Send reminder to Zainab"], "deadline": null, "people": ["Zainab"], "meetings": []}}
 {"input": "HR se meeting hai aur laptop charger lana hai", "output": {"tasks": ["Buy laptop charger"], "deadline": null, "people": ["HR"], "meetings": ["Meeting with HR"]}}
 {"input": "oh haan presentation finalize karni hai", "output": {"tasks": ["Finalize presentation"], "deadline": null, "people": [], "meetings": []}}
-{"input": "baad mein Netflix watchlist update karni hai", "output": {"tasks": ["Update Netflix watchlist"], "deadline": null, "people": [], "meetings": []}}
 {"input": "jaldi se meeting reschedule karni hai aaj tak", "output": {"tasks": ["Reschedule the meeting"], "deadline": "today", "people": [], "meetings": []}}
 {"input": "ek important cheez Ali se feedback lena hai aur bug fix karna hai aur I need to update Zahid on the project status tuesday tak", "output": {"tasks": ["Get feedback from Ali", "Fix the bug", "Update Zahid on project status"], "deadline": "Tuesday", "people": ["Ali", "Zahid"], "meetings": []}}
 {"input": "oh haan printer ink lani hai aur need to send proposal to Huma aur testing karni hai", "output": {"tasks": ["Buy printer ink", "Send proposal to Huma", "Do testing"], "deadline": null, "people": ["Huma"], "meetings": []}}
-{"input": "ek important cheez Ahsan ko reminder bhejna hai aur need to send proposal to Sheeza 3 baje tak", "output": {"tasks": ["Send reminder to Ahsan", "Send proposal to Sheeza"], "deadline": "3pm", "people": ["Ahsan", "Sheeza"], "meetings": []}}
 {"input": "dekh payment karna hai Faisal ko aaj tak", "output": {"tasks": ["Make payment to Faisal"], "deadline": "today", "people": ["Faisal"], "meetings": []}}
 {"input": "jaldi se project review meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Project review meeting"]}}
 {"input": "btw invoice bhejna hai aur utility bills pay karne hain", "output": {"tasks": ["Send invoice", "Pay utility bills"], "deadline": null, "people": [], "meetings": []}}
@@ -722,18 +650,15 @@
 {"input": "suno follow up karna hai with HR regarding invoice aur HR ko email bhejo monday tak", "output": {"tasks": ["Follow up with HR regarding invoice", "Email HR"], "deadline": "Monday", "people": ["HR"], "meetings": []}}
 {"input": "testing karni hai aur rent pay karna hai aur need to review the contract monday tak", "output": {"tasks": ["Do testing", "Pay rent", "Review the contract"], "deadline": "Monday", "people": [], "meetings": []}}
 {"input": "dekh slides update karni hain aur report complete karni hai aur Asad ke sath meeting karni hai subah tak", "output": {"tasks": ["Update slides", "Complete the report", "Meeting with Asad"], "deadline": "by morning", "people": ["Asad"], "meetings": []}}
-{"input": "urgent hai Rukhsana ke sath sync karni hai", "output": {"tasks": [], "deadline": null, "people": ["Rukhsana"], "meetings": ["Sync with Rukhsana"]}}
 {"input": "please bill pay karna hai aur slides update karni hain", "output": {"tasks": ["Pay the bill", "Update slides"], "deadline": null, "people": [], "meetings": []}}
 {"input": "by the way proposal bhejna hai aur deadline confirm karni hai Zainab se", "output": {"tasks": ["Send proposal", "Confirm deadline with Zainab"], "deadline": null, "people": ["Zainab"], "meetings": []}}
 {"input": "when you get time, Bushra se feedback lo", "output": {"tasks": ["Get feedback from Bushra"], "deadline": null, "people": ["Bushra"], "meetings": []}}
-{"input": "oh haan Faisal ko call back karna hai aur proposal ready karni hai aur Sara ko email karna hai", "output": {"tasks": ["Call back Faisal", "Prepare proposal", "Email Sara"], "deadline": null, "people": ["Faisal", "Sara"], "meetings": []}}
 {"input": "bas email Mansoor karna hai about the project", "output": {"tasks": ["Email Mansoor about the project"], "deadline": null, "people": ["Mansoor"], "meetings": []}}
 {"input": "Prepare agenda for Friday's meeting", "output": {"tasks": ["Prepare meeting agenda"], "deadline": "Friday", "people": [], "meetings": []}}
 {"input": "aaram se warranty claim fill karni hai", "output": {"tasks": ["Fill warranty claim"], "deadline": null, "people": [], "meetings": []}}
 {"input": "by the way CEO ko call karna hai aglay do din mein", "output": {"tasks": ["Call CEO"], "deadline": "in two days", "people": ["CEO"], "meetings": []}}
 {"input": "yar contract sign karna hai 3 baje tak", "output": {"tasks": ["Sign the contract"], "deadline": "3pm", "people": [], "meetings": []}}
 {"input": "jaldi se call Farah aur quotation bhejna hai aur electricity bill pay karna hai tuesday tak", "output": {"tasks": ["Call Farah", "Send quotation", "Pay electricity bill"], "deadline": "Tuesday", "people": ["Farah"], "meetings": []}}
-{"input": "ek important cheez bill pay karna hai", "output": {"tasks": ["Pay the bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "form fill karna hai aur report bhejna hai aaj tak", "output": {"tasks": ["Fill the form", "Send report"], "deadline": "today", "people": [], "meetings": []}}
 {"input": "yar car service karwani hai by EOD", "output": {"tasks": ["Get car serviced"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "sun Fatima se baat karni hai aur need to review the contract aur Saad ko reminder bhejna hai", "output": {"tasks": ["Talk to Fatima", "Review the contract", "Send reminder to Saad"], "deadline": null, "people": ["Fatima", "Saad"], "meetings": []}}
@@ -742,7 +667,7 @@
 {"input": "btw report Maryam ko bhejna hai aur Tooba ko payment bhejna hai", "output": {"tasks": ["Send report to Maryam", "Send payment to Tooba"], "deadline": null, "people": ["Maryam", "Tooba"], "meetings": []}}
 {"input": "Need to send meeting notes to Adnan", "output": {"tasks": ["Send meeting notes to Adnan"], "deadline": null, "people": ["Adnan"], "meetings": []}}
 {"input": "suno board meeting hai aur deck bhejna hai", "output": {"tasks": ["Send the deck"], "deadline": null, "people": [], "meetings": ["Board meeting"]}}
-{"input": "ek kaam hai weekly meeting hai aur proposal bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": null , "people": [], "meetings": ["Weekly meeting"]}}
+{"input": "ek kaam hai weekly meeting hai aur proposal bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": null, "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "suno rent pay karna hai end of day", "output": {"tasks": ["Pay rent"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "by the way gas bill pay karna hai", "output": {"tasks": ["Pay gas bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "yar server update karna hai", "output": {"tasks": ["Update the server"], "deadline": null, "people": [], "meetings": []}}
@@ -757,16 +682,12 @@
 {"input": "I need to call Shazia", "output": {"tasks": ["Call Shazia"], "deadline": null, "people": ["Shazia"], "meetings": []}}
 {"input": "project ka status share karna hai Mahnoor ke sath", "output": {"tasks": ["Share project status with Mahnoor"], "deadline": null, "people": ["Mahnoor"], "meetings": []}}
 {"input": "presentation boss ko bhejna hai aur Sheraz se feedback lena hai", "output": {"tasks": ["Send presentation to boss", "Get feedback from Sheraz"], "deadline": null, "people": ["boss", "Sheraz"], "meetings": []}}
-{"input": "PR merge karna hai aur call Waseem aur Maryam ko email karna hai thursday tak", "output": {"tasks": ["Merge the PR", "Call Waseem", "Email Maryam"], "deadline": "Thursday", "people": ["Waseem", "Maryam"], "meetings": []}}
-{"input": "demo call hai client ke sath aur email send karna hai Sheraz ko", "output": {"tasks": ["Send email to Sheraz"], "deadline": null, "people": ["Sheraz"], "meetings": ["Demo call with client"]}}
 {"input": "I have a meeting with Huma tomorrow morning", "output": {"tasks": [], "deadline": "tomorrow morning", "people": ["Huma"], "meetings": ["Meeting with Huma"]}}
 {"input": "remember karna Bushra se baat karni hai", "output": {"tasks": ["Talk to Bushra"], "deadline": null, "people": ["Bushra"], "meetings": []}}
 {"input": "yar interview hai Adnan ka", "output": {"tasks": [], "deadline": null, "people": ["Adnan"], "meetings": ["Interview with Adnan"]}}
 {"input": "Farah se sign off lena hai", "output": {"tasks": ["Get sign-off from Farah"], "deadline": null, "people": ["Farah"], "meetings": []}}
 {"input": "sun board meeting hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Board meeting"]}}
 {"input": "please I need to call Lubna", "output": {"tasks": ["Call Lubna"], "deadline": null, "people": ["Lubna"], "meetings": []}}
-{"input": "yar contract sign karna hai raat tak", "output": {"tasks": ["Sign the contract"], "deadline": "by tonight", "people": [], "meetings": []}}
-{"input": "aaram se room organize karna hai", "output": {"tasks": ["Organize the room"], "deadline": null, "people": [], "meetings": []}}
 {"input": "urgent hai deck bhejna hai aur quotation bhejna hai aur CV submit karni hai 3 baje tak", "output": {"tasks": ["Send the deck", "Send quotation", "Submit CV"], "deadline": "3pm", "people": [], "meetings": []}}
 {"input": "oh haan Bushra ko update karo aur Noor ko call karna hai aur Ahmed se baat karni hai", "output": {"tasks": ["Update Bushra", "Call Noor", "Talk to Ahmed"], "deadline": null, "people": ["Bushra", "Noor", "Ahmed"], "meetings": []}}
 {"input": "acha sun proposal bhejna hai", "output": {"tasks": ["Send proposal"], "deadline": null, "people": [], "meetings": []}}
@@ -792,11 +713,9 @@
 {"input": "ek important cheez document ready karna hai aur appraisal form bhejna hai end of day", "output": {"tasks": ["Prepare document", "Submit appraisal form"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "urgent hai presentation ready karni hai aur follow up karna hai with Naila regarding invoice", "output": {"tasks": ["Prepare presentation", "Follow up with Naila regarding invoice"], "deadline": null, "people": ["Naila"], "meetings": []}}
 {"input": "bhai Hassan se confirm karna hai", "output": {"tasks": ["Confirm with Hassan"], "deadline": null, "people": ["Hassan"], "meetings": []}}
-{"input": "ek kaam hai contract sign karna hai aur electricity bill pay karna hai is hafte tak", "output": {"tasks": ["Sign the contract", "Pay electricity bill"], "deadline": "this week", "people": [], "meetings": []}}
 {"input": "urgent hai Irfan se confirm karna hai aur email send karna hai Naveed ko", "output": {"tasks": ["Confirm with Irfan", "Send email to Naveed"], "deadline": null, "people": ["Irfan", "Naveed"], "meetings": []}}
 {"input": "interview hai Junaid ka", "output": {"tasks": [], "deadline": null, "people": ["Junaid"], "meetings": ["Interview with Junaid"]}}
 {"input": "kal wala printer ink lani hai aur Zara ko payment bhejna hai aur CV submit karni hai parson tak", "output": {"tasks": ["Buy printer ink", "Send payment to Zara", "Submit CV"], "deadline": "day after tomorrow", "people": ["Zara"], "meetings": []}}
-{"input": "by the way stationery lani hai aur Sheeza ko payment bhejna hai", "output": {"tasks": ["Get stationery", "Send payment to Sheeza"], "deadline": null, "people": ["Sheeza"], "meetings": []}}
 {"input": "presentation ready karni hai", "output": {"tasks": ["Prepare presentation"], "deadline": null, "people": [], "meetings": []}}
 {"input": "dekh gas bill pay karna hai", "output": {"tasks": ["Pay gas bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Rizwan se baat karni hai saturday tak", "output": {"tasks": ["Talk to Rizwan"], "deadline": "Saturday", "people": ["Rizwan"], "meetings": []}}
@@ -806,14 +725,12 @@
 {"input": "dekh CV submit karni hai", "output": {"tasks": ["Submit CV"], "deadline": null, "people": [], "meetings": []}}
 {"input": "assignment submit karni hai aaj tak", "output": {"tasks": ["Submit assignment"], "deadline": "today", "people": [], "meetings": []}}
 {"input": "interview hai Aroha ka", "output": {"tasks": [], "deadline": null, "people": ["Aroha"], "meetings": ["Interview with Aroha"]}}
-{"input": "btw laptop charger lana hai", "output": {"tasks": ["Buy laptop charger"], "deadline": null, "people": [], "meetings": []}}
 {"input": "printer ink lani hai aglay do din mein", "output": {"tasks": ["Buy printer ink"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Rukhsana ko phone karo aur server update karna hai aur report Rehan ko bhejna hai", "output": {"tasks": ["Call Rukhsana", "Update the server", "Send report to Rehan"], "deadline": null, "people": ["Rukhsana", "Rehan"], "meetings": []}}
 {"input": "aaj ka Bushra ke sath online meeting hai", "output": {"tasks": [], "deadline": "tomorrow 3pm", "people": ["Bushra"], "meetings": ["Online meeting with Bushra"]}}
 {"input": "bas Imran ko email karna report ke barey mein shaam tak", "output": {"tasks": ["Email Imran about the report"], "deadline": "by evening", "people": ["Imran"], "meetings": []}}
 {"input": "dekh meeting reschedule karni hai", "output": {"tasks": ["Reschedule the meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "please apna phone charge karna hai dopahar tak", "output": {"tasks": ["Charge phone"], "deadline": "by noon", "people": [], "meetings": []}}
-{"input": "electricity bill pay karna hai aaj", "output": {"tasks": ["Pay electricity bill"], "deadline": "today", "people": [], "meetings": []}}
 {"input": "oh haan paani ki bottle le ani hai", "output": {"tasks": ["Buy water bottle"], "deadline": null, "people": [], "meetings": []}}
 {"input": "ek important cheez payment karna hai Omer ko", "output": {"tasks": ["Make payment to Omer"], "deadline": null, "people": ["Omer"], "meetings": []}}
 {"input": "acha sun 1-on-1 hai Huma ke sath", "output": {"tasks": [], "deadline": null, "people": ["Huma"], "meetings": ["1-on-1 with Huma"]}}
@@ -831,7 +748,6 @@
 {"input": "by the way call Zubair aur fee jama karni hai", "output": {"tasks": ["Call Zubair", "Submit the fee"], "deadline": null, "people": ["Zubair"], "meetings": []}}
 {"input": "suno Zubair ko email bhejo", "output": {"tasks": ["Email Zubair"], "deadline": null, "people": ["Zubair"], "meetings": []}}
 {"input": "dekh Shahid ke sath meeting karni hai aur project ka status share karna hai Naveed ke sath", "output": {"tasks": ["Meeting with Shahid", "Share project status with Naveed"], "deadline": null, "people": ["Shahid", "Naveed"], "meetings": []}}
-{"input": "ek important cheez follow up karna hai with boss regarding invoice", "output": {"tasks": ["Follow up with boss regarding invoice"], "deadline": null, "people": ["boss"], "meetings": []}}
 {"input": "sun presentation ready karni hai aur accounts se approval chahiye aur I need to call Khalid is weekend tak", "output": {"tasks": ["Prepare presentation", "Get approval from accounts", "Call Khalid"], "deadline": "this weekend", "people": ["accounts", "Khalid"], "meetings": []}}
 {"input": "urgent hai code review karni hai shaam tak", "output": {"tasks": ["Do code review"], "deadline": "by evening", "people": [], "meetings": []}}
 {"input": "bhai project review meeting hai aur meeting reschedule karni hai", "output": {"tasks": ["Reschedule the meeting"], "deadline": null, "people": [], "meetings": ["Project review meeting"]}}
@@ -851,7 +767,6 @@
 {"input": "utility bills pay karne hain aur server update karna hai aur I need to update Waseem on the project status", "output": {"tasks": ["Pay utility bills", "Update the server", "Update Waseem on project status"], "deadline": null, "people": ["Waseem"], "meetings": []}}
 {"input": "Get Rizwan to sign off on the budget", "output": {"tasks": ["Get sign-off from Rizwan on budget"], "deadline": null, "people": ["Rizwan"], "meetings": []}}
 {"input": "dekh payment karna hai Sara ko shaam tak", "output": {"tasks": ["Make payment to Sara"], "deadline": "by evening", "people": ["Sara"], "meetings": []}}
-{"input": "suno Rehan ke sath meeting karni hai aur proposal finalize karni hai", "output": {"tasks": ["Meeting with Rehan", "Finalize proposal"], "deadline": null, "people": ["Rehan"], "meetings": []}}
 {"input": "Zara ke sath meeting hai aur presentation ready karni hai", "output": {"tasks": ["Prepare presentation"], "deadline": null, "people": ["Zara"], "meetings": ["Meeting with Zara"]}}
 {"input": "jaldi se Asad se sign off lena hai aur project ka status share karna hai Sumera ke sath aur Mehwish se confirm karna hai tuesday tak", "output": {"tasks": ["Get sign-off from Asad", "Share project status with Sumera", "Confirm with Mehwish"], "deadline": "Tuesday", "people": ["Asad", "Sumera", "Mehwish"], "meetings": []}}
 {"input": "I need to check in with Lubna about the delivery", "output": {"tasks": ["Check in with Lubna about delivery"], "deadline": null, "people": ["Lubna"], "meetings": []}}
@@ -871,18 +786,13 @@
 {"input": "oh haan OPD token lena hai kal subah tak", "output": {"tasks": ["Get OPD token"], "deadline": "tomorrow morning", "people": [], "meetings": []}}
 {"input": "kal wala Waseem ke sath sync karni hai", "output": {"tasks": [], "deadline": "tomorrow noon", "people": ["Waseem"], "meetings": ["Sync with Waseem"]}}
 {"input": "yar meeting cancel karni hai", "output": {"tasks": ["Cancel the meeting"], "deadline": null, "people": [], "meetings": []}}
-{"input": "aaj ka I need to update Faisal on the project status shaam tak", "output": {"tasks": ["Update Faisal on project status"], "deadline": "by evening", "people": ["Faisal"], "meetings": []}}
-{"input": "accounts ko invoice bhejna hai aaj tak", "output": {"tasks": ["Send invoice to accounts"], "deadline": "today", "people": ["accounts"], "meetings": []}}
 {"input": "yar deadline confirm karni hai Tooba se aur email Shakeel karna hai about the project aaj tak", "output": {"tasks": ["Confirm deadline with Tooba", "Email Shakeel about the project"], "deadline": "today", "people": ["Tooba", "Shakeel"], "meetings": []}}
-{"input": "Follow up with Zara on the pending approval", "output": {"tasks": ["Follow up with Zara on pending approval"], "deadline": null, "people": ["Zara"], "meetings": []}}
 {"input": "jaldi se demo call hai client ke sath aur Imran se approval lena hai", "output": {"tasks": ["Get approval from Imran"], "deadline": null, "people": ["Imran"], "meetings": ["Demo call with client"]}}
 {"input": "kal subah Ahmed ke sath meeting hai", "output": {"tasks": [], "deadline": "tomorrow morning", "people": ["Ahmed"], "meetings": ["Meeting with Ahmed"]}}
 {"input": "bas contract sign karna hai aur deadline confirm karni hai Zara se aur proposal boss ko bhejna hai", "output": {"tasks": ["Sign the contract", "Confirm deadline with Zara", "Send proposal to boss"], "deadline": null, "people": ["Zara", "boss"], "meetings": []}}
 {"input": "kal wala HR se meeting hai", "output": {"tasks": [], "deadline": "tomorrow noon", "people": ["HR"], "meetings": ["Meeting with HR"]}}
 {"input": "oh haan Mehwish ko reminder bhejna hai", "output": {"tasks": ["Send reminder to Mehwish"], "deadline": null, "people": ["Mehwish"], "meetings": []}}
 {"input": "contract sign karna hai", "output": {"tasks": ["Sign the contract"], "deadline": null, "people": [], "meetings": []}}
-{"input": "ek kaam hai form fill karna hai", "output": {"tasks": ["Fill the form"], "deadline": null, "people": [], "meetings": []}}
-{"input": "bas payment karna hai Ahsan ko aur contract review karni hai aur accounts ko invoice bhejna hai thursday tak", "output": {"tasks": ["Make payment to Ahsan", "Review the contract", "Send invoice to accounts"], "deadline": "Thursday", "people": ["Ahsan", "accounts"], "meetings": []}}
 {"input": "grocery lani hai", "output": {"tasks": ["Buy groceries"], "deadline": null, "people": [], "meetings": []}}
 {"input": "kal wala medicine le ani hai aur stationery lani hai end of day", "output": {"tasks": ["Get medicine", "Get stationery"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "acha sun code review karni hai aur invoice bhejna hai", "output": {"tasks": ["Do code review", "Send invoice"], "deadline": null, "people": [], "meetings": []}}
@@ -917,8 +827,6 @@
 {"input": "aaj ka Mehwish se milna hai kal 3 baje", "output": {"tasks": [], "deadline": "tomorrow 3pm", "people": ["Mehwish"], "meetings": ["Meeting with Mehwish"]}}
 {"input": "meeting schedule karni hai aur Zubair ko email karna hai", "output": {"tasks": ["Schedule a meeting", "Email Zubair"], "deadline": null, "people": ["Zubair"], "meetings": []}}
 {"input": "project review meeting hai aur medicine le ani hai", "output": {"tasks": ["Get medicine"], "deadline": null, "people": [], "meetings": ["Project review meeting"]}}
-{"input": "slowly data backup leni hai laptop se", "output": {"tasks": ["Back up laptop data"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Usman ke sath call hai", "output": {"tasks": [], "deadline": null, "people": ["Usman"], "meetings": ["Call with Usman"]}}
 {"input": "I need to finalize the contract before Friday", "output": {"tasks": ["Finalize the contract"], "deadline": "Friday", "people": [], "meetings": []}}
 {"input": "by the way call Junaid", "output": {"tasks": ["Call Junaid"], "deadline": null, "people": ["Junaid"], "meetings": []}}
 {"input": "jaldi se kuch cheezein order karni hain", "output": {"tasks": ["Place an order"], "deadline": null, "people": [], "meetings": []}}
@@ -936,7 +844,6 @@
 {"input": "please email Rizwan karna hai about the project aur utility bills pay karne hain", "output": {"tasks": ["Email Rizwan about the project", "Pay utility bills"], "deadline": null, "people": ["Rizwan"], "meetings": []}}
 {"input": "please ATM se paise nikalne hain aglay do din mein", "output": {"tasks": ["Withdraw cash from ATM"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "suno testing karni hai", "output": {"tasks": ["Do testing"], "deadline": null, "people": [], "meetings": []}}
-{"input": "oh haan email Raza karna hai about the project aur Sana se baat karni hai aur deck bhejna hai", "output": {"tasks": ["Email Raza about the project", "Talk to Sana", "Send the deck"], "deadline": null, "people": ["Raza", "Sana"], "meetings": []}}
 {"input": "acha sun gas bill pay karna hai", "output": {"tasks": ["Pay gas bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Book a cab for tomorrow morning", "output": {"tasks": ["Book cab"], "deadline": "tomorrow morning", "people": [], "meetings": []}}
 {"input": "jaldi se database backup lena hai aur Irfan se milna hai aur Adnan ko email karna report ke barey mein shaam tak", "output": {"tasks": ["Take database backup", "Meet with Irfan", "Email Adnan about the report"], "deadline": "by evening", "people": ["Irfan", "Adnan"], "meetings": []}}
@@ -950,7 +857,6 @@
 {"input": "I have to finalize the budget aur server update karna hai", "output": {"tasks": ["Finalize the budget", "Update the server"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bug fix karna hai aur gas bill pay karna hai", "output": {"tasks": ["Fix the bug", "Pay gas bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "jaldi se I need to update Tooba on the project status aur accounts ko invoice bhejna hai aur email send karna hai Fatima ko 5 baje tak", "output": {"tasks": ["Update Tooba on project status", "Send invoice to accounts", "Send email to Fatima"], "deadline": "5pm", "people": ["Tooba", "accounts", "Fatima"], "meetings": []}}
-{"input": "paani ki bottle le ani hai", "output": {"tasks": ["Buy water bottle"], "deadline": null, "people": [], "meetings": []}}
 {"input": "by the way meeting reschedule karni hai", "output": {"tasks": ["Reschedule the meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "bas report bhejna hai aur electricity bill pay karna hai aur contract sign karna hai", "output": {"tasks": ["Send report", "Pay electricity bill", "Sign the contract"], "deadline": null, "people": [], "meetings": []}}
 {"input": "kal wala Tariq ke sath call hai", "output": {"tasks": [], "deadline": "Thursday 4pm", "people": ["Tariq"], "meetings": ["Call with Tariq"]}}
@@ -958,9 +864,7 @@
 {"input": "please Rabia ko payment bhejna hai aur presentation Ayesha ko bhejna hai aur Zainab se feedback lena hai", "output": {"tasks": ["Send payment to Rabia", "Send presentation to Ayesha", "Get feedback from Zainab"], "deadline": null, "people": ["Rabia", "Ayesha", "Zainab"], "meetings": []}}
 {"input": "dekh assignment submit karni hai aglay do din mein", "output": {"tasks": ["Submit assignment"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "yar bill pay karna hai aur utility bills pay karne hain aur Ahsan ko email bhejo dopahar tak", "output": {"tasks": ["Pay the bill", "Pay utility bills", "Email Ahsan"], "deadline": "by noon", "people": ["Ahsan"], "meetings": []}}
-{"input": "btw document ready karna hai aur Rehan se approval chahiye aur deadline confirm karni hai Usman se tuesday tak", "output": {"tasks": ["Prepare document", "Get approval from Rehan", "Confirm deadline with Usman"], "deadline": "Tuesday", "people": ["Rehan", "Usman"], "meetings": []}}
 {"input": "dekh I need to call Ali", "output": {"tasks": ["Call Ali"], "deadline": null, "people": ["Ali"], "meetings": []}}
-{"input": "bhai proposal ready karni hai dopahar tak", "output": {"tasks": ["Prepare proposal"], "deadline": "by noon", "people": [], "meetings": []}}
 {"input": "btw deck bhejna hai aur Nadia se feedback lena hai aur report Bilal ko bhejna hai", "output": {"tasks": ["Send the deck", "Get feedback from Nadia", "Send report to Bilal"], "deadline": null, "people": ["Nadia", "Bilal"], "meetings": []}}
 {"input": "alarm set karni hai 3 baje tak", "output": {"tasks": ["Set the alarm"], "deadline": "3pm", "people": [], "meetings": []}}
 {"input": "acha sun project review meeting hai aur Rehan se baat karni hai", "output": {"tasks": ["Talk to Rehan"], "deadline": null, "people": ["Rehan"], "meetings": ["Project review meeting"]}}
@@ -994,18 +898,15 @@
 {"input": "ek kaam hai deployment karna hai aur I need to update Sara on the project status aur form fill karna hai 5 baje tak", "output": {"tasks": ["Do deployment", "Update Sara on project status", "Fill the form"], "deadline": "5pm", "people": ["Sara"], "meetings": []}}
 {"input": "sun document ready karna hai saturday tak", "output": {"tasks": ["Prepare document"], "deadline": "Saturday", "people": [], "meetings": []}}
 {"input": "sun presentation Sana ko bhejna hai is mahine tak", "output": {"tasks": ["Send presentation to Sana"], "deadline": "this month", "people": ["Sana"], "meetings": []}}
-{"input": "Get Samina to sign off on the budget", "output": {"tasks": ["Get sign-off from Samina on budget"], "deadline": null, "people": ["Samina"], "meetings": []}}
 {"input": "payment karna hai Zara ko aur Nadia ko email karna report ke barey mein 3 baje tak", "output": {"tasks": ["Make payment to Zara", "Email Nadia about the report"], "deadline": "3pm", "people": ["Zara", "Nadia"], "meetings": []}}
 {"input": "ATM se paise nikalne hain by EOD", "output": {"tasks": ["Withdraw cash from ATM"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "by the way contract sign karna hai aur payment karna hai Ayesha ko aur kuch cheezein order karni hain", "output": {"tasks": ["Sign the contract", "Make payment to Ayesha", "Place an order"], "deadline": null, "people": ["Ayesha"], "meetings": []}}
-{"input": "Yaar 1-on-1 postpone karni hai", "output": {"tasks": ["Postpone the 1-on-1"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Fyi Husnain and Usman need to complete the proposal", "output": {"tasks": ["Complete the proposal with Husnain and Usman"], "deadline": null, "people": ["Husnain", "Usman"], "meetings": []}}
 {"input": "Just need to order a gas cylinder", "output": {"tasks": ["Order a gas cylinder"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab free ho tab bas printer cartridge le ana", "output": {"tasks": ["Buy printer cartridge"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Quick one i have to pick up medicine", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Dekh Hamza ko remind karna hai submission ke bare mein", "output": {"tasks": ["Remind Hamza about the submission"], "deadline": null, "people": ["Hamza"], "meetings": []}}
 {"input": "Btw sync hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Sync"]}}
-{"input": "Ek kaam hai gas cylinder mangwana hai end of day tak", "output": {"tasks": ["Order a gas cylinder"], "deadline": "end of day", "people": [], "meetings": []}}
 {"input": "Ek kaam hai kal kickoff hai", "output": {"tasks": [], "deadline": "tomorrow", "people": [], "meetings": ["Kickoff"]}}
 {"input": "Acha sun client call postpone karni hai", "output": {"tasks": ["Postpone the client call"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Yaar Nimra aur Talha ke sath summary finalize karni hai", "output": {"tasks": ["Finalize the summary with Nimra and Talha"], "deadline": null, "people": ["Nimra", "Talha"], "meetings": []}}
@@ -1018,11 +919,7 @@
 {"input": "Jaldi karna hai, bhai CEO ko remind karna hai documents ke liye", "output": {"tasks": ["Remind CEO about the documents"], "deadline": null, "people": ["CEO"], "meetings": []}}
 {"input": "Dekh parso standup hai Mahnoor ke sath aur design draft karni hai", "output": {"tasks": ["Draft the design"], "deadline": "day after tomorrow", "people": ["Mahnoor"], "meetings": ["Standup with Mahnoor"]}}
 {"input": "Ek kaam hai Areeba aur Bilal ke sath proposal banani hai", "output": {"tasks": ["Prepare the proposal with Areeba and Bilal"], "deadline": null, "people": ["Areeba", "Bilal"], "meetings": []}}
-{"input": "Quick one need to prepare the spreadsheet and then share it to Bilal this weekend", "output": {"tasks": ["Prepare the spreadsheet", "Share spreadsheet with Bilal"], "deadline": "this weekend", "people": ["Bilal"], "meetings": []}}
 {"input": "Need this urgently, hey need to record the tutorial then send it to Saad by Friday", "output": {"tasks": ["Record the tutorial", "Send tutorial to Saad"], "deadline": "Friday", "people": ["Saad"], "meetings": []}}
-{"input": "Dekh kal bank jana hai kaam se", "output": {"tasks": [], "deadline": "tomorrow", "people": [], "meetings": ["Bank visit"]}}
-{"input": "This coffee is amazing", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Btw Usman aur Mahnoor ke sath report ready karni hai", "output": {"tasks": ["Get the report ready with Usman and Mahnoor"], "deadline": null, "people": ["Usman", "Mahnoor"], "meetings": []}}
 {"input": "I am so tired today", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Bhai Danish aur Maryam ke sath feedback draft karni hai", "output": {"tasks": ["Draft the feedback with Danish and Maryam"], "deadline": null, "people": ["Danish", "Maryam"], "meetings": []}}
 {"input": "Note to self we have a board meeting with Ahmed day after tomorrow", "output": {"tasks": [], "deadline": "day after tomorrow", "people": ["Ahmed"], "meetings": ["Board meeting with Ahmed"]}}
@@ -1030,7 +927,6 @@
 {"input": "We have a board meeting with Ali Friday", "output": {"tasks": [], "deadline": "Friday", "people": ["Ali"], "meetings": ["Board meeting with Ali"]}}
 {"input": "Koi urgency nahi bas files arrange karni hain", "output": {"tasks": ["Arrange the files"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Acha sun 3 baje sprint review hai Usman ke sath", "output": {"tasks": [], "deadline": "3pm", "people": ["Usman"], "meetings": ["Sprint review with Usman"]}}
-{"input": "Kaisa chal raha hai sab", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Asap, note to self need to draft the slides and send it to Fatima", "output": {"tasks": ["Draft the slides", "Send slides to Fatima"], "deadline": null, "people": ["Fatima"], "meetings": []}}
 {"input": "Jaldi karna hai, bhai medicine leni hai pharmacy se weekend pe", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "Btw client ko remind karna hai payment ke liye parso tak", "output": {"tasks": ["Remind client about the payment"], "deadline": "in two days", "people": ["client"], "meetings": []}}
@@ -1052,7 +948,6 @@
 {"input": "Zara team ko remind karna hai payment ke liye", "output": {"tasks": ["Remind the team about the payment"], "deadline": null, "people": ["the team"], "meetings": []}}
 {"input": "Dekh Faisal aur Sara ke sath summary tayyar karni hai", "output": {"tasks": ["Prepare the summary with Faisal and Sara"], "deadline": null, "people": ["Faisal", "Sara"], "meetings": []}}
 {"input": "No rush, just need to return the books", "output": {"tasks": ["Return the books"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Koi jaldi nahi bas notes organize karne hain", "output": {"tasks": ["Organize the notes"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab free ho tab bas bijli ka bill jama karna hai", "output": {"tasks": ["Pay the electricity bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jaldi karna hai, dekh Sikander ko remind karna hai deadline ke bare mein aaj shaam tak", "output": {"tasks": ["Remind Sikander about the deadline"], "deadline": "by evening", "people": ["Sikander"], "meetings": []}}
 {"input": "Ek kaam hai Kamran ko remind karna hai payment ke liye monday tak", "output": {"tasks": ["Remind Kamran about the payment"], "deadline": "Monday", "people": ["Kamran"], "meetings": []}}
@@ -1078,7 +973,6 @@
 {"input": "Acha sun parso client call hai", "output": {"tasks": [], "deadline": "day after tomorrow", "people": [], "meetings": ["Client call"]}}
 {"input": "Fyi Ahmed and Ayesha need to prepare the invoice", "output": {"tasks": ["Prepare the invoice with Ahmed and Ayesha"], "deadline": null, "people": ["Ahmed", "Ayesha"], "meetings": []}}
 {"input": "Bhai Junaid aur Kamran ke sath spreadsheet ready karni hai", "output": {"tasks": ["Get the spreadsheet ready with Junaid and Kamran"], "deadline": null, "people": ["Junaid", "Kamran"], "meetings": []}}
-{"input": "No hurry, just need to pick up the kids from school", "output": {"tasks": ["Pick up the kids from school"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Can't believe it's already friday", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Fyi Danish and Nimra need to draft the presentation", "output": {"tasks": ["Draft the presentation with Danish and Nimra"], "deadline": null, "people": ["Danish", "Nimra"], "meetings": []}}
 {"input": "Hey need to draft the spreadsheet then send it to Junaid", "output": {"tasks": ["Draft the spreadsheet", "Send spreadsheet to Junaid"], "deadline": null, "people": ["Junaid"], "meetings": []}}
@@ -1086,18 +980,15 @@
 {"input": "Koi jaldi nahi, zara Sana ko remind karna hai payment ke liye agle hafte", "output": {"tasks": ["Remind Sana about the payment"], "deadline": "next week", "people": ["Sana"], "meetings": []}}
 {"input": "Okay so remind client about the meeting aaj shaam tak", "output": {"tasks": ["Remind client about the meeting"], "deadline": "by evening", "people": ["client"], "meetings": []}}
 {"input": "Talha aur Adnan ke sath invoice banani hai", "output": {"tasks": ["Prepare the invoice with Talha and Adnan"], "deadline": null, "people": ["Talha", "Adnan"], "meetings": []}}
-{"input": "Dekh HR ko remind karna hai meeting ke bare mein friday tak", "output": {"tasks": ["Remind HR about the meeting"], "deadline": "Friday", "people": ["HR"], "meetings": []}}
 {"input": "Koi urgency nahi, zara CEO ko remind karna hai payment ke liye 5 baje tak", "output": {"tasks": ["Remind CEO about the payment"], "deadline": "by 5pm", "people": ["CEO"], "meetings": []}}
 {"input": "Bhai Omer aur Sana ke sath presentation finalize karni hai", "output": {"tasks": ["Finalize the presentation with Omer and Sana"], "deadline": null, "people": ["Omer", "Sana"], "meetings": []}}
 {"input": "Quick one Mehwish and Fatima need to prepare the summary", "output": {"tasks": ["Prepare the summary with Mehwish and Fatima"], "deadline": null, "people": ["Mehwish", "Fatima"], "meetings": []}}
 {"input": "Note to self we have a interview 10am and I should prepare the document", "output": {"tasks": ["Prepare the document"], "deadline": "10am", "people": [], "meetings": ["Interview"]}}
 {"input": "Sun na medicine leni hai pharmacy se parso tak", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": "in two days", "people": [], "meetings": []}}
-{"input": "Zara design finalize karni hai kar ke Kamran ko email karni hai", "output": {"tasks": ["Finalize the design", "Email design to Kamran"], "deadline": null, "people": ["Kamran"], "meetings": []}}
 {"input": "Dekh bank jana hai kaam se", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Bank visit"]}}
 {"input": "Bhai quotation banani hai aur phir Aiman ko bhejni hai weekend pe", "output": {"tasks": ["Prepare the quotation", "Send quotation to Aiman"], "deadline": "this weekend", "people": ["Aiman"], "meetings": []}}
 {"input": "Note to self we have a sync tomorrow", "output": {"tasks": [], "deadline": "tomorrow", "people": [], "meetings": ["Sync"]}}
 {"input": "I have a doctor's appointment", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Doctor appointment"]}}
-{"input": "Boss ne abhi manga hai, acha sun Aiman ko remind karna hai documents ke liye", "output": {"tasks": ["Remind Aiman about the documents"], "deadline": null, "people": ["Aiman"], "meetings": []}}
 {"input": "Acha yaar demo hai aur spreadsheet ready karni hai", "output": {"tasks": ["Get the spreadsheet ready"], "deadline": null, "people": [], "meetings": ["Demo"]}}
 {"input": "Acha sun parso demo hai Talha ke sath aur quotation update karni hai", "output": {"tasks": ["Update the quotation"], "deadline": "day after tomorrow", "people": ["Talha"], "meetings": ["Demo with Talha"]}}
 {"input": "Fyi remind Iqra about the meeting", "output": {"tasks": ["Remind Iqra about the meeting"], "deadline": null, "people": ["Iqra"], "meetings": []}}
@@ -1133,7 +1024,6 @@
 {"input": "Acha sun parso review meeting hai boss ke sath aur quotation banani hai", "output": {"tasks": ["Prepare the quotation"], "deadline": "day after tomorrow", "people": ["boss"], "meetings": ["Review meeting with boss"]}}
 {"input": "This is urgent, quick one i have to pick up the kids from school by by 5pm", "output": {"tasks": ["Pick up the kids from school"], "deadline": "by 5pm", "people": [], "meetings": []}}
 {"input": "Haha that was hilarious", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Yaar grocery laani hai parso tak", "output": {"tasks": ["Get groceries"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Bhai standup cancel karni hai", "output": {"tasks": ["Cancel the standup"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Okay so i have to pay the electricity bill by in two days", "output": {"tasks": ["Pay the electricity bill"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Koi urgency nahi bas doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
@@ -1142,7 +1032,6 @@
 {"input": "Relax koi jaldi nahi bas doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Good morning, hope you slept well", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Yaar mood off hai aaj", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Zara proposal update karni hai ke baad boss ko email karni hai 5 baje tak", "output": {"tasks": ["Update the proposal", "Email proposal to boss"], "deadline": "by 5pm", "people": ["boss"], "meetings": []}}
 {"input": "Acha yaar sprint review hai aur deck update karni hai", "output": {"tasks": ["Update the deck"], "deadline": null, "people": [], "meetings": ["Sprint review"]}}
 {"input": "No rush, just need to cancel the subscription", "output": {"tasks": ["Cancel the subscription"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Koi urgency nahi, tutorial record karni hai phir Hamza ko email karni hai 5 baje tak", "output": {"tasks": ["Record the tutorial", "Email tutorial to Hamza"], "deadline": "by 5pm", "people": ["Hamza"], "meetings": []}}
@@ -1156,7 +1045,6 @@
 {"input": "Sun na boss ko remind karna hai submission ke bare mein end of day tak", "output": {"tasks": ["Remind boss about the submission"], "deadline": "end of day", "people": ["boss"], "meetings": []}}
 {"input": "Zara demo reschedule karni hai", "output": {"tasks": ["Reschedule the demo"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Acha sun boss ko remind karna hai payment ke liye agle hafte", "output": {"tasks": ["Remind boss about the payment"], "deadline": "next week", "people": ["boss"], "meetings": []}}
-{"input": "Btw board meeting postpone karni hai", "output": {"tasks": ["Postpone the board meeting"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Sun na Areeba ko remind karna hai payment ke liye parso tak", "output": {"tasks": ["Remind Areeba about the payment"], "deadline": "in two days", "people": ["Areeba"], "meetings": []}}
 {"input": "Congrats on the new job", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab free ho tab bas photos backup karni hain", "output": {"tasks": ["Back up the photos"], "deadline": null, "people": [], "meetings": []}}
@@ -1181,7 +1069,6 @@
 {"input": "No hurry, just need to back up the photos", "output": {"tasks": ["Back up the photos"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Okay so need to record the video then send it to Sir this weekend", "output": {"tasks": ["Record the video", "Send video to Sir"], "deadline": "this weekend", "people": ["Sir"], "meetings": []}}
 {"input": "Bhai Bilal aur Sikander ke sath invoice update karni hai", "output": {"tasks": ["Update the invoice with Bilal and Sikander"], "deadline": null, "people": ["Bilal", "Sikander"], "meetings": []}}
-{"input": "No hurry, just need to clean the desk", "output": {"tasks": ["Clean the desk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "No hurry, just need to cancel the subscription", "output": {"tasks": ["Cancel the subscription"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Sun na standup cancel karni hai", "output": {"tasks": ["Cancel the standup"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Btw summary banani hai aur phir team ko email karni hai parso tak", "output": {"tasks": ["Prepare the summary", "Email summary to the team"], "deadline": "in two days", "people": ["the team"], "meetings": []}}
@@ -1190,7 +1077,6 @@
 {"input": "Ek kaam hai video record karni hai kar ke Bilal ko bhejni hai friday tak", "output": {"tasks": ["Record the video", "Send video to Bilal"], "deadline": "Friday", "people": ["Bilal"], "meetings": []}}
 {"input": "Fyi Kamran and Danish need to get the deck ready", "output": {"tasks": ["Get the deck ready with Kamran and Danish"], "deadline": null, "people": ["Kamran", "Danish"], "meetings": []}}
 {"input": "Koi urgency nahi bas desk saaf karni hai", "output": {"tasks": ["Clean the desk"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Zara Bilal aur Areeba ke sath summary draft karni hai", "output": {"tasks": ["Draft the summary with Bilal and Areeba"], "deadline": null, "people": ["Bilal", "Areeba"], "meetings": []}}
 {"input": "Bhai bijli ka bill jama karna hai aaj raat tak", "output": {"tasks": ["Pay the electricity bill"], "deadline": "by tonight", "people": [], "meetings": []}}
 {"input": "Bhai gari service karwani hai parso tak", "output": {"tasks": ["Get the car serviced"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Ek kaam hai demo record karni hai aur phir CEO ko forward karni hai aaj raat tak", "output": {"tasks": ["Record the demo", "Forward demo to CEO"], "deadline": "by tonight", "people": ["CEO"], "meetings": []}}
@@ -1202,12 +1088,10 @@
 {"input": "Hey i have to buy milk by 15 August", "output": {"tasks": ["Buy milk"], "deadline": "15 August", "people": [], "meetings": []}}
 {"input": "Note to self i have a salon appointment in December", "output": {"tasks": [], "deadline": "December", "people": [], "meetings": ["Salon appointment"]}}
 {"input": "Bhai March ke pehle week mein planning meeting hai Mahnoor ke sath aur draft update karni hai", "output": {"tasks": ["Update the draft"], "deadline": "first week of March", "people": ["Mahnoor"], "meetings": ["Planning meeting with Mahnoor"]}}
-{"input": "Zara June 2027 mein planning meeting hai Mahnoor ke sath", "output": {"tasks": [], "deadline": "June 2027", "people": ["Mahnoor"], "meetings": ["Planning meeting with Mahnoor"]}}
 {"input": "Barish ho rahi hai bahar is December", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Acha yaar January ke second week mein salon ki appointment hai", "output": {"tasks": [], "deadline": "second week of January", "people": [], "meetings": ["Salon appointment"]}}
 {"input": "Presentation banani hai karke Maryam ko email karni hai Q3 tak", "output": {"tasks": ["Prepare the presentation", "Email presentation to Maryam"], "deadline": "Q3", "people": ["Maryam"], "meetings": []}}
 {"input": "Zara next quarter sync hai client ke sath aur document finalize karni hai", "output": {"tasks": ["Finalize the document"], "deadline": "next quarter", "people": ["client"], "meetings": ["Sync with client"]}}
-{"input": "Sun na Sara aur Mahnoor ke sath presentation draft karni hai before September", "output": {"tasks": ["Draft the presentation with Sara and Mahnoor"], "deadline": "before September", "people": ["Sara", "Mahnoor"], "meetings": []}}
 {"input": "Fyi i have to buy milk in January 2028", "output": {"tasks": ["Buy milk"], "deadline": "January 2028", "people": [], "meetings": []}}
 {"input": "Sun na weekly meeting reschedule karni hai aglay mahine", "output": {"tasks": ["Reschedule the weekly meeting"], "deadline": "next month", "people": [], "meetings": []}}
 {"input": "Bhai December mein 1-on-1 hai Sana ke sath", "output": {"tasks": [], "deadline": "December", "people": ["Sana"], "meetings": ["1-on-1 with Sana"]}}
@@ -1228,9 +1112,7 @@
 {"input": "Btw grocery laani hai next January", "output": {"tasks": ["Get groceries"], "deadline": "next January", "people": [], "meetings": []}}
 {"input": "Acha sun March mein daily scrum hai Hamza ke sath", "output": {"tasks": [], "deadline": "March", "people": ["Hamza"], "meetings": ["Daily scrum with Hamza"]}}
 {"input": "Yaar mockup banani hai ke baad Husnain ko share karni hai before July 2027", "output": {"tasks": ["Prepare the mockup", "Share mockup with Husnain"], "deadline": "before July 2027", "people": ["Husnain"], "meetings": []}}
-{"input": "Yaar doodh le ana hai kal tak", "output": {"tasks": ["Buy milk"], "deadline": "tomorrow", "people": [], "meetings": []}}
 {"input": "Dekh kal dentist ke pass jana hai", "output": {"tasks": [], "deadline": "tomorrow", "people": [], "meetings": ["Dentist appointment"]}}
-{"input": "Sun na video record karni hai ke baad boss ko share karni hai agle hafte", "output": {"tasks": ["Record the video", "Share video with boss"], "deadline": "next week", "people": ["boss"], "meetings": []}}
 {"input": "Kal raat neend hi nahi aayi", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Zara proposal banani hai ke baad Hira ko email karni hai agle hafte", "output": {"tasks": ["Prepare the proposal", "Email proposal to Hira"], "deadline": "next week", "people": ["Hira"], "meetings": []}}
 {"input": "Urgent hai, zara slides banani hai karke Hassan ko email karni hai kal tak", "output": {"tasks": ["Prepare the slides", "Email slides to Hassan"], "deadline": "tomorrow", "people": ["Hassan"], "meetings": []}}
@@ -1275,9 +1157,7 @@
 {"input": "Jaldi karna hai, dekh budget finalize karni hai ke baad Talha ko forward karni hai kal tak", "output": {"tasks": ["Finalize the budget", "Forward budget to Talha"], "deadline": "tomorrow", "people": ["Talha"], "meetings": []}}
 {"input": "Urgent hai, gari service karwani hai kal tak", "output": {"tasks": ["Get the car serviced"], "deadline": "tomorrow", "people": [], "meetings": []}}
 {"input": "Jaldi karna hai, bhai grocery laani hai", "output": {"tasks": ["Get groceries"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Btw bijli ka bill jama karna hai", "output": {"tasks": ["Pay the electricity bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab free ho tab, sun na walkthrough record karni hai kar ke Talha ko forward karni hai do din mein", "output": {"tasks": ["Record the walkthrough", "Forward walkthrough to Talha"], "deadline": "in two days", "people": ["Talha"], "meetings": []}}
-{"input": "I love this weather", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Yaar aaj bohat garmi hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Okay so i have to pay the internet bill by by morning", "output": {"tasks": ["Pay the internet bill"], "deadline": "by morning", "people": [], "meetings": []}}
 {"input": "Acha sun bijli ka bill jama karna hai aaj shaam tak", "output": {"tasks": ["Pay the electricity bill"], "deadline": "by evening", "people": [], "meetings": []}}
@@ -1289,18 +1169,14 @@
 {"input": "Medicine leni hai pharmacy se", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Fyi we have a review meeting with Talha and I should draft the design", "output": {"tasks": ["Draft the design"], "deadline": null, "people": ["Talha"], "meetings": ["Review meeting with Talha"]}}
 {"input": "Jab free ho tab bas medicine leni hai pharmacy se", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Yaar aaj shaam standup hai Saad ke sath", "output": {"tasks": [], "deadline": "this evening", "people": ["Saad"], "meetings": ["Standup with Saad"]}}
 {"input": "Boss ne abhi manga hai, yaar video record karni hai karke Areeba ko bhejna hai agle hafte", "output": {"tasks": ["Record the video", "Send video to Areeba"], "deadline": "next week", "people": ["Areeba"], "meetings": []}}
 {"input": "That restaurant was overrated honestly", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Take care, bye", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Acha yaar intro video record karni hai phir Husnain ko bhejni hai aaj shaam tak", "output": {"tasks": ["Record the intro video", "Send intro video to Husnain"], "deadline": "by evening", "people": ["Husnain"], "meetings": []}}
-{"input": "Okay so need to prepare the feedback and forward it to Zain", "output": {"tasks": ["Prepare the feedback", "Forward feedback to Zain"], "deadline": null, "people": ["Zain"], "meetings": []}}
 {"input": "Parso client call hai Bushra ke sath", "output": {"tasks": [], "deadline": "day after tomorrow", "people": ["Bushra"], "meetings": ["Client call with Bushra"]}}
 {"input": "Jab free ho tab bas subscription cancel karni hai", "output": {"tasks": ["Cancel the subscription"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Yaar bohat bore ho raha hu", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Okay so we have a interview with client 10am", "output": {"tasks": [], "deadline": "10am", "people": ["client"], "meetings": ["Interview with client"]}}
 {"input": "Acha yaar design tayyar karni hai aur phir CEO ko bhejna hai subah tak", "output": {"tasks": ["Prepare the design", "Send design to CEO"], "deadline": "by morning", "people": ["CEO"], "meetings": []}}
-{"input": "We have a planning meeting tomorrow morning and I should update the report", "output": {"tasks": ["Update the report"], "deadline": "tomorrow morning", "people": [], "meetings": ["Planning meeting"]}}
 {"input": "Asap, gas cylinder mangwana hai parso tak", "output": {"tasks": ["Order a gas cylinder"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Ek kaam hai bachon ko school se pick karna hai weekend pe", "output": {"tasks": ["Pick up the kids from school"], "deadline": "this weekend", "people": [], "meetings": []}}
 {"input": "Just chilling at home today", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
@@ -1312,15 +1188,12 @@
 {"input": "Dekh slides complete karni hai karke Rabia ko forward karni hai subah tak", "output": {"tasks": ["Complete the slides", "Forward slides to Rabia"], "deadline": "by morning", "people": ["Rabia"], "meetings": []}}
 {"input": "Nothing much, just relaxing", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Ye gana sun na zabardast hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Dekh bachon ko school se pick karna hai 5 baje tak", "output": {"tasks": ["Pick up the kids from school"], "deadline": "by 5pm", "people": [], "meetings": []}}
-{"input": "This is urgent, okay so i have to pick up medicine by in two days", "output": {"tasks": ["Pick up medicine from the pharmacy"], "deadline": "in two days", "people": [], "meetings": []}}
 {"input": "Acha sun video record karni hai aur phir HR ko share karni hai", "output": {"tasks": ["Record the video", "Share video with HR"], "deadline": null, "people": ["HR"], "meetings": []}}
 {"input": "Need to update the agenda and send it to Hira", "output": {"tasks": ["Update the agenda", "Send agenda to Hira"], "deadline": null, "people": ["Hira"], "meetings": []}}
 {"input": "Hey need to record the intro video and forward it to HR", "output": {"tasks": ["Record the intro video", "Forward intro video to HR"], "deadline": null, "people": ["HR"], "meetings": []}}
 {"input": "Yaar mockup banani hai aur phir HR ko bhejna hai agle hafte", "output": {"tasks": ["Prepare the mockup", "Send mockup to HR"], "deadline": "next week", "people": ["HR"], "meetings": []}}
 {"input": "Whenever you get time, just need to back up the photos", "output": {"tasks": ["Back up the photos"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab time mile, budget update karni hai aur phir manager ko share karni hai", "output": {"tasks": ["Update the budget", "Share budget with manager"], "deadline": null, "people": ["manager"], "meetings": []}}
-{"input": "Sun na kal subah board meeting hai sir ke sath aur deck banani hai", "output": {"tasks": ["Prepare the deck"], "deadline": "tomorrow morning", "people": ["Sir"], "meetings": ["Board meeting with Sir"]}}
 {"input": "Zara 3 baje weekly meeting hai client ke sath", "output": {"tasks": [], "deadline": "3pm", "people": ["client"], "meetings": ["Weekly meeting with client"]}}
 {"input": "No rush bas doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Need to record the demo and send it to Sir by end of day", "output": {"tasks": ["Record the demo", "Send demo to Sir"], "deadline": "end of day", "people": ["Sir"], "meetings": []}}
@@ -1329,7 +1202,6 @@
 {"input": "Relax koi jaldi nahi bas purane emails clear karne hain", "output": {"tasks": ["Clear old emails"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Btw aaj shaam interview hai Shayan ke sath aur feedback tayyar karni hai", "output": {"tasks": ["Prepare the feedback"], "deadline": "this evening", "people": ["Shayan"], "meetings": ["Interview with Shayan"]}}
 {"input": "We have a kickoff day after tomorrow and I should finalize the invoice", "output": {"tasks": ["Finalize the invoice"], "deadline": "day after tomorrow", "people": [], "meetings": ["Kickoff"]}}
-{"input": "Koi jaldi nahi bas files arrange karni hain", "output": {"tasks": ["Arrange the files"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Feeling sleepy after lunch", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab time mile bas gari service karwani hai", "output": {"tasks": ["Get the car serviced"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Yaar kal subah board meeting hai", "output": {"tasks": [], "deadline": "tomorrow morning", "people": [], "meetings": ["Board meeting"]}}
@@ -1341,18 +1213,14 @@
 {"input": "Yaar kal subah review meeting hai", "output": {"tasks": [], "deadline": "tomorrow morning", "people": [], "meetings": ["Review meeting"]}}
 {"input": "Weather kitna acha ho gaya hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "No rush bas purane emails clear karne hain", "output": {"tasks": ["Clear old emails"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Dekh demo hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": ["Demo"]}}
 {"input": "Jab time mile bas notes organize karne hain", "output": {"tasks": ["Organize the notes"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Bohat zaroori hai, sun na deck finalize karni hai karke manager ko forward karni hai weekend pe", "output": {"tasks": ["Finalize the deck", "Forward deck to manager"], "deadline": "this weekend", "people": ["manager"], "meetings": []}}
-{"input": "No hurry, just need to tidy up the desktop", "output": {"tasks": ["Tidy up the desktop"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Bohat zaroori hai, acha sun presentation finalize karni hai ke baad Iqra ko forward karni hai aaj shaam tak", "output": {"tasks": ["Finalize the presentation", "Forward presentation to Iqra"], "deadline": "by evening", "people": ["Iqra"], "meetings": []}}
 {"input": "Fyi we have a kickoff with client tomorrow", "output": {"tasks": [], "deadline": "tomorrow", "people": ["client"], "meetings": ["Kickoff with client"]}}
 {"input": "Koi jaldi nahi bas bijli ka bill jama karna hai", "output": {"tasks": ["Pay the electricity bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Sun na agenda complete karni hai kar ke sir ko bhejna hai agle hafte", "output": {"tasks": ["Complete the agenda", "Send agenda to Sir"], "deadline": "next week", "people": ["Sir"], "meetings": []}}
 {"input": "Jab time mile bas doodh le ana hai", "output": {"tasks": ["Buy milk"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Jaldi karna hai, acha sun mockup banani hai ke baad Omer ko forward karni hai aaj shaam tak", "output": {"tasks": ["Prepare the mockup", "Forward mockup to Omer"], "deadline": "by evening", "people": ["Omer"], "meetings": []}}
 {"input": "No rush, just need to get the car serviced", "output": {"tasks": ["Get the car serviced"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Dekh demo hai aur feedback update karni hai", "output": {"tasks": ["Update the feedback"], "deadline": null, "people": [], "meetings": ["Demo"]}}
 {"input": "Zara kal subah weekly meeting hai team ke sath", "output": {"tasks": [], "deadline": "tomorrow morning", "people": ["the team"], "meetings": ["Weekly meeting with the team"]}}
 {"input": "Draft finalize karni hai phir Sara ko email karni hai subah tak", "output": {"tasks": ["Finalize the draft", "Email draft to Sara"], "deadline": "by morning", "people": ["Sara"], "meetings": []}}
 {"input": "Bhai kal subah board meeting hai aur feedback banani hai", "output": {"tasks": ["Prepare the feedback"], "deadline": "tomorrow morning", "people": [], "meetings": ["Board meeting"]}}
@@ -1365,7 +1233,6 @@
 {"input": "Acha yaar aaj shaam weekly meeting hai", "output": {"tasks": [], "deadline": "this evening", "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "Walkthrough record karni hai karke client ko email karni hai subah tak", "output": {"tasks": ["Record the walkthrough", "Email walkthrough to client"], "deadline": "by morning", "people": ["client"], "meetings": []}}
 {"input": "Hey need to draft the contract then send it to Sir this weekend", "output": {"tasks": ["Draft the contract", "Send contract to Sir"], "deadline": "this weekend", "people": ["Sir"], "meetings": []}}
-{"input": "Just a reminder we have a daily scrum with Ayesha 3pm", "output": {"tasks": [], "deadline": "3pm", "people": ["Ayesha"], "meetings": ["Daily scrum with Ayesha"]}}
 {"input": "Dekh intro video record karni hai karke team ko forward karni hai weekend pe", "output": {"tasks": ["Record the intro video", "Forward intro video to the team"], "deadline": "this weekend", "people": ["the team"], "meetings": []}}
 {"input": "Acha yaar friday ko sprint review hai aur feedback tayyar karni hai", "output": {"tasks": ["Prepare the feedback"], "deadline": "Friday", "people": [], "meetings": ["Sprint review"]}}
 {"input": "Dekh 10 baje interview hai Hassan ke sath aur spreadsheet banani hai", "output": {"tasks": ["Prepare the spreadsheet"], "deadline": "10am", "people": ["Hassan"], "meetings": ["Interview with Hassan"]}}
@@ -1374,7 +1241,6 @@
 {"input": "Relax koi jaldi nahi bas gas cylinder mangwana hai", "output": {"tasks": ["Order a gas cylinder"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Zara 10 baje demo hai aur report banani hai", "output": {"tasks": ["Prepare the report"], "deadline": "10am", "people": [], "meetings": ["Demo"]}}
 {"input": "Acha sun kal subah daily scrum hai Sana ke sath aur agenda draft karni hai", "output": {"tasks": ["Draft the agenda"], "deadline": "tomorrow morning", "people": ["Sana"], "meetings": ["Daily scrum with Sana"]}}
-{"input": "Jab free ho tab bas desk saaf karni hai", "output": {"tasks": ["Clean the desk"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Kal off hai na office", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Sun na 10 baje weekly meeting hai", "output": {"tasks": [], "deadline": "10am", "people": [], "meetings": ["Weekly meeting"]}}
 {"input": "Btw contract banani hai phir Maryam ko bhejni hai do din mein", "output": {"tasks": ["Prepare the contract", "Send contract to Maryam"], "deadline": "in two days", "people": ["Maryam"], "meetings": []}}
@@ -1393,12 +1259,10 @@
 {"input": "Fyi we have a interview with CEO day after tomorrow and I should finalize the document", "output": {"tasks": ["Finalize the document"], "deadline": "day after tomorrow", "people": ["CEO"], "meetings": ["Interview with CEO"]}}
 {"input": "Bohat zaroori hai, acha yaar deck draft karni hai kar ke boss ko email karni hai end of day tak", "output": {"tasks": ["Draft the deck", "Email deck to boss"], "deadline": "end of day", "people": ["boss"], "meetings": []}}
 {"input": "Jab time mile bas purane emails clear karne hain", "output": {"tasks": ["Clear old emails"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Acha sun video record karni hai phir boss ko bhejna hai monday tak", "output": {"tasks": ["Record the video", "Send video to boss"], "deadline": "Monday", "people": ["boss"], "meetings": []}}
 {"input": "10 baje weekly meeting hai Areeba ke sath", "output": {"tasks": [], "deadline": "10am", "people": ["Areeba"], "meetings": ["Weekly meeting with Areeba"]}}
 {"input": "Relax koi jaldi nahi bas files arrange karni hain", "output": {"tasks": ["Arrange the files"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab free ho tab, dekh video record karni hai karke boss ko bhejni hai monday tak", "output": {"tasks": ["Record the video", "Send video to boss"], "deadline": "Monday", "people": ["boss"], "meetings": []}}
 {"input": "Jab free ho tab bas gas cylinder mangwana hai", "output": {"tasks": ["Order a gas cylinder"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Fyi need to record the walkthrough and then share it to Husnain by 5pm", "output": {"tasks": ["Record the walkthrough", "Share walkthrough with Husnain"], "deadline": "by 5pm", "people": ["Husnain"], "meetings": []}}
 {"input": "Zara summary update karni hai kar ke Bushra ko forward karni hai parso tak", "output": {"tasks": ["Update the summary", "Forward summary to Bushra"], "deadline": "in two days", "people": ["Bushra"], "meetings": []}}
 {"input": "Acha sun 3 baje planning meeting hai Mahnoor ke sath", "output": {"tasks": [], "deadline": "3pm", "people": ["Mahnoor"], "meetings": ["Planning meeting with Mahnoor"]}}
 {"input": "Ek kaam hai proposal update karni hai phir manager ko share karni hai monday tak", "output": {"tasks": ["Update the proposal", "Share proposal with manager"], "deadline": "Monday", "people": ["manager"], "meetings": []}}
@@ -1412,8 +1276,6 @@
 {"input": "Relax koi jaldi nahi bas bachon ko school se pick karna hai", "output": {"tasks": ["Pick up the kids from school"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Just a reminder we have a sync with Sara tomorrow morning and I should draft the agenda", "output": {"tasks": ["Draft the agenda"], "deadline": "tomorrow morning", "people": ["Sara"], "meetings": ["Sync with Sara"]}}
 {"input": "No rush, just need to get groceries", "output": {"tasks": ["Get groceries"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Ek kaam hai 10 baje demo hai client ke sath", "output": {"tasks": [], "deadline": "10am", "people": ["client"], "meetings": ["Demo with client"]}}
-{"input": "Bhai 3 baje kickoff hai aur agenda draft karni hai", "output": {"tasks": ["Draft the agenda"], "deadline": "3pm", "people": [], "meetings": ["Kickoff"]}}
 {"input": "Jab free ho tab bas purane emails clear karne hain", "output": {"tasks": ["Clear old emails"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Zara feedback update karni hai aur phir Komal ko bhejni hai do din mein", "output": {"tasks": ["Update the feedback", "Send feedback to Komal"], "deadline": "in two days", "people": ["Komal"], "meetings": []}}
 {"input": "Yaar quotation finalize karni hai ke baad CEO ko bhejni hai kal tak", "output": {"tasks": ["Finalize the quotation", "Send quotation to CEO"], "deadline": "tomorrow", "people": ["CEO"], "meetings": []}}
@@ -1422,7 +1284,6 @@
 {"input": "Acha laga tum se baat karke", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Jab time mile, btw walkthrough record karni hai phir Ali ko bhejna hai", "output": {"tasks": ["Record the walkthrough", "Send walkthrough to Ali"], "deadline": null, "people": ["Ali"], "meetings": []}}
 {"input": "Jab time mile bas passwords update karne hain", "output": {"tasks": ["Update the passwords"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Jab time mile bas gas cylinder mangwana hai", "output": {"tasks": ["Order a gas cylinder"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Need to record the walkthrough then forward it to CEO", "output": {"tasks": ["Record the walkthrough", "Forward walkthrough to CEO"], "deadline": null, "people": ["CEO"], "meetings": []}}
 {"input": "Summary banani hai kar ke client ko bhejna hai kal tak", "output": {"tasks": ["Prepare the summary", "Send summary to client"], "deadline": "tomorrow", "people": ["client"], "meetings": []}}
 {"input": "Quick one need to finalize the presentation and send it to manager", "output": {"tasks": ["Finalize the presentation", "Send presentation to manager"], "deadline": null, "people": ["manager"], "meetings": []}}
@@ -1432,7 +1293,6 @@
 {"input": "Bhai tutorial record karni hai karke Danish ko bhejna hai 5 baje tak", "output": {"tasks": ["Record the tutorial", "Send tutorial to Danish"], "deadline": "by 5pm", "people": ["Danish"], "meetings": []}}
 {"input": "Koi jaldi nahi bas internet bill pay karna hai", "output": {"tasks": ["Pay the internet bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "No rush, just need to update the passwords", "output": {"tasks": ["Update the passwords"], "deadline": null, "people": [], "meetings": []}}
-{"input": "Asap, sun na contract ready karni hai kar ke Ali ko email karni hai aaj raat tak", "output": {"tasks": ["Get the contract ready", "Email contract to Ali"], "deadline": "by tonight", "people": ["Ali"], "meetings": []}}
 {"input": "Happy birthday by the way", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "Asap, note to self need to put together the draft and email it to Sir by tonight", "output": {"tasks": ["Put together the draft", "Email draft to Sir"], "deadline": "by tonight", "people": ["Sir"], "meetings": []}}
 {"input": "Sun na quotation ready karni hai aur phir Sikander ko share karni hai", "output": {"tasks": ["Get the quotation ready", "Share quotation with Sikander"], "deadline": null, "people": ["Sikander"], "meetings": []}}
@@ -1463,16 +1323,12 @@
 {"input": "Just need to pay the electricity bill", "output": {"tasks": ["Pay the electricity bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Asap, acha yaar summary update karni hai kar ke Adnan ko share karni hai monday tak", "output": {"tasks": ["Update the summary", "Share summary with Adnan"], "deadline": "Monday", "people": ["Adnan"], "meetings": []}}
 {"input": "Hey need to update the budget and share it to Sikander", "output": {"tasks": ["Update the budget", "Share budget with Sikander"], "deadline": null, "people": ["Sikander"], "meetings": []}}
-{"input": "Dekh presentation update karni hai phir Nimra ko share karni hai agle hafte", "output": {"tasks": ["Update the presentation", "Share presentation with Nimra"], "deadline": "next week", "people": ["Nimra"], "meetings": []}}
 {"input": "Budget finalize karni hai karke manager ko share karni hai", "output": {"tasks": ["Finalize the budget", "Share budget with manager"], "deadline": null, "people": ["manager"], "meetings": []}}
 {"input": "Need this urgently, just a reminder need to draft the contract then send it to the team next week", "output": {"tasks": ["Draft the contract", "Send contract to the team"], "deadline": "next week", "people": ["the team"], "meetings": []}}
 {"input": "Acha sun feedback ready karni hai ke baad client ko bhejna hai", "output": {"tasks": ["Get the feedback ready", "Send feedback to client"], "deadline": null, "people": ["client"], "meetings": []}}
 {"input": "Whenever you get time, just need to get groceries", "output": {"tasks": ["Get groceries"], "deadline": null, "people": [], "meetings": []}}
-{"input": "No hurry, just need to pay the electricity bill", "output": {"tasks": ["Pay the electricity bill"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Sun na report complete karni hai karke client ko bhejni hai parso tak", "output": {"tasks": ["Complete the report", "Send report to client"], "deadline": "in two days", "people": ["client"], "meetings": []}}
-{"input": "Bohat zaroori hai, proposal draft karni hai aur phir client ko share karni hai", "output": {"tasks": ["Draft the proposal", "Share proposal with client"], "deadline": null, "people": ["client"], "meetings": []}}
 {"input": "Relax koi jaldi nahi, sun na intro video record karni hai kar ke Maryam ko bhejni hai agle hafte", "output": {"tasks": ["Record the intro video", "Send intro video to Maryam"], "deadline": "next week", "people": ["Maryam"], "meetings": []}}
-{"input": "Relax koi jaldi nahi bas books wapas karni hain", "output": {"tasks": ["Return the books"], "deadline": null, "people": [], "meetings": []}}
 {"input": "Note to self need to record the video and email it to Saad", "output": {"tasks": ["Record the video", "Email video to Saad"], "deadline": null, "people": ["Saad"], "meetings": []}}
 {"input": "Acha sun report banani hai aur phir Zain ko share karni hai aaj raat tak", "output": {"tasks": ["Prepare the report", "Share report with Zain"], "deadline": "by tonight", "people": ["Zain"], "meetings": []}}
 {"input": "Btw agenda update karni hai phir Ahmed ko share karni hai do din mein", "output": {"tasks": ["Update the agenda", "Share agenda with Ahmed"], "deadline": "in two days", "people": ["Ahmed"], "meetings": []}}
@@ -1486,8 +1342,6 @@
 {"input": "Zara demo record karni hai kar ke manager ko email karni hai kal tak", "output": {"tasks": ["Record the demo", "Email demo to manager"], "deadline": "tomorrow", "people": ["manager"], "meetings": []}}
 {"input": "Dekh presentation tayyar karni hai phir Faisal ko bhejni hai aaj shaam tak", "output": {"tasks": ["Prepare the presentation", "Send presentation to Faisal"], "deadline": "by evening", "people": ["Faisal"], "meetings": []}}
 {"input": "No rush, note to self need to record the intro video and send it to Komal this weekend", "output": {"tasks": ["Record the intro video", "Send intro video to Komal"], "deadline": "this weekend", "people": ["Komal"], "meetings": []}}
-{"input": "Sun na report finalize karni hai kar ke Ayesha ko bhejni hai friday tak", "output": {"tasks": ["Finalize the report", "Send report to Ayesha"], "deadline": "Friday", "people": ["Ayesha"], "meetings": []}}
-{"input": "Need to record the tutorial then email it to the team by Friday", "output": {"tasks": ["Record the tutorial", "Email tutorial to the team"], "deadline": "Friday", "people": ["the team"], "meetings": []}}
 {"input": "Acha chalo milte hain phir", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "My back hurts from sitting all day", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "The internet is so slow today", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
@@ -1495,5 +1349,3 @@
 {"input": "Acha yaar chalo phir baad mein", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "The weather is lovely today", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
 {"input": "How was your weekend", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Subah subah kya scene hai", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}
-{"input": "Thak gaya hu aaj", "output": {"tasks": [], "deadline": null, "people": [], "meetings": []}}

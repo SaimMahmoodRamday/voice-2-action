@@ -3,7 +3,7 @@
 Next.js (App Router) + TypeScript + Tailwind UI for the Voice2Action backend.
 
 Upload a voice note (`.m4a/.mp3/.ogg/.wav`) or type a transcript, and get back
-structured tasks, deadline, people, meetings, and priority — with an inline
+structured tasks, deadline, people, and meetings — with an inline
 follow-up loop when information is missing.
 
 ## Run

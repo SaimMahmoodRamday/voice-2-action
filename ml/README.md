@@ -28,7 +28,7 @@ Adapter weights land in `outputs/qwen2.5-3b-voice2action/`.
 `data/examples.jsonl` — one JSON object per line:
 
 ```json
-{"input": "Roman Urdu transcript", "output": {"tasks": [...], "deadline": ..., "people": [...], "meetings": [...], "priority": ...}}
+{"input": "Roman Urdu transcript", "output": {"tasks": [...], "deadline": ..., "people": [...], "meetings": [...]}}
 ```
 
 Add more examples here. The 10 starter examples are only enough to validate the pipeline runs; collect a real dataset before relying on the output.

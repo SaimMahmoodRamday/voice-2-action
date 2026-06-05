@@ -5,7 +5,6 @@ import {
   followup,
   processText,
   transcribe,
-  type Priority,
   type ProcessResponse,
 } from "@/lib/api";
 
@@ -195,9 +194,8 @@ export default function Home() {
             )}
 
             <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-              <div className="mb-3 flex items-center justify-between">
+              <div className="mb-3">
                 <Label>Tasks</Label>
-                <PriorityPill priority={result.extraction.priority} />
               </div>
 
               {result.extraction.tasks.length ? (
@@ -354,22 +352,6 @@ function Chips({
         </span>
       ))}
     </div>
-  );
-}
-
-function PriorityPill({ priority }: { priority: Priority | null }) {
-  if (!priority) return null;
-  const map: Record<Priority, string> = {
-    High: "bg-red-50 text-red-700 ring-red-600/20",
-    Medium: "bg-amber-50 text-amber-700 ring-amber-600/20",
-    Low: "bg-emerald-50 text-emerald-700 ring-emerald-600/20",
-  };
-  return (
-    <span
-      className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${map[priority]}`}
-    >
-      {priority} priority
-    </span>
   );
 }
 

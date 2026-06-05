@@ -9,7 +9,7 @@ class AgentState(TypedDict, total=False):
     extraction: TaskExtraction
     missing_fields: List[str]
     followup_question: Optional[str]
-    user_reply: Optional[str]
+    user_reply: Optional[str]           
 
 
 def extract_node(state: AgentState) -> AgentState:
@@ -28,8 +28,6 @@ def validate_node(state: AgentState) -> AgentState:
         missing.append("deadline")
     if ex.tasks and not ex.people:
         missing.append("people")
-    if ex.tasks and ex.priority is None:
-        missing.append("priority")
     return {"missing_fields": missing}
 
 

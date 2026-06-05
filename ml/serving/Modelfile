@@ -12,7 +12,7 @@ TEMPLATE """{{ if .System }}<|im_start|>system
 
 # Default system prompt (matches training). The backend overrides this per
 # request via the API `system` field, so this is just a sensible fallback.
-SYSTEM """You extract structured task information from informal voice-note transcripts in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys tasks, deadline, people, meetings, priority."""
+SYSTEM """You extract structured task information from informal voice-note transcripts in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys tasks, deadline, people, meetings."""
 
 PARAMETER stop "<|im_start|>"
 PARAMETER stop "<|im_end|>"

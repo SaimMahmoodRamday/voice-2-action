@@ -17,11 +17,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 SYSTEM = (
     "You extract structured task information from informal voice-note transcripts "
     "in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys "
-    "tasks, deadline, people, meetings, priority."
+    "tasks, deadline, people, meetings."
 )
 
 # ── Test cases ───────────────────────────────────────────────────────────────
-# Mix of: Roman Urdu, English, mixed, single task, multi-task, meetings, low priority
+# Mix of: Roman Urdu, English, mixed, single task, multi-task, meetings
 TEST_CASES = [
     # Basic Roman Urdu
     {
@@ -43,15 +43,15 @@ TEST_CASES = [
         "input": "Please send the proposal to Kamran by end of day",
         "expect": {"tasks": ["Send proposal to Kamran"], "deadline": "end of day", "people": ["Kamran"]},
     },
-    # Mixed Urdu-English with urgency cue
+    # Mixed Urdu-English, multiple tasks
     {
         "input": "urgent hai PR merge karna hai aur deployment karna hai",
-        "expect": {"tasks": ["Merge the PR", "Do deployment"], "priority": "High"},
+        "expect": {"tasks": ["Merge the PR", "Do deployment"]},
     },
-    # Low priority cue
+    # Casual single task
     {
         "input": "koi jaldi nahi, bas library books return karne hain",
-        "expect": {"priority": "Low"},
+        "expect": {"tasks": ["Return the library books"]},
     },
     # People + meeting + task
     {
@@ -115,7 +115,7 @@ def check_result(output_dict: dict | None, expected: dict) -> tuple[bool, list[s
         return False, ["Output is not valid JSON"]
 
     issues = []
-    required_keys = {"tasks", "deadline", "people", "meetings", "priority"}
+    required_keys = {"tasks", "deadline", "people", "meetings"}
     missing_keys = required_keys - output_dict.keys()
     if missing_keys:
         issues.append(f"Missing keys: {missing_keys}")
