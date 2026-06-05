@@ -1,16 +1,44 @@
-# Frontend (placeholder)
+# Voice2Action — Frontend
 
-Not the current focus. Initialize when backend is stable:
+Next.js (App Router) + TypeScript + Tailwind UI for the Voice2Action backend.
+
+Upload a voice note (`.m4a/.mp3/.ogg/.wav`) or type a transcript, and get back
+structured tasks, deadline, people, meetings, and priority — with an inline
+follow-up loop when information is missing.
+
+## Run
 
 ```bash
-cd ..
-rm -rf frontend
-npx create-next-app@latest frontend --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-The backend exposes:
+The backend must be running (default `http://localhost:8000`). Configure the URL
+in `.env.local`:
 
-- `POST /transcribe` — multipart audio → `{ transcript, language }`
-- `POST /process` — `{ transcript }` → `{ extraction, missing_fields, followup_question }`
-- `POST /followup` — `{ extraction, missing_fields, user_reply }` → updated extraction
-- `POST /voice2action` — multipart audio → full pipeline in one call
+```bash
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+```
+
+## How it talks to the backend
+
+`lib/api.ts` wraps these endpoints:
+
+- **Upload audio** → `POST /transcribe` (audio → transcript) → `POST /process`
+  (transcript → extraction). Two calls so the transcript can be shown.
+- **Type text** → `POST /process` directly.
+- **Follow-up answer** → `POST /followup` (updates the extraction in place).
+
+> CORS: the backend allows all origins in dev (`app/main.py`). Tighten before
+> deploying.
+
+## Structure
+
+```
+app/
+  layout.tsx     # metadata + fonts
+  page.tsx       # the whole UI (client component)
+  globals.css    # Tailwind + theme tokens
+lib/
+  api.ts         # typed backend client
+```
