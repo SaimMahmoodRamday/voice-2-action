@@ -1,5 +1,5 @@
 base_model: Qwen/Qwen2.5-3B-Instruct
-dataset_path: ml/data/examples.jsonl
+dataset_path: ml/data/train.jsonl
 output_dir: ml/outputs/qwen2.5-3b-voice2action
 
 # QLoRA

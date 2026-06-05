@@ -1,0 +1,19 @@
+FROM ./voice2action-q8_0.gguf
+
+# Qwen2.5 chat format. The backend calls Ollama's /api/generate with a `system`
+# and `prompt`, which Ollama renders through this template into the exact
+# <|im_start|> turn structure the model was fine-tuned on.
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+{{ .Response }}"""
+
+# Default system prompt (matches training). The backend overrides this per
+# request via the API `system` field, so this is just a sensible fallback.
+SYSTEM """You extract structured task information from informal voice-note transcripts in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys tasks, deadline, people, meetings, priority."""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.2

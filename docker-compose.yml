@@ -6,7 +6,38 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
     restart: unless-stopped
+
+  # One-shot init: registers the fine-tuned model into the ollama volume.
+  # Idempotent — skips if the model already exists, so re-runs are cheap.
+  # The GGUF + Modelfile are mounted from ./ml/serving (a build artifact,
+  # gitignored). For a distributed deploy, swap `ollama create` for
+  # `ollama pull <registry>/voice2action` here.
+  model-init:
+    image: ollama/ollama:latest
+    container_name: voice2action-model-init
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      - ./ml/serving:/models:ro
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        if ollama list | grep -q '^voice2action'; then
+          echo "Model 'voice2action' already present — skipping create."
+        else
+          echo "Registering 'voice2action' from /models/Modelfile..."
+          ollama create voice2action -f /models/Modelfile
+        fi
+    restart: "no"
 
   backend:
     build: ./backend
@@ -15,14 +46,23 @@ services:
       - "8000:8000"
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
-      - OLLAMA_MODEL=qwen2.5:3b
+      - OLLAMA_MODEL=voice2action
       - WHISPER_MODEL=medium
       - WHISPER_DEVICE=cpu
       - WHISPER_COMPUTE_TYPE=int8
       - UPLOAD_DIR=/tmp/uploads
+      # Persist the HuggingFace cache so the ~1.5 GB Whisper model is downloaded
+      # once and survives container recreation.
+      - HF_HOME=/root/.cache/huggingface
+    volumes:
+      - hf_cache:/root/.cache/huggingface
     depends_on:
-      - ollama
+      ollama:
+        condition: service_healthy
+      model-init:
+        condition: service_completed_successfully
     restart: unless-stopped
 
 volumes:
   ollama_data:
+  hf_cache:

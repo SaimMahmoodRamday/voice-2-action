@@ -1,4 +1,8 @@
-"""QLoRA fine-tuning entry point. Run after prepare_dataset.py."""
+"""QLoRA fine-tuning entry point. Run after prepare_dataset.py.
+
+Expects train.jsonl rows in conversational format:
+    {"messages": [{"role": "system", ...}, {"role": "user", ...}, {"role": "assistant", ...}]}
+"""
 import argparse
 from pathlib import Path
 
@@ -51,6 +55,21 @@ def main():
 
     dataset = load_dataset("json", data_files=args.train_file, split="train")
 
+    def formatting_func(examples):
+        """Apply the model's chat template to each messages sequence.
+
+        SFTTrainer receives batched examples, so examples["messages"] is a
+        list of message lists.  We apply the tokenizer's built-in chat
+        template (e.g. Qwen2.5's <|im_start|> format) so training tokens
+        match inference exactly.
+        """
+        return [
+            tokenizer.apply_chat_template(
+                msgs, tokenize=False, add_generation_prompt=False
+            )
+            for msgs in examples["messages"]
+        ]
+
     Path(cfg["output_dir"]).mkdir(parents=True, exist_ok=True)
     sft_cfg = SFTConfig(
         output_dir=cfg["output_dir"],
@@ -71,6 +90,7 @@ def main():
         tokenizer=tokenizer,
         train_dataset=dataset,
         peft_config=peft_cfg,
+        formatting_func=formatting_func,
         args=sft_cfg,
     )
     trainer.train()

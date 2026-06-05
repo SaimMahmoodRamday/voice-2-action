@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 venv/
 .env
+.pytest_cache/
 
 # Models / caches
 *.bin
@@ -25,6 +26,9 @@ backend/uploads/
 ml/outputs/
 ml/checkpoints/
 wandb/
+
+# Build tooling (cloned llama.cpp for GGUF conversion)
+tools/
 
 # Node
 node_modules/

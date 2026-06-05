@@ -1,0 +1,21 @@
+# Virtual envs (huge — must not enter the build context)
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local runtime / secrets
+.env
+uploads/
+
+# Audio samples
+*.wav
+*.mp3
+*.ogg
+*.m4a
+
+# Tests aren't needed in the runtime image
+tests/
