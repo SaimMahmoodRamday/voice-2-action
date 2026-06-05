@@ -28,8 +28,21 @@ Write ONE short, friendly clarifying question (in English) asking the user to pr
 
 FOLLOWUP_MERGE_SYSTEM = """You update a partial task extraction with new information from the user's reply.
 
-You will be given the current JSON extraction, the fields that were missing, and the user's reply.
-Return the updated JSON with the same shape. Only modify fields that the reply addresses. Output JSON only."""
+You are given the current JSON extraction, the fields that were missing, and the user's reply.
+Return the updated JSON with EXACTLY this shape:
+{
+  "tasks": [string, ...],
+  "deadline": string | null,
+  "people": [string, ...],
+  "meetings": [string, ...],
+  "priority": "Low" | "Medium" | "High" | null
+}
+
+Rules:
+- "priority" MUST be exactly one of "Low", "Medium", "High" (capitalized) or null. Map cues like "urgent"/"asap" to "High", "koi jaldi nahi" to "Low".
+- Only modify fields that the reply addresses; keep the others unchanged.
+- Use [] for empty lists and null for a missing deadline/priority.
+- Output JSON only. No prose, no markdown fences."""
 
 
 FOLLOWUP_MERGE_USER_TEMPLATE = """Current extraction:
