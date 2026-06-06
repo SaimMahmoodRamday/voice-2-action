@@ -128,6 +128,57 @@ Fine-tuning produces a LoRA adapter that is merged and exported to GGUF format f
 
 ---
 
+## Fine-Tuning Results
+
+Does fine-tuning actually beat prompting? Measured on a **148-example held-out test set** that the model never saw during training (split stratified by example type *and* spread across the dataset to avoid positional bias; verified zero train/test leakage).
+
+**Conditions** — all three receive the *same* system prompt and the raw transcript, decoded greedily (`temperature 0`). The only differences are in-context examples and fine-tuning:
+
+1. **Base, zero-shot** — `qwen2.5:3b` with the instruction only
+2. **Base, few-shot** — same model + 5 worked examples in context
+3. **Fine-tuned** — the QLoRA-adapted `voice2action` model
+
+**Results**
+
+| Condition | JSON valid | Task F1 | People F1 | Meeting F1 | Deadline acc | **Exact match** |
+|---|---|---|---|---|---|---|
+| Base — zero-shot | 96.6% | 0.36 | 0.90 | 0.82 | 73.6% | **21.6%** |
+| Base — few-shot (5 ex) | 100% | 0.72 | 0.93 | 0.83 | 81.8% | **45.9%** |
+| **Fine-tuned** | **100%** | **0.99** | **0.99** | **1.00** | **98.6%** | **95.9%** |
+
+> Fine-tuning lifted exact-match from **21.6%** (zero-shot) and **45.9%** (5-shot) to **95.9%**, and task-extraction F1 from **0.36 → 0.99** — gains prompting alone could not achieve. Few-shot prompting closed only about half the gap.
+
+**Why the gap is where it is.** Base models are already decent at copying literal **names** (People F1 ≈ 0.90) — but weak at **task extraction** (F1 0.36), which requires Roman-Urdu→English translation, splitting compound actions, and disciplined JSON. That domain skill is exactly what fine-tuning installs.
+
+**Representative cases** (base zero-shot vs. fine-tuned):
+
+```text
+Input:  yar utility bills pay karne hain aur contract sign karna hai June ke end tak
+Base:   tasks as objects with an invented "priority" key — wrong schema
+Tuned:  {"tasks": ["Pay utility bills", "Sign the contract"], "deadline": "end of June", ...}   ✓
+
+Input:  sun presentation ready karni hai wednesday tak
+Base:   {"tasks": ["sun presentation ready"], ...}        # untranslated, keeps filler "sun"
+Tuned:  {"tasks": ["Prepare presentation"], "deadline": "Wednesday", ...}                       ✓
+
+Input:  urgent hai Rukhsana ke sath sync karni hai
+Base:   {"tasks": ["sync with Rukhsana"], "meetings": null}   # misclassifies a meeting as a task
+Tuned:  {"tasks": [], "meetings": ["Sync with Rukhsana"], ...}                                  ✓
+```
+
+**Reproduce**
+
+```bash
+python ml/scripts/split_dataset.py            # stratified, position-spread 90/10 split
+python ml/scripts/prepare_dataset.py --input ml/data/examples_train.jsonl --output ml/data/train.jsonl
+python ml/scripts/train_qlora.py --config ml/configs/qlora.yaml
+python ml/scripts/evaluate.py                 # base (0-shot + few-shot) vs fine-tuned → table
+```
+
+> **Scope note:** the test set is drawn from the same curated distribution, so these are strong *in-distribution* numbers; on noisy real-world speech all conditions drop somewhat, but the relative gap holds. Matching is lenient (set/substring/token-overlap) since task text is free-form; exact-match is the strict complement. Full per-example outputs: `ml/eval_results.json`.
+
+---
+
 ## API Reference
 
 | Method | Endpoint | Description |
