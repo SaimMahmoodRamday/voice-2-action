@@ -359,6 +359,28 @@ python ml/scripts/evaluate.py
 ```
 
 ---
+
+## Deployment
+
+Voice2Action ships as a Docker Compose stack, so the simplest production path is a **single Docker host** (one VM) running the same `docker compose up` you use locally. A GPU is recommended for low-latency LLM inference but not required — Ollama also serves the 3B model on CPU, just slower.
+
+**Production checklist (any provider):**
+
+- **Get the model artifact onto the host.** `ml/serving/voice2action-q8_0.gguf` is gitignored, so build it (see [`ml/README.md`](ml/README.md)) or copy it to the server before `docker compose up`. For multi-host setups, push the model to a registry and switch the `model-init` step to `ollama pull`.
+- **Point the frontend at the public backend URL.** `NEXT_PUBLIC_API_BASE_URL` is baked at build time, so set it to your real API URL (edit the build arg in `docker-compose.yml`, or pass `--build-arg NEXT_PUBLIC_API_BASE_URL=https://api.yourdomain.com` when building the `frontend` image) — `localhost` only works for local runs.
+- **Front it with HTTPS.** Put a reverse proxy (Caddy / Nginx / Traefik) in front, terminating TLS and routing to the frontend (`:3000`) and backend (`:8000`). Keep Ollama (`:11434`) **internal** — don't expose it.
+- **Tighten CORS.** Replace the backend's `allow_origins=["*"]` (`app/main.py`) with your frontend domain.
+- **Persist volumes.** `ollama_data` (model) and `hf_cache` (Whisper) so restarts don't re-download multi-GB files.
+
+**AWS** — a GPU EC2 instance (`g4dn.xlarge` / `g5.xlarge`) with Docker + the NVIDIA Container Toolkit, then `docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d`. Open 80/443 in the security group; keep 8000/11434 private. CPU instances (`t3`/`m5`) also work, just slower. ECS/EKS is possible but heavier than a single host for this stack.
+
+**Azure** — a GPU VM (NC / NV series) with Docker + NVIDIA Container Toolkit, same compose command. For a more managed split, host the backend + frontend images on Azure Container Apps / Container Instances with Ollama on a GPU VM.
+
+**Anywhere else** — any VM with Docker + Compose works (GCP `g2`/T4, DigitalOcean, Hetzner, RunPod, Lambda…). GPU hosts give the best latency; CPU is fine for demos and light traffic.
+
+> This is a single-node design. Horizontal scaling (a separate Ollama pool, multiple backend replicas behind a load balancer) is a later step, not required to ship.
+
+---
 <!-- 
 ## Example Use Cases
 
