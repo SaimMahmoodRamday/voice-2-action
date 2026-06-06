@@ -10,9 +10,14 @@ People communicate tasks informally — through voice notes, quick messages, and
 
 > *"yar client ne kaha proposal bhejna hai friday tak aur Ali se approval bhi lena hai"*
 
-contains a deadline, two tasks, and a person — but buried in informal, mixed-language speech. Voice2Action extracts all of it automatically.
+contains a deadline, two tasks, and a person — but buried in informal, mixed-language speech.
 
-The system transcribes audio, runs a fine-tuned language model to extract structured fields, and then uses an agentic graph to detect missing information and ask targeted follow-up questions — producing a clean, actionable output every time.
+Voice2Action pairs two pieces that reinforce each other:
+
+1. **A fine-tuned LLM** (Qwen2.5-3B + QLoRA) that turns noisy Roman-Urdu / mixed-language speech into clean, structured JSON — `tasks · deadline · people · meetings`.
+2. **A LangGraph agent** that doesn't stop at extraction. It **validates** the result, **detects what's genuinely ambiguous** (an unnamed recipient, a missing or vague deadline, an undated meeting), asks **one targeted follow-up question**, and **merges the answer back** into the structured output.
+
+The fine-tuned model supplies domain accuracy; the agent supplies completeness and trust — so the output is an action plan you can act on, not just a best-effort parse.
 
 ---
 
@@ -44,43 +49,64 @@ Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, de
 
 ## Key Features
 
-- **Roman Urdu NLP** — handles the real way Pakistanis communicate: informal, code-switched, spoken-language text
-- **Fine-tuned LLM** — Qwen2.5-3B fine-tuned with QLoRA on a curated 1,500+ example dataset; not just prompting
-- **Agentic clarification loop** — a LangGraph agent detects *genuinely ambiguous* gaps (e.g. an unnamed recipient → "who should I call?"), asks one targeted question, then merges your reply — instead of blindly demanding every empty field
+- **Fine-tuned domain model** — Qwen2.5-3B fine-tuned with QLoRA on a curated 1,500+ example dataset; it *measurably* beats prompting on Roman-Urdu task extraction ([results](#fine-tuning-results)), not just prompt engineering
+- **Agentic reasoning loop (LangGraph)** — the system **validates** every extraction, **detects genuine ambiguity** (unnamed recipient, missing/vague deadline, undated meeting), asks **one targeted clarifying question**, and **merges** the reply back into the result — it reasons about what's actually missing instead of demanding every empty field
+- **Robust by design** — deterministic decoding, JSON self-repair, *grounded* merges (won't invent a deadline or a name), ask-each-gap-once, and graceful recovery when extraction returns empty
+- **Roman Urdu / mixed-language first** — built for how people actually speak: informal, code-switched, spoken-language text
 - **Full speech-to-text pipeline** — Faster-Whisper (medium) transcribes voice notes in Urdu and Roman Urdu
-- **One-command deployment** — Docker Compose brings up Ollama, auto-registers the fine-tuned model, and starts the backend
-- **GPU-accelerated inference** — optional NVIDIA GPU support via a compose override file
+- **One-command deployment** — Docker Compose brings up Ollama, auto-registers the fine-tuned model, and starts the backend (optional NVIDIA GPU via a compose override)
 
 ---
 
 ## Architecture
 
 ```
-┌──────────────────────┐
-│   Voice Note (audio) │
-└──────────┬───────────┘
-           │  POST /voice2action  or  POST /transcribe → POST /process
-           ▼
-┌──────────────────────┐
-│   Faster-Whisper     │  Speech-to-text (medium model, int8, Urdu/Roman Urdu)
-│   Speech-to-Text     │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│   Fine-Tuned LLM     │  Qwen2.5-3B-Instruct + QLoRA adapter → GGUF, served via Ollama
-│   Task Extraction    │  Extracts: tasks · deadline · people · meetings
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│   LangGraph Agent    │  Validation → Missing field detection → Follow-up generation
-│   Agentic Pipeline   │  → User reply merge → Final structured output
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│  Structured JSON     │  Returned via FastAPI REST API
-│  Action Plan         │
-└──────────────────────┘
+┌────────────────────────┐
+│    Voice Note (audio)  │
+└───────────┬────────────┘
+            │  POST /voice2action   (or  /transcribe → /process)
+            ▼
+┌────────────────────────┐
+│     Faster-Whisper     │   speech-to-text · medium · int8 · Urdu / Roman Urdu
+└───────────┬────────────┘
+            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                         LangGraph agent                          │
+│                                                                  │
+│   extract ─▶ validate ─▶ ┐                                       │
+│   (fine-tuned Qwen2.5)   │  no gaps    ──────────────▶  done      │
+│                          │  ambiguous  ─▶ ask ONE targeted Q      │
+│                          ▼                       │               │
+│              merge & re-validate  ◀───── user reply              │
+│              (grounded · ask each gap once)                      │
+└───────────┬─────────────────────────────────────────────────────┘
+            ▼
+┌────────────────────────┐
+│    FastAPI REST API    │   JSON { extraction, missing_fields, followup_question }
+└────────────────────────┘
 ```
+
+---
+
+## Agentic Workflow
+
+Extraction is only step one. The core of Voice2Action is a small, deliberate **LangGraph** agent that turns a raw extraction into a *complete, trustworthy* action plan. Two compiled graphs drive it:
+
+- **Process graph:** `extract → validate → (conditional) → follow-up`
+- **Follow-up graph:** `merge → validate → (conditional) → follow-up`
+
+A conditional edge ends the graph immediately when nothing is ambiguous, so the agent only speaks up when it genuinely needs to.
+
+**What the agent actually reasons about — not blind field-presence:**
+
+- **Intent-aware ambiguity.** It asks *"who should I call?"* only when a task implies a person but none was resolved — never *"who's involved?"* for `"buy milk"`.
+- **Missing & vague deadlines.** A task or meeting with no time — or a vague one like `"jaldi"` / `"soon"` — triggers a *"when?"*; an undated meeting is asked *"when is the meeting?"*.
+- **Recovery from a missed extraction.** If the model returns nothing but the transcript clearly *was* a request, the agent replies *"I may have missed the task — could you rephrase…?"* instead of failing silently. Genuine chit-chat still returns cleanly empty.
+- **Grounded, non-hallucinating merges.** A merged-in deadline or name is rejected unless it actually appears in the user's reply — a confused answer like `"what"` can't fabricate a `"tomorrow"`.
+- **Never loses good output.** A follow-up may add or refine, but it can't drop tasks/meetings the model already extracted.
+- **Asks each gap once.** Already-asked gaps are tracked, so the agent clarifies — it doesn't nag in a loop.
+
+Each clarifying question is generated **deterministically from the detected gap**, so what the agent flags and what it asks can never drift apart. Combined with deterministic (greedy) extraction, JSON self-repair, and a clean `503` when the model service is unreachable, the pipeline behaves predictably under real-world, messy input.
 
 ---
 
@@ -123,6 +149,10 @@ Rather than relying on prompt engineering alone, the model is fine-tuned end-to-
 | Max sequence length | 1024 |
 
 Fine-tuning produces a LoRA adapter that is merged and exported to GGUF format for local serving via Ollama.
+
+### Iterative dataset development
+
+The dataset is treated as a living asset. Real-world failures — transcripts the model mishandles in actual use — are continuously collected, reviewed, and folded into future training data, so coverage grows over time (for example, expanding under-represented patterns surfaced during testing). The held-out evaluation below is re-run after each iteration to confirm a change *helps* rather than regresses.
 
 ---
 
@@ -325,7 +355,7 @@ python ml/scripts/evaluate.py
 ```
 
 ---
-
+<!-- 
 ## Example Use Cases
 
 | Voice Note | Extracted |
@@ -337,24 +367,34 @@ python ml/scripts/evaluate.py
 | `"Usko call karna hai"` | Task: Call … → agent asks *"Who should I call?"* |
 | `"Doodh le ana"` | Task: Buy milk |
 
----
+--- -->
 
 ## Why This Matters
 
 Roman Urdu is how hundreds of millions of people communicate daily — in WhatsApp messages, voice notes, and casual speech — but it is almost entirely absent from standard NLP tooling. This project demonstrates that a small, fine-tuned model (3B parameters) can outperform generic prompting on this domain by learning the specific vocabulary, sentence structures, and mixed-language patterns that characterise real Pakistani communication.
 
-The agentic follow-up system means the output is always complete and actionable, even when the speaker omits details — which is the norm in conversational task delegation.
+But extraction alone isn't enough: real voice notes omit details. The LangGraph agent closes that gap — validating each result, detecting genuine ambiguity, asking one targeted question, and merging the answer back — with grounded, deterministic behavior designed not to hallucinate or nag. The fine-tuned model supplies domain accuracy; the agent supplies completeness and trust.
+
+<!-- ---
+
+## Scope & Limitations
+
+Stated up front, since they shape how the project is built and evaluated:
+
+- **One deadline per note.** The schema carries a single deadline, so a note with two tasks on different dates collapses to one. Per-task deadlines are a planned schema change.
+- **In-distribution evaluation.** The reported metrics are on a held-out slice of the curated dataset; genuinely noisy real-world speech is harder (the fine-tuned-vs-prompting gap holds, but absolute numbers drop). This is exactly why dataset development is treated as continuous.
+- **Recipient resolution depends on the model.** Unnamed pronoun references (`usey`, `usko`) are an active coverage area being expanded in the dataset; when extraction leaves a recipient unresolved, the agent already detects it and asks *"who?"*. -->
 
 ---
 
 ## Future Roadmap
 
-- [ ] Google Calendar / Outlook integration — auto-schedule extracted tasks
+<!-- - [ ] Google Calendar / Outlook integration — auto-schedule extracted tasks -->
 - [ ] WhatsApp bot interface — receive and respond to voice notes in-app
-- [ ] Personal task memory — cross-session context and history
+<!-- - [ ] Personal task memory — cross-session context and history
 - [ ] Mobile app (Flutter / React Native)
-- [ ] Multilingual expansion — Arabic, Hindi, Bengali
+- [ ] Multilingual expansion — Arabic, Hindi, Bengali -->
 
 ---
 
-*Built with FastAPI · LangGraph · Faster-Whisper · Qwen2.5 · QLoRA · Next.js · Docker*
+<!-- *Built with FastAPI · LangGraph · Faster-Whisper · Qwen2.5 · QLoRA · Next.js · Docker* -->
