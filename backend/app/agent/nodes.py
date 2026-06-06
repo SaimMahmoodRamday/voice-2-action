@@ -13,11 +13,10 @@ class AgentState(TypedDict, total=False):
 
 
 def extract_node(state: AgentState) -> AgentState:
+    # Send the RAW transcript as the user turn with the training system prompt —
+    # matching exactly how the model was fine-tuned and evaluated (0.99 task F1).
     transcript = state["transcript"]
-    data = llm.generate_json(
-        prompts.EXTRACTION_USER_TEMPLATE.format(transcript=transcript),
-        system=prompts.EXTRACTION_SYSTEM,
-    )
+    data = llm.generate_json(transcript, system=prompts.EXTRACTION_SYSTEM)
     return {"extraction": TaskExtraction(**data)}
 
 

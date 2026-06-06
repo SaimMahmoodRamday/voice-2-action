@@ -1,23 +1,14 @@
-EXTRACTION_SYSTEM = """You extract structured task information from informal voice-note transcripts in Roman Urdu, Urdu, or mixed Urdu-English.
-
-Return ONLY a JSON object with this exact shape:
-{
-  "tasks": [string, ...],        // short imperative English task descriptions
-  "deadline": string | null,     // natural deadline if present, e.g. "Friday", "kal", "5pm"
-  "people": [string, ...],       // names of people mentioned
-  "meetings": [string, ...]      // meetings/events mentioned
-}
-
-Rules:
-- Translate Roman Urdu tasks into concise English (e.g. "Ali ko call karna hai" -> "Call Ali").
-- Use null for a missing deadline. Use [] for missing lists.
-- Output JSON only. No prose, no markdown fences."""
-
-
-EXTRACTION_USER_TEMPLATE = """Transcript:
-{transcript}
-
-JSON:"""
+# IMPORTANT: this must stay identical to the system prompt used during
+# fine-tuning (ml/scripts/prepare_dataset.py) and evaluation, and the user turn
+# must be the RAW transcript (no wrapper) — so the deployed model runs exactly
+# in-distribution. The fine-tuned model learned the JSON shape from training, so
+# no schema spec is needed here. Changing this risks degrading live accuracy
+# relative to the measured eval numbers.
+EXTRACTION_SYSTEM = (
+    "You extract structured task information from informal voice-note transcripts "
+    "in Roman Urdu, Urdu, or mixed Urdu-English. Return ONLY a JSON object with keys "
+    "tasks, deadline, people, meetings."
+)
 
 
 FOLLOWUP_QUESTION_TEMPLATE = """The following information is missing from the extracted tasks: {missing}.
