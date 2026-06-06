@@ -54,7 +54,7 @@ Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, de
 - **Robust by design** — deterministic decoding, JSON self-repair, *grounded* merges (won't invent a deadline or a name), ask-each-gap-once, and graceful recovery when extraction returns empty
 - **Roman Urdu / mixed-language first** — built for how people actually speak: informal, code-switched, spoken-language text
 - **Full speech-to-text pipeline** — Faster-Whisper (medium) transcribes voice notes in Urdu and Roman Urdu
-- **One-command deployment** — Docker Compose brings up Ollama, auto-registers the fine-tuned model, and starts the backend (optional NVIDIA GPU via a compose override)
+- **One-command deployment** — Docker Compose brings up the full stack: Ollama, the auto-registered fine-tuned model, the FastAPI backend, and the Next.js frontend (optional NVIDIA GPU via a compose override)
 
 ---
 
@@ -254,7 +254,8 @@ voice-2-action/
 │   └── Dockerfile
 ├── frontend/                 # Next.js 16 app
 │   ├── app/                  # App router pages
-│   └── lib/                  # API client utilities
+│   ├── lib/                  # API client utilities
+│   └── Dockerfile
 ├── ml/                       # Model training & serving
 │   ├── configs/
 │   │   └── qlora.yaml        # QLoRA training configuration
@@ -271,7 +272,7 @@ voice-2-action/
 │   │   └── infer.py            # Local inference sanity checks
 │   └── serving/
 │       └── Modelfile           # Ollama model definition
-├── docker-compose.yml          # Ollama + model-init + backend
+├── docker-compose.yml          # Ollama + model-init + backend + frontend
 ├── docker-compose.gpu.yml      # GPU override
 └── README.md
 ```
@@ -297,11 +298,14 @@ This starts:
 1. **Ollama** (model server) on port `11434`
 2. **model-init** — one-shot service that registers the fine-tuned `voice2action` model (idempotent)
 3. **Backend** (FastAPI) on port `8000`
+4. **Frontend** (Next.js) on port `3000`
+
+Then open **http://localhost:3000**.
 
 For GPU acceleration (requires [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)):
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.gpu.yml up
+docker compose -f docker-compose.yml -f docker-compose.gpu.yml up 
 ```
 
 ### Option B — Local Development

@@ -64,6 +64,20 @@ services:
         condition: service_completed_successfully
     restart: unless-stopped
 
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked into the client bundle at build time → must be the URL the
+        # browser can reach (the published backend port), not "http://backend".
+        NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
+    container_name: voice2action-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
 volumes:
   ollama_data:
   hf_cache:
