@@ -44,7 +44,10 @@ def process(req: ProcessRequest):
     if not req.transcript.strip():
         raise HTTPException(status_code=400, detail="transcript is empty")
     graph = build_process_graph()
-    result = graph.invoke({"transcript": req.transcript})
+    try:
+        result = graph.invoke({"transcript": req.transcript})
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
     return ProcessResponse(
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),
@@ -55,11 +58,15 @@ def process(req: ProcessRequest):
 @router.post("/followup", response_model=FollowupResponse)
 def followup(req: FollowupRequest):
     graph = build_followup_graph()
-    result = graph.invoke({
-        "extraction": req.extraction,
-        "missing_fields": req.missing_fields,
-        "user_reply": req.user_reply,
-    })
+    try:
+        result = graph.invoke({
+            "extraction": req.extraction,
+            # the fields just asked — so validate won't re-ask them (ask-once)
+            "asked_fields": req.missing_fields,
+            "user_reply": req.user_reply,
+        })
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
     return FollowupResponse(
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),
@@ -88,7 +95,10 @@ async def voice2action(file: UploadFile = File(...)):
         )
 
     graph = build_process_graph()
-    result = graph.invoke({"transcript": transcript})
+    try:
+        result = graph.invoke({"transcript": transcript})
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
     return ProcessResponse(
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),

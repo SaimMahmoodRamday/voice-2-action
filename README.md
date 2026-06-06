@@ -33,14 +33,12 @@ yar client ne proposal bhejna hai friday tak aur Ali se approval bhi lena hai
 }
 ```
 
-**Agent follow-up (when fields are missing)**
+**Agentic follow-up** — when a task is ambiguous, the agent asks one targeted question:
 ```
-I found the following tasks:
-  - Send proposal
-  - Get approval from Ali
-
-No deadline was mentioned — when does this need to be done?
+Input:  usko call karna hai          # "call him" — no name given
+Agent:  Who should I call, and when does this need to be done?
 ```
+Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, deadline `tomorrow`.
 
 ---
 
@@ -48,9 +46,9 @@ No deadline was mentioned — when does this need to be done?
 
 - **Roman Urdu NLP** — handles the real way Pakistanis communicate: informal, code-switched, spoken-language text
 - **Fine-tuned LLM** — Qwen2.5-3B fine-tuned with QLoRA on a curated 1,500+ example dataset; not just prompting
-- **Agentic clarification loop** — LangGraph detects missing fields and asks targeted follow-up questions
+- **Agentic clarification loop** — a LangGraph agent detects *genuinely ambiguous* gaps (e.g. an unnamed recipient → "who should I call?"), asks one targeted question, then merges your reply — instead of blindly demanding every empty field
 - **Full speech-to-text pipeline** — Faster-Whisper (medium) transcribes voice notes in Urdu and Roman Urdu
-- **One-command deployment** — Docker Compose brings up the entire stack (Ollama + model + backend + frontend)
+- **One-command deployment** — Docker Compose brings up Ollama, auto-registers the fine-tuned model, and starts the backend
 - **GPU-accelerated inference** — optional NVIDIA GPU support via a compose override file
 
 ---
@@ -90,7 +88,7 @@ No deadline was mentioned — when does this need to be done?
 
 | Layer | Technology | Notes |
 |---|---|---|
-| **Frontend** | Next.js 14, TypeScript, Tailwind CSS | App router, real-time voice recording |
+| **Frontend** | Next.js 16, TypeScript, Tailwind CSS | App router; upload audio or type a transcript |
 | **Backend** | FastAPI, Python 3.11, Uvicorn | Async REST API, Pydantic v2 validation |
 | **Speech-to-Text** | Faster-Whisper (medium) | int8 quantized, Urdu + Roman Urdu |
 | **LLM** | Qwen2.5-3B-Instruct | Fine-tuned via QLoRA + PEFT |
@@ -107,9 +105,9 @@ Rather than relying on prompt engineering alone, the model is fine-tuned end-to-
 
 - Casual task mentions (`yar Ali ko call karna hai`)
 - Multi-task entries with deadlines (`proposal friday tak bhejna hai aur contract sign karna hai`)
+- Compound "do X then send it" actions (`report banani hai phir Ali ko bhejni hai`)
 - Meeting extraction (`monday ko client meeting hai 3 baje`)
-- Low-priority errands (`doodh le ana`)
-- Urgent high-priority items (`urgent hai deployment karna hai aaj tak`)
+- Everyday errands, and chit-chat with no actionable task (`doodh le ana`, `yaar aaj mausam acha hai`)
 
 **Training configuration** (`ml/configs/qlora.yaml`):
 
@@ -224,7 +222,7 @@ voice-2-action/
 │   │   └── main.py           # FastAPI app entry point
 │   ├── tests/                # Pytest smoke tests
 │   └── Dockerfile
-├── frontend/                 # Next.js 14 app
+├── frontend/                 # Next.js 16 app
 │   ├── app/                  # App router pages
 │   └── lib/                  # API client utilities
 ├── ml/                       # Model training & serving
@@ -236,13 +234,14 @@ voice-2-action/
 │   │   └── test.jsonl        # Held-out evaluation split
 │   ├── scripts/
 │   │   ├── prepare_dataset.py  # Formats examples into chat template
+│   │   ├── split_dataset.py    # Stratified, position-spread train/test split
 │   │   ├── train_qlora.py      # QLoRA fine-tuning entrypoint
 │   │   ├── merge_lora.py       # Merges adapter into base model
-│   │   ├── infer.py            # Local inference / evaluation
-│   │   └── split_dataset.py    # Train/test split utility
+│   │   ├── evaluate.py         # Base vs fine-tuned metrics on held-out test
+│   │   └── infer.py            # Local inference sanity checks
 │   └── serving/
 │       └── Modelfile           # Ollama model definition
-├── docker-compose.yml          # Full stack (Ollama + backend + frontend)
+├── docker-compose.yml          # Ollama + model-init + backend
 ├── docker-compose.gpu.yml      # GPU override
 └── README.md
 ```
@@ -309,19 +308,20 @@ npm run dev
 ### Training From Scratch
 
 ```bash
-cd ml
+# from the repo root
 
-# Prepare the dataset
-python scripts/prepare_dataset.py
+# 1. Split (stratified, position-spread) + format for training
+python ml/scripts/split_dataset.py
+python ml/scripts/prepare_dataset.py --input ml/data/examples_train.jsonl --output ml/data/train.jsonl
 
-# Fine-tune (requires a CUDA GPU)
-python scripts/train_qlora.py --config configs/qlora.yaml
+# 2. Fine-tune (requires a CUDA GPU)
+python ml/scripts/train_qlora.py --config ml/configs/qlora.yaml
 
-# Merge LoRA adapter into the base model
-python scripts/merge_lora.py
+# 3. Merge adapter into base, then export to GGUF (see ml/README.md)
+python ml/scripts/merge_lora.py
 
-# Export to GGUF (requires llama.cpp)
-# See ml/README.md for the full export steps
+# 4. Evaluate fine-tuned vs base prompting on the held-out set
+python ml/scripts/evaluate.py
 ```
 
 ---
@@ -334,8 +334,8 @@ python scripts/merge_lora.py
 | `"Proposal friday tak bhejna hai"` | Task + deadline: Friday |
 | `"Monday ko client meeting hai 3 baje"` | Meeting: Monday 3pm |
 | `"Electricity bill pay karna hai aaj tak"` | Task + deadline: today |
-| `"Urgent hai deployment karna hai"` | Task + priority: High |
-| `"No rush, doodh le ana"` | Task + priority: Low |
+| `"Usko call karna hai"` | Task: Call … → agent asks *"Who should I call?"* |
+| `"Doodh le ana"` | Task: Buy milk |
 
 ---
 

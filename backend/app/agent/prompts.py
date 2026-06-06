@@ -11,11 +11,6 @@ EXTRACTION_SYSTEM = (
 )
 
 
-FOLLOWUP_QUESTION_TEMPLATE = """The following information is missing from the extracted tasks: {missing}.
-
-Write ONE short, friendly clarifying question (in English) asking the user to provide the missing information. Output the question only, no preamble."""
-
-
 FOLLOWUP_MERGE_SYSTEM = """You update a partial task extraction with new information from the user's reply.
 
 You are given the current JSON extraction, the fields that were missing, and the user's reply.
@@ -28,7 +23,8 @@ Return the updated JSON with EXACTLY this shape:
 }
 
 Rules:
-- Only modify fields that the reply addresses; keep the others unchanged.
+- Only modify a field if the reply CLEARLY provides a value for it. Keep every other field exactly as given.
+- If the reply is vague, a question, or does not actually answer (e.g. "what", "huh", "idk", "pata nahi"), return the extraction UNCHANGED. Never invent or guess a deadline, name, task, or meeting.
 - Use [] for empty lists and null for a missing deadline.
 - Output JSON only. No prose, no markdown fences."""
 
