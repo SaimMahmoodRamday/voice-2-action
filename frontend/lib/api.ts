@@ -11,6 +11,12 @@ export interface ProcessResponse {
   extraction: TaskExtraction;
   missing_fields: string[];
   followup_question: string | null;
+  // Short, rule-based explanation of why the follow-up was asked (null if none).
+  reason: string | null;
+  // Deterministic, high-level trace of the agent's decisions for this request.
+  agent_trace: string[];
+  // URL of the Notion page created when execution ran (null otherwise).
+  notion_url: string | null;
 }
 
 export interface TranscribeResponse {
@@ -22,6 +28,7 @@ export interface FollowupRequest {
   extraction: TaskExtraction;
   missing_fields: string[];
   user_reply: string;
+  execute?: boolean;
 }
 
 const BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
@@ -54,11 +61,14 @@ export async function transcribe(file: File): Promise<TranscribeResponse> {
 }
 
 /** Transcript → structured extraction + follow-up question. */
-export async function processText(transcript: string): Promise<ProcessResponse> {
+export async function processText(
+  transcript: string,
+  execute = false,
+): Promise<ProcessResponse> {
   const res = await fetch(`${BASE}/process`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ transcript }),
+    body: JSON.stringify({ transcript, execute }),
   });
   return unwrap<ProcessResponse>(res);
 }

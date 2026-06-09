@@ -24,6 +24,7 @@ export default function Home() {
   const [result, setResult] = useState<ProcessResponse | null>(null);
   const [answer, setAnswer] = useState("");
   const [answering, setAnswering] = useState(false);
+  const [execute, setExecute] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const busy = loading || answering;
@@ -54,8 +55,8 @@ export default function Home() {
         source = text.trim();
       }
       setTranscript(source);
-      setStage("Extracting tasks…");
-      setResult(await processText(source));
+      setStage(execute ? "Extracting & creating task…" : "Extracting tasks…");
+      setResult(await processText(source, execute));
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");
     } finally {
@@ -73,6 +74,7 @@ export default function Home() {
         extraction: result.extraction,
         missing_fields: result.missing_fields,
         user_reply: answer.trim(),
+        execute,
       });
       setResult(updated);
       setAnswer("");
@@ -158,11 +160,21 @@ export default function Home() {
             </div>
           )}
 
+          <label className="mt-4 flex cursor-pointer items-center gap-2.5 text-sm text-slate-600">
+            <input
+              type="checkbox"
+              checked={execute}
+              onChange={(e) => setExecute(e.target.checked)}
+              className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-400"
+            />
+            Create the task in Notion when nothing is ambiguous
+          </label>
+
           <button
             type="button"
             onClick={handleSubmit}
             disabled={busy}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading ? (
               <>
@@ -233,6 +245,30 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Notion execution result */}
+            {result.notion_url && (
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 shadow-sm">
+                <div className="flex items-start gap-2.5">
+                  <span className="mt-0.5 text-emerald-600">
+                    <CheckIcon />
+                  </span>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-emerald-900">
+                      Task created in Notion.
+                    </p>
+                    <a
+                      href={result.notion_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 inline-block text-sm font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
+                    >
+                      Open page →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Follow-up */}
             {result.followup_question && (
               <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 shadow-sm">
@@ -244,6 +280,12 @@ export default function Home() {
                     <p className="text-sm font-medium text-amber-900">
                       {result.followup_question}
                     </p>
+                    {result.reason && (
+                      <p className="mt-1 text-xs text-amber-700">
+                        <span className="font-semibold">Why I asked:</span>{" "}
+                        {result.reason}
+                      </p>
+                    )}
                     <div className="mt-3 flex gap-2">
                       <input
                         value={answer}
@@ -263,6 +305,26 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* Agent reasoning trace */}
+            {result.agent_trace.length > 0 && (
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <Label>Agent reasoning</Label>
+                <ol className="mt-2.5 space-y-1.5">
+                  {result.agent_trace.map((step, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 text-sm text-slate-600"
+                    >
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-500">
+                        {i + 1}
+                      </span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
               </div>
             )}
           </section>
