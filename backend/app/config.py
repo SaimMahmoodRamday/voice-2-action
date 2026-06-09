@@ -17,5 +17,13 @@ class Settings(BaseSettings):
 
     upload_dir: str = "./uploads"
 
+    # Optional Notion task-execution tool. Left blank by default → the feature is
+    # OFF unless both are set (see app/services/notion.py). Never hardcode these;
+    # provide them via the environment / .env.
+    notion_token: str = ""
+    notion_database_id: str = ""
+    # Name of the database's title property (Notion defaults a new DB to "Name").
+    notion_title_prop: str = "Name"
+
 
 settings = Settings()
