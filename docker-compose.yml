@@ -55,6 +55,11 @@ services:
       # Persist the HuggingFace cache so the ~1.5 GB Whisper model is downloaded
       # once and survives container recreation.
       - HF_HOME=/root/.cache/huggingface
+      # Optional Notion task execution — passed through from the host env (or a
+      # root .env). Empty by default → the feature stays OFF, nothing breaks.
+      - NOTION_TOKEN=${NOTION_TOKEN:-}
+      - NOTION_DATABASE_ID=${NOTION_DATABASE_ID:-}
+      - NOTION_TITLE_PROP=${NOTION_TITLE_PROP:-Name}
     volumes:
       - hf_cache:/root/.cache/huggingface
     depends_on:
