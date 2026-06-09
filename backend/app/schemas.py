@@ -22,21 +22,33 @@ class TranscribeResponse(BaseModel):
 
 class ProcessRequest(BaseModel):
     transcript: str
+    # Opt-in Notion task execution. OFF by default → unchanged behavior.
+    execute: bool = False
 
 
 class ProcessResponse(BaseModel):
     extraction: TaskExtraction
     missing_fields: List[str]
     followup_question: Optional[str] = None
+    # Why the follow-up question was asked (rule-based; None when none asked).
+    reason: Optional[str] = None
+    # Deterministic, high-level trace of the agent's decisions for this request.
+    agent_trace: List[str] = Field(default_factory=list)
+    # URL of the Notion page created when execution ran (None otherwise).
+    notion_url: Optional[str] = None
 
 
 class FollowupRequest(BaseModel):
     extraction: TaskExtraction
     missing_fields: List[str]
     user_reply: str
+    execute: bool = False
 
 
 class FollowupResponse(BaseModel):
     extraction: TaskExtraction
     missing_fields: List[str]
     followup_question: Optional[str] = None
+    reason: Optional[str] = None
+    agent_trace: List[str] = Field(default_factory=list)
+    notion_url: Optional[str] = None

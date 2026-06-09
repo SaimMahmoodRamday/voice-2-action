@@ -45,13 +45,16 @@ def process(req: ProcessRequest):
         raise HTTPException(status_code=400, detail="transcript is empty")
     graph = build_process_graph()
     try:
-        result = graph.invoke({"transcript": req.transcript})
+        result = graph.invoke({"transcript": req.transcript, "execute": req.execute})
     except RuntimeError as e:
         raise HTTPException(status_code=503, detail=str(e))
     return ProcessResponse(
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),
         followup_question=result.get("followup_question"),
+        reason=result.get("reason"),
+        agent_trace=result.get("agent_trace", []),
+        notion_url=result.get("notion_url"),
     )
 
 
@@ -64,6 +67,7 @@ def followup(req: FollowupRequest):
             # the fields just asked — so validate won't re-ask them (ask-once)
             "asked_fields": req.missing_fields,
             "user_reply": req.user_reply,
+            "execute": req.execute,
         })
     except RuntimeError as e:
         raise HTTPException(status_code=503, detail=str(e))
@@ -71,11 +75,14 @@ def followup(req: FollowupRequest):
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),
         followup_question=result.get("followup_question"),
+        reason=result.get("reason"),
+        agent_trace=result.get("agent_trace", []),
+        notion_url=result.get("notion_url"),
     )
 
 
 @router.post("/voice2action", response_model=ProcessResponse)
-async def voice2action(file: UploadFile = File(...)):
+async def voice2action(file: UploadFile = File(...), execute: bool = False):
     Path(settings.upload_dir).mkdir(parents=True, exist_ok=True)
     suffix = Path(file.filename or "audio").suffix or ".wav"
     path = os.path.join(settings.upload_dir, f"{uuid.uuid4().hex}{suffix}")
@@ -92,15 +99,20 @@ async def voice2action(file: UploadFile = File(...)):
             extraction=TaskExtraction(),
             missing_fields=[],
             followup_question="I couldn't hear anything in that recording. Could you try again?",
+            reason="The transcription was empty, so there was nothing to extract.",
+            agent_trace=["Transcription returned empty audio — asking the user to retry"],
         )
 
     graph = build_process_graph()
     try:
-        result = graph.invoke({"transcript": transcript})
+        result = graph.invoke({"transcript": transcript, "execute": execute})
     except RuntimeError as e:
         raise HTTPException(status_code=503, detail=str(e))
     return ProcessResponse(
         extraction=result["extraction"],
         missing_fields=result.get("missing_fields", []),
         followup_question=result.get("followup_question"),
+        reason=result.get("reason"),
+        agent_trace=result.get("agent_trace", []),
+        notion_url=result.get("notion_url"),
     )
