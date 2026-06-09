@@ -1,9 +1,9 @@
 # Voice2Action
 
 > **Turn informal Roman-Urdu / Urdu / mixed-language voice notes into structured, executable tasks.**
-> A **QLoRA fine-tuned** domain LLM extracts `tasks · deadline · people · meetings`; a **LangGraph agent** validates the result, clarifies genuine ambiguity with one targeted question, and — optionally — **executes** the task in Notion.
-
-> **What makes it more than a parser:** it's fine-tuned for a domain mainstream models handle poorly (95.9% exact match vs 21.6% zero-shot), it *reasons* about what's actually missing instead of demanding every field, it exposes a deterministic reasoning trace for every decision, and it can take a real action at the end — create the task in Notion.
+> A **QLoRA fine-tuned** domain LLM extracts `tasks · deadline · people · meetings`; a **LangGraph agent** validates the result, asks one targeted question when something is genuinely ambiguous, exposes a deterministic trace of every decision, and — optionally — **executes** the task in Notion.
+>
+> More than a parser: fine-tuned for a domain mainstream models handle poorly — **95.9% exact match vs 21.6% zero-shot** — and reasoning about what's *actually* missing instead of demanding every field.
 
 ---
 
@@ -18,7 +18,7 @@ contains a deadline, two tasks, and a person — but buried in informal, mixed-l
 Voice2Action pairs two pieces that reinforce each other:
 
 1. **A fine-tuned LLM** (Qwen2.5-3B + QLoRA) that turns noisy Roman-Urdu / mixed-language speech into clean, structured JSON — `tasks · deadline · people · meetings`.
-2. **A LangGraph agent** that doesn't stop at extraction. It **validates** the result, **detects what's genuinely ambiguous** (an unnamed recipient, a missing or vague deadline, an undated meeting), asks **one targeted follow-up question**, and **merges the answer back** into the structured output.
+2. **A LangGraph agent** that doesn't stop at extraction — it validates the result, detects what's *genuinely* ambiguous, asks **one** targeted follow-up, merges the answer back, and can execute the task (full behavior in [Agentic Workflow](#agentic-workflow)).
 
 The fine-tuned model supplies domain accuracy; the agent supplies completeness and trust — so the output is an action plan you can act on, not just a best-effort parse.
 
@@ -52,14 +52,14 @@ Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, de
 
 ## Key Features
 
-- **Fine-tuned domain model** — Qwen2.5-3B fine-tuned with QLoRA on a curated 1,500+ example dataset; it *measurably* beats prompting on Roman-Urdu task extraction ([results](#fine-tuning-results)), not just prompt engineering
-- **Agentic reasoning loop (LangGraph)** — the system **validates** every extraction, **detects genuine ambiguity** (unnamed recipient, missing/vague deadline, undated meeting), asks **one targeted clarifying question**, and **merges** the reply back into the result — it reasons about what's actually missing instead of demanding every empty field
-- **Transparent reasoning** — every response includes a deterministic, rule-based **`agent_trace`** (the high-level steps the graph actually took) and, whenever a follow-up is asked, a **`reason`** explaining *why* (by ambiguity type). No extra LLM calls, no chain-of-thought — just an honest mirror of the agent's decisions
-- **Agentic tool execution: Notion integration for task creation** — optional and **off by default**. When an extraction is complete and unambiguous, the agent can create the task in your Notion database via the official API and return the page URL. It only acts when `execute=true` *and* validation finds zero gaps — never on ambiguous or empty input — so it's a real action, taken safely
-- **Robust by design** — deterministic (greedy) decoding, JSON self-repair, *grounded* merges (won't invent a deadline or a name), ask-each-gap-once, spelling-robust deadline recovery for noisy variants, and graceful recovery when extraction returns empty
-- **Roman Urdu / mixed-language first** — built for how people actually speak: informal, code-switched, spoken-language text
-- **Full speech-to-text pipeline** — Faster-Whisper (medium) transcribes voice notes in Urdu and Roman Urdu
-- **One-command deployment** — Docker Compose brings up the full stack: Ollama, the auto-registered fine-tuned model, the FastAPI backend, and the Next.js frontend (optional NVIDIA GPU via a compose override)
+- **Fine-tuned domain model** — Qwen2.5-3B + QLoRA on a curated 1,500+ example dataset; *measurably* beats prompting, not just prompt engineering ([results](#fine-tuning-results))
+- **Agentic reasoning loop (LangGraph)** — validates every extraction, detects *genuine* ambiguity, asks one targeted question, and merges the reply back — reasoning about what's missing instead of demanding every empty field ([how it works](#agentic-workflow))
+- **Transparent reasoning** — every response carries a deterministic, rule-based `agent_trace` and a `reason` for any follow-up — no extra LLM calls, no chain-of-thought
+- **Agentic tool execution** — optional, off-by-default Notion task creation via the official API, firing only on a complete, unambiguous plan ([details](#agentic-tool-execution-notion-integration-for-task-creation))
+- **Robust by design** — greedy decoding, JSON self-repair, *grounded* merges (won't invent a deadline or name), ask-each-gap-once, spelling-robust deadline recovery, and graceful empty-extraction recovery
+- **Roman Urdu / mixed-language first** — built for how people actually speak: informal, code-switched, spoken text
+- **Full speech-to-text** — Faster-Whisper (medium, int8) transcribes Urdu / Roman-Urdu voice notes
+- **One-command deployment** — Docker Compose brings up the full stack (Ollama + fine-tuned model + FastAPI + Next.js), with an optional NVIDIA GPU override
 
 ---
 
@@ -281,12 +281,16 @@ python ml/scripts/evaluate.py                 # base (0-shot + few-shot) vs fine
 
 > `notion_url` is `null` unless `execute=true` was sent and the extraction had no gaps (and Notion is configured) — then it holds the created page's URL.
 
+<!-- The transparency fields (`agent_trace`, `reason`) are explained in full under
+[Agentic Workflow → Inspectable decisions](#agentic-workflow). Kept here, commented out, so nothing is lost:
+
 Every response also carries two transparency fields:
 
 - **`agent_trace`** — a deterministic, rule-based list of the high-level steps the agent took (what was extracted, what gaps were detected, whether a question was generated). No LLM calls and no chain-of-thought — it mirrors the graph's actual decisions.
 - **`reason`** — when a follow-up question is asked, a short rule-based explanation of *why* (derived from the ambiguity type: unnamed recipient, missing/vague deadline, undated meeting, or a missed extraction). `null` when no question is asked.
+-->
 
-When a task is ambiguous, those fields look like:
+A follow-up (ambiguous input) response — note the populated `reason` and `agent_trace`:
 ```json
 {
   "extraction": { "tasks": ["Send proposal"], "deadline": null, "people": [], "meetings": [] },
@@ -440,13 +444,17 @@ Voice2Action ships as a Docker Compose stack, so the simplest production path is
 - **Persist volumes.** `ollama_data` (model) and `hf_cache` (Whisper) so restarts don't re-download multi-GB files.
 - **Inject secrets at runtime, not in the image.** If you enable Notion execution, provide `NOTION_TOKEN` / `NOTION_DATABASE_ID` via a root `.env` or your orchestrator's secret store — `.env` is gitignored and dockerignored, so credentials never bake into the image.
 
+**Cloud:** any GPU VM with Docker + the NVIDIA Container Toolkit runs the GPU compose command — AWS `g4dn`/`g5`, Azure NC/NV, GCP `g2`/T4, DigitalOcean, Hetzner, RunPod, Lambda. Open `80`/`443`; keep `8000`/`11434` private. CPU-only hosts (`t3`/`m5`) work too, just slower.
+
+> Single-node design; horizontal scaling (a separate Ollama pool, backend replicas behind a load balancer) is a later step, not required to ship.
+
+<!-- Per-provider detail, kept for reference:
 **AWS** — a GPU EC2 instance (`g4dn.xlarge` / `g5.xlarge`) with Docker + the NVIDIA Container Toolkit, then `docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d`. Open 80/443 in the security group; keep 8000/11434 private. CPU instances (`t3`/`m5`) also work, just slower. ECS/EKS is possible but heavier than a single host for this stack.
 
 **Azure** — a GPU VM (NC / NV series) with Docker + NVIDIA Container Toolkit, same compose command. For a more managed split, host the backend + frontend images on Azure Container Apps / Container Instances with Ollama on a GPU VM.
 
 **Anywhere else** — any VM with Docker + Compose works (GCP `g2`/T4, DigitalOcean, Hetzner, RunPod, Lambda…). GPU hosts give the best latency; CPU is fine for demos and light traffic.
-
-> This is a single-node design. Horizontal scaling (a separate Ollama pool, multiple backend replicas behind a load balancer) is a later step, not required to ship.
+-->
 
 ---
 <!-- 
@@ -465,9 +473,11 @@ Voice2Action ships as a Docker Compose stack, so the simplest production path is
 
 ## Why This Matters
 
-Roman Urdu is how hundreds of millions of people communicate daily — in WhatsApp messages, voice notes, and casual speech — but it is almost entirely absent from standard NLP tooling. This project demonstrates that a small, fine-tuned model (3B parameters) can outperform generic prompting on this domain by learning the specific vocabulary, sentence structures, and mixed-language patterns that characterise real Pakistani communication.
+Roman Urdu is how hundreds of millions of people communicate daily — in WhatsApp messages, voice notes, and casual speech — but it is almost entirely absent from standard NLP tooling. This project demonstrates that a small, fine-tuned model (3B parameters) can outperform generic prompting on this domain by learning the specific vocabulary, sentence structures, and mixed-language patterns that characterise real Pakistani communication — and that a disciplined agent on top turns that extraction into something you can actually act on.
 
+<!-- Redundant with Overview + Agentic Workflow; kept here, commented out, so nothing is lost:
 But extraction alone isn't enough: real voice notes omit details. The LangGraph agent closes that gap — validating each result, detecting genuine ambiguity, asking one targeted question, and merging the answer back — with grounded, deterministic behavior designed not to hallucinate or nag. The fine-tuned model supplies domain accuracy; the agent supplies completeness and trust.
+-->
 
 <!-- ---
 
