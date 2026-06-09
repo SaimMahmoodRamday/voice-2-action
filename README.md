@@ -67,43 +67,8 @@ Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, de
 
 A clean three-tier split — a Next.js client, a FastAPI orchestration layer, and the intelligence (Faster-Whisper for speech, a LangGraph agent over a fine-tuned model served by Ollama, and Notion as an executable tool). Everything runs locally via Docker Compose; no data leaves the host unless Notion execution is enabled.
 
-```mermaid
-flowchart TB
-    UI["🖥️ Next.js 16 + Tailwind UI<br/><sub>upload audio · type transcript · answer follow-ups · toggle Notion execution</sub>"]
+![System Architecture](./assets/voice2actiongit.png)
 
-    subgraph API["⚡ FastAPI · async REST · Pydantic v2"]
-      EP["/transcribe · /process · /followup · /voice2action · /health"]
-    end
-
-    STT["🎙️ Faster-Whisper<br/><sub>medium · int8 · Urdu / Roman-Urdu speech to text</sub>"]
-
-    subgraph AGENT["🧠 LangGraph agent"]
-      direction TB
-      EX["extract"] --> VAL{"validate<br/>genuine gaps?"}
-      VAL -->|"ambiguous"| FU["follow-up<br/><sub>ask ONE targeted question</sub>"]
-      VAL -->|"clean + execute"| NO["notion<br/><sub>create the task</sub>"]
-      VAL -->|"clean"| DONE(["done"])
-      FU --> DONE
-      NO --> DONE
-    end
-
-    LLM["🤖 Ollama<br/><sub>fine-tuned Qwen2.5-3B · QLoRA to GGUF q8_0</sub>"]
-    NOTION["📝 Notion API<br/><sub>official REST · optional tool execution</sub>"]
-
-    UI -->|"HTTPS / JSON"| EP
-    EP -->|"audio"| STT
-    STT -->|"transcript"| EX
-    EP -->|"transcript"| EX
-    EX <-->|"structured JSON"| LLM
-    NO -->|"create page"| NOTION
-    DONE -->|"extraction · missing_fields · reason<br/>agent_trace · notion_url"| UI
-    FU -.->|"user reply to /followup<br/>merge and re-validate"| EP
-
-    classDef tier fill:#eef2ff,stroke:#6366f1,color:#1e1b4b;
-    classDef ext fill:#ecfdf5,stroke:#10b981,color:#064e3b;
-    class UI,EP tier;
-    class LLM,NOTION,STT ext;
-```
 
 ---
 
