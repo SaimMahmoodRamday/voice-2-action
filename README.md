@@ -67,7 +67,7 @@ Reply *"Ahmed ko, kal tak"* and the agent merges it back in → `Call Ahmed`, de
 
 A clean three-tier split — a Next.js client, a FastAPI orchestration layer, and the intelligence (Faster-Whisper for speech, a LangGraph agent over a fine-tuned model served by Ollama, and Notion as an executable tool). Everything runs locally via Docker Compose; no data leaves the host unless Notion execution is enabled.
 
-![System Architecture](./assets/voice2actiongit.png)
+![System Architecture](./assets/voice2action_git.png)
 
 
 ---
