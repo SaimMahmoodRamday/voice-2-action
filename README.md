@@ -1,16 +1,8 @@
 # Voice2Action
 
-Convert informal Roman-Urdu / Urdu / mixed-language voice notes into structured, executable tasks — extract `tasks · deadline · people · meetings`, clarify genuine ambiguity with one targeted question, and optionally create the task in Notion.
+Voice2Action is an end-to-end agentic system for extracting structured tasks from informal Roman Urdu voice notes — the way hundreds of millions of people communicate daily, and a domain mainstream models handle poorly.
 
-<p>
-<img alt="Python 3.11"    src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white">
-<img alt="FastAPI"        src="https://img.shields.io/badge/FastAPI-async%20REST-009688?logo=fastapi&logoColor=white">
-<img alt="Next.js 16"     src="https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white">
-<img alt="LangGraph"      src="https://img.shields.io/badge/LangGraph-agent-1C3C3C">
-<img alt="Qwen2.5-3B"     src="https://img.shields.io/badge/Qwen2.5--3B-QLoRA-FF6A00">
-<img alt="Ollama"         src="https://img.shields.io/badge/Ollama-GGUF%20q8__0-000000?logo=ollama&logoColor=white">
-<img alt="Docker"         src="https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white">
-</p>
+It fine-tunes Qwen2.5-3B with QLoRA , wraps it in a LangGraph agent that detects genuine ambiguity and asks exactly one follow-up to close it, and optionally pushes the result to Notion — deployable in one command via Docker Compose.
 
 ---
 
@@ -200,4 +192,4 @@ Any GPU VM with Docker + the NVIDIA Container Toolkit works (AWS `g4dn`/`g5`, Az
 ## Roadmap
 
 - [ ] WhatsApp bot interface — receive and respond to voice notes in-app
-```
+
