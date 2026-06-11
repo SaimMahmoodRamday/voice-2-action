@@ -1,6 +1,6 @@
 # Voice2Action
 
-Voice2Action is an end-to-end agentic system for extracting structured tasks from informal Roman Urdu voice notes — the way hundreds of millions of people communicate daily.
+Voice2Action is an end-to-end agentic system for extracting structured tasks from informal Roman Urdu voice notes —  the way hundreds of millions of people communicate daily.
 
 It fine-tunes Qwen2.5-3B with QLoRA , wraps it in a LangGraph agent that detects genuine ambiguity and asks exactly one follow-up to close it, and optionally pushes the result to Notion — deployable in one command via Docker Compose.
 
