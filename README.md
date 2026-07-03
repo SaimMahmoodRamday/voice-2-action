@@ -193,3 +193,10 @@ Any GPU VM with Docker + the NVIDIA Container Toolkit works (AWS `g4dn`/`g5`, Az
 
 - [ ] WhatsApp bot interface — receive and respond to voice notes in-app
 
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
